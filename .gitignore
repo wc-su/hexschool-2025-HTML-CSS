@@ -1,3 +1,8 @@
 node_modules
 .env
+
+# 忽略 Mac 系統自動產生的 DS_Store
 .DS_Store
+
+# 改用 Vite，留之前 webpack 的設定檔
+webpack_backup
