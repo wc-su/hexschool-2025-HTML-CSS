@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import { resolve } from 'path'
 
-const week="week2"
+const week="week1"
 
 export default defineConfig({
   root: `./${week}/src`,
@@ -12,9 +12,14 @@ export default defineConfig({
     },
     rollupOptions: {
       input: {
-        'product-list': resolve(__dirname, `${week}/src/product-list.html`),
-        product: resolve(__dirname, `${week}/src/product.html`),
+        'story': resolve(__dirname, `${week}/src/story.html`),
+        'pixel-perfect-kata': resolve(__dirname, `${week}/src/pixel-perfect-kata.html`),
       },
+      // week2
+      // input: {
+      //   'product-list': resolve(__dirname, `${week}/src/product-list.html`),
+      //   product: resolve(__dirname, `${week}/src/product.html`),
+      // },
       // 不使用預設 hash
       output: {
         // JS chunk 檔案輸出到 js 資料夾
