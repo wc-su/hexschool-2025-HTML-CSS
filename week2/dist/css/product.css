@@ -1,0 +1,434 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  color: #212529;
+  line-height: 1.5;
+  font-family: "Noto Sans TC", -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body * {
+  letter-spacing: 0.05em;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  border: none;
+  background-image: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.f-14 {
+  font-size: 14px;
+}
+
+.f-16 {
+  font-size: 16px;
+}
+
+.font-weight-medium {
+  font-weight: 500;
+}
+
+.font-weight-bold {
+  font-weight: 700;
+}
+
+.text-primary {
+  color: #212529;
+}
+
+.text-secondary {
+  color: #6c757d;
+}
+
+.text-muted {
+  color: #adb5bd;
+}
+
+.text-highlight {
+  color: #57a203;
+}
+
+.text-on-dark {
+  color: #fff;
+}
+
+.text-danger-300 {
+  color: #D74F4F;
+}
+
+.text-line-through {
+  text-decoration: line-through;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.w-64 {
+  width: 64px;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.flex-direction-column {
+  flex-direction: column;
+}
+
+.border-radius-5 {
+  border-radius: 5px;
+}
+
+.mt-4 {
+  margin-top: 4px;
+}
+
+.mt-8 {
+  margin-top: 8px;
+}
+
+.mr-8 {
+  margin-right: 8px;
+}
+
+.mb-8 {
+  margin-bottom: 8px;
+}
+
+.mt-12 {
+  margin-top: 12px;
+}
+
+.mt-16 {
+  margin-top: 16px;
+}
+
+.mt-32 {
+  margin-top: 32px;
+}
+
+.mt-48 {
+  margin-top: 48px;
+}
+
+.mb-48 {
+  margin-bottom: 48px;
+}
+
+.container {
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.col-10, .col-7, .col-6, .col-5, .col-4, .col-2, .col {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.row {
+  margin-right: -12px;
+  margin-left: -12px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 1;
+}
+
+.col-2 {
+  width: 16.6666%;
+}
+
+.col-4 {
+  width: 33.3333%;
+}
+
+.col-5 {
+  width: 41.6666%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.3333%;
+}
+
+.col-10 {
+  width: 83.3333%;
+}
+
+.gx-4.row {
+  margin-left: -4px;
+  margin-right: -4px;
+}
+
+.gx-4 > .col {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.gx-4 > .col-2 {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.gx-4 > .col-4 {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.gx-4 > .col-5 {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.gx-4 > .col-6 {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.gx-4 > .col-7 {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.gx-4 > .col-10 {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.header {
+  padding: 16px 0;
+}
+.header .logo {
+  margin-right: 48px;
+}
+.header li {
+  margin-right: 40px;
+}
+.header a.person {
+  display: block;
+  color: #212529;
+  font-size: 24px;
+  line-height: 1;
+  padding: 8px;
+}
+.header a.person:hover {
+  color: #57a203;
+  cursor: pointer;
+}
+.header a.person:focus {
+  color: #212529;
+  background: #f5fee7;
+}
+
+.footer {
+  background: #f8f9fa;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+.footer li {
+  margin-left: 40px;
+}
+.footer .copyright {
+  padding-top: 32px;
+  border-top: 1px solid #dee2e6;
+  margin-top: 24px;
+}
+.footer .copyright p {
+  font-size: 14px;
+  color: #6c757d;
+}
+.footer .copyright p:last-child {
+  margin-top: 4px;
+}
+
+.banner {
+  background: #e8fec5;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-top: 40px;
+}
+.banner h4 {
+  margin-right: 24px;
+}
+.banner a {
+  color: #fff;
+  background: #212529;
+  border-radius: 4px;
+  padding: 12px 24px;
+}
+.banner a:hover {
+  background: #495057;
+}
+.banner a:focus {
+  background: #495057;
+  box-shadow: 0 0 0 3px rgba(33, 37, 41, 0.1);
+}
+
+.text-link {
+  display: inline-block;
+  color: #212529;
+  padding: 12px 0;
+}
+.text-link:hover {
+  color: #6c757d;
+}
+.text-link:focus {
+  color: #212529;
+  border-bottom: 2px solid #212529;
+  padding-top: 12px;
+  padding-bottom: 10px;
+}
+
+.breadcrumb .prev-page {
+  color: #6c757d;
+  font-weight: 500;
+  margin-right: 12px;
+}
+.breadcrumb .slash {
+  color: #dee2e6;
+  font-weight: 700;
+  margin-right: 12px;
+}
+.breadcrumb .now-page {
+  color: #212529;
+  font-weight: 500;
+}
+
+.size-btn {
+  width: 160px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #212529;
+  border: 1px solid #212529;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-bottom: 8px;
+}

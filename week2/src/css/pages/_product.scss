@@ -1,0 +1,14 @@
+@use '../abstracts/variables' as *;
+
+.size-btn {
+  width: 160px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $gray-900;
+  border: 1px solid $gray-900;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-bottom: 8px;
+}
