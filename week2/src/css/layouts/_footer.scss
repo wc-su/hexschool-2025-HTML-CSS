@@ -1,0 +1,21 @@
+@use '../abstracts/variables' as *;
+
+.footer {
+  background: $gray-100;
+  padding: 64px 0;
+  li {
+    margin-left: 40px;
+  }
+  .copyright {
+    padding-top: 32px;
+    border-top: 1px solid $gray-300;
+    margin-top: 24px;
+    p {
+      font-size: 14px;
+      color: $gray-600;
+      &:last-child {
+        margin-top: 4px;
+      }
+    }
+  }
+}
