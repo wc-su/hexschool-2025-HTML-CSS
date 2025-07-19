@@ -10,6 +10,7 @@
   &:focus {
     color: $gray-900;
     border-bottom: 2px solid $gray-900;
-    padding: 12px 0 10px 0;
+    padding-top: 12px;
+    padding-bottom: 10px;
   }
 }

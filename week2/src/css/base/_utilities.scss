@@ -1,17 +1,55 @@
+@use '../abstracts/variables' as *;
 
+.f-14 {
+  font-size: 14px;
+}
+.f-16 {
+  font-size: 16px;
+}
 .font-weight-medium {
   font-weight: 500;
 }
 .font-weight-bold {
   font-weight: 700;
 }
+.text-primary {
+  color: $gray-900;
+}
+.text-secondary {
+  color: $gray-600;
+}
+.text-muted {
+  color: $gray-500;
+}
+.text-highlight {
+  color: $primary-400;
+}
+.text-on-dark {
+  color: $white;
+}
+.text-danger-300 {
+  color: $danger-300;
+}
+.text-line-through {
+  text-decoration: line-through;;
+}
 
 .text-align-center {
   text-align: center;
 }
 
+.w-64 {
+  width: 64px;
+}
+
+.d-block {
+  display: block;
+}
 .d-flex {
   display: flex;
+}
+.flex-wrap {
+  flex-wrap: wrap;
 }
 .justify-content-center {
   justify-content: center;
@@ -25,10 +63,35 @@
 .flex-direction-column {
   flex-direction: column;
 }
-.flex-wrap {
-  flex-wrap: wrap;
+
+.border-radius-5 {
+  border-radius: 5px;
 }
 
+.mt-4 {
+  margin-top: 4px;
+}
+.mt-8 {
+  margin-top: 8px;
+}
+.mr-8 {
+  margin-right: 8px;
+}
+.mb-8 {
+  margin-bottom: 8px;
+}
+.mt-12 {
+  margin-top: 12px;
+}
+.mt-16 {
+  margin-top: 16px;
+}
+.mt-32 {
+  margin-top: 32px;
+}
+.mt-48 {
+  margin-top: 48px;
+}
 .mb-48 {
   margin-bottom: 48px;
 }

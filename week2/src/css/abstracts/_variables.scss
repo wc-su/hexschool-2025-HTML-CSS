@@ -10,8 +10,30 @@ $gray-800: #343a40;
 $gray-900: #212529;
 $black: #000;
 
+$danger-100: #FCF1F1;
+$danger-200: #EBA7A7;
+$danger-300: #D74F4F;
+
+$success-100: #EFF8F4;
+$success-200: #9AD1BA;
+$success-300: #36A375;
+
+$warning-100: #FEF6EC;
+$warning-200: #F9C588;
+$warning-300: #F38B12;
+
+$info-100: #EEF5FC;
+$info-200: #97C3ED;
+$info-300: #3087DB;
+
 $primary: #477a11;
 $primary-400: #57a203;
 $primary-300: #c0fa73;
 $primary-200: #e8fec5;
 $primary-100: #f5fee7;
+
+$gutters: (
+  4: 4px,
+);
+
+$cols: col, col-2, col-4, col-5, col-6, col-7, col-10;

@@ -15,9 +15,11 @@
 @use 'layouts/grid' as *;
 @use 'layouts/header' as *;
 @use 'layouts/footer' as *;
+@use 'layouts/banner' as *;
 
 // 可重複使用元件
 @use 'components/text-link' as *;
+@use 'components/breadcrumb' as *;
 
 // 頁面
 @use 'pages/product-list' as *;
