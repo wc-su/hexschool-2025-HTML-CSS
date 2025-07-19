@@ -1,8 +1,8 @@
+/* reset */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -49,25 +49,20 @@ table {
 img {
   max-width: 100%;  
 }
-
 .d-flex {
   display: flex;
 }
-
 .container {
   max-width: 640px;
   margin: 0 auto;
 }
-
 .title {
   font-size: 20px;
   line-height: 1.2;
 }
-
 .content {
   line-height: 1.5;
 }
-
 .footer {
   text-align: center;
   padding: 48px 0;
@@ -76,11 +71,9 @@ img {
 .footer p {
   line-height: 1.5;
 }
-
 .mr-20 {
   margin-right: 20px;
 }
-
 .mb-24 {
   margin-bottom: 24px;
 }

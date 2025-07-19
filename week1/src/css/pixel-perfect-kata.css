@@ -1,3 +1,6 @@
+/* reset */
+@import 'reset.css';
+
 img {
   max-width: 100%;  
 }
