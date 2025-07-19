@@ -5,8 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "preview": "vite preview",
     "build": "vite build",
-    "preview": "vite preview"
+    "build:week1": "WEEK=week1 vite build",
+    "build:week2": "WEEK=week2 vite build"
   },
   "devDependencies": {
     "sass": "^1.89.2",
