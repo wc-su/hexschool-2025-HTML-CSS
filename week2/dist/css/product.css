@@ -173,8 +173,8 @@ input {
   background-color: #e8fec5;
 }
 
-.w-64 {
-  width: 64px;
+.bg-primary-gray-100 {
+  background: #f8f9fa;
 }
 
 .d-block {
@@ -207,6 +207,14 @@ input {
 
 .border-primary {
   border: 1px solid #212529;
+}
+
+.border-top-primary {
+  border-top: 1px solid #212529;
+}
+
+.border-color-gray-300 {
+  border-color: #dee2e6;
 }
 
 .border-radius-4 {
@@ -339,27 +347,6 @@ input {
   background: #f5fee7;
 }
 
-.footer {
-  background: #f8f9fa;
-  padding-top: 64px;
-  padding-bottom: 64px;
-}
-.footer li {
-  margin-left: 40px;
-}
-.footer .copyright {
-  padding-top: 32px;
-  border-top: 1px solid #dee2e6;
-  margin-top: 24px;
-}
-.footer .copyright p {
-  font-size: 14px;
-  color: #6c757d;
-}
-.footer .copyright p:last-child {
-  margin-top: 4px;
-}
-
 .text-link {
   display: inline-block;
   color: #212529;
@@ -455,6 +442,10 @@ input {
   padding-bottom: 24px;
 }
 
+.pt-32 {
+  padding-top: 32px;
+}
+
 .py-48 {
   padding-top: 48px;
   padding-bottom: 48px;
@@ -493,6 +484,10 @@ input {
   margin-top: 16px;
 }
 
+.mt-24 {
+  margin-top: 24px;
+}
+
 .mr-24 {
   margin-right: 24px;
 }
@@ -503,6 +498,10 @@ input {
 
 .mb-40 {
   margin-bottom: 40px;
+}
+
+.ml-40 {
+  margin-left: 40px;
 }
 
 .mt-48 {
