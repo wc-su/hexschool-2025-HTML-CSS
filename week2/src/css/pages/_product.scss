@@ -1,14 +1,85 @@
 @use '../abstracts/variables' as *;
 
-.size-btn {
-  width: 160px;
-  font-size: 16px;
-  line-height: 1.5;
-  color: $gray-900;
-  border: 1px solid $gray-900;
-  border-radius: 4px;
-  box-sizing: border-box;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  margin-bottom: 8px;
+.color-selector {
+  display: flex;
+  text-align: center;
+  .color-option {
+    width: 64px;
+    color: $gray-600;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+      img {
+        opacity: 0.8;
+      }
+    }
+  }
+  input[type="radio"] {
+    display: none;
+  }
+  input[type="radio"]:checked + .color-option {
+    color: $gray-900;
+    img {
+      opacity: 1;
+      border: 1px solid $gray-900;
+    }
+  }
+  input[type="radio"]:disabled + .color-option {
+    cursor: default;
+    color: $gray-300;
+    img {
+      opacity: 0.4;
+    }
+  }
+}
+
+.size-selector {
+  display: flex;
+  flex-wrap: wrap;
+  .size-option {
+    width: 160px;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border: 1px solid $gray-300;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    &:hover {
+      border-color: $gray-600;
+    }
+  }
+  input[type="radio"] {
+    display: none;
+  }
+  input[type="radio"]:checked + .size-option {
+    border-color: $gray-900;
+  }
+  input[type="radio"]:disabled + .size-option {
+    cursor: default;
+    color: $gray-500;
+    border-color: $gray-300;
+  }
+}
+
+.btn-like {
+  & .liked {
+    display: none;
+  }
+  &:hover {
+    & .liked {
+      display: none;
+    }
+    & .non-like {
+      display: block;
+    }
+  }
+  &.active {
+    & .liked {
+      display: block;
+    }
+    & .non-like {
+      display: none;
+    }
+  }
 }

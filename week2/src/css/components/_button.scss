@@ -1,0 +1,32 @@
+@use '../abstracts/variables' as *;
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+  font-weight: 500;
+  background: $gray-900;
+  border-radius: 4px;
+  padding: 12px 24px;
+  &:hover {
+    background: $gray-700;
+  }
+  &:focus {
+    background: $gray-700;
+    box-shadow: 0 0 0 3px rgba($gray-900, 0.1);
+  }
+  &.btn-outline {
+    color: $gray-900;
+    background-color: $white;
+    border: 1px solid $gray-900;
+    &:hover {
+      color: $white;
+      background-color: $gray-900;
+    }
+    &:focus {
+      color: $white;
+      background: $gray-900;
+    }
+  }
+}

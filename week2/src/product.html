@@ -46,38 +46,48 @@
         <p class="mt-16">Platform 404 以柔和奶白為底，搭配深藍色皮革點綴，走在街上自帶回頭率。鞋型採用復古運動風輪廓，結合輕量厚底與柔軟泡棉鞋舌，兼顧美感與舒適。</p>
         <p class="mt-12">鞋身選用柔軟皮革材質，打造出清新卻不失個性的氛圍，並以鞋面透氣孔設計提升穿著體驗，兼顧質感與舒適度，適合日常長時間著用。無論是街頭穿搭、日常通勤或週末出遊都能輕鬆駕馭。</p> 
         <p class="mt-32">顏色</p>
-        <ul class="d-flex mt-8">
-          <li class="text-align-center w-64 mr-8">
-            <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product.png" alt="">
-            <p class="text-secondary font-weight-medium mt-4">藍色</p>
-          </li>
-          <li class="text-align-center w-64">
-            <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product-1.png" alt="">
-            <p class="text-secondary font-weight-medium mt-4">卡其色</p>
-          </li>
-        </ul>
+        <div class="color-selector mt-8">
+          <label class="mr-8">
+            <input type="radio" name="color" />
+            <div class="color-option">
+              <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product.png" alt="">
+              <div class="mt-4">藍色</div>
+            </div>
+          </label>
+          <label>
+            <input type="radio" name="color" />
+            <div class="color-option">
+              <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product-1.png" alt="">
+              <div class="mt-4">卡其色</div>
+            </div>
+          </label>
+        </div>
         <p class="mt-32">尺寸</p>
-        <ul class="d-flex flex-wrap mt-8">
-          <li class="mr-8"><input type="button" value="35(22.5cm)" class="size-btn" /></li>
-          <li class="mr-8"><input type="button" value="36(23.0cm)" class="size-btn" /></li>
-          <li class="mr-8"><input type="button" value="37(23.5cm)" class="size-btn" /></li>
-          <li class="mr-8"><input type="button" value="38(24.0cm)" class="size-btn" /></li>
-          <li class="mr-8"><input type="button" value="39(24.5cm)" class="size-btn" /></li>
-          <li class="mr-8"><input type="button" value="40(25.0cm)" class="size-btn" /></li>
-          <li class="mr-8"><input type="button" value="41(26.0cm)" class="size-btn" /></li>
-          <li class="mr-8"><input type="button" value="42(26.5cm)" class="size-btn" /></li>
-          <li class="mr-8"><input type="button" value="43(27.0cm)" class="size-btn" /></li>
-        </ul>
+        <div class="size-selector mt-8">
+          <label class="mr-8 mb-8"><input type="radio" name="size" checked /><div class="size-option">35(22.5cm)</div></label>
+          <label class="mr-8 mb-8"><input type="radio" name="size" /><div class="size-option">36(23.0cm)</div></label>
+          <label class="mr-8 mb-8"><input type="radio" name="size" /><div class="size-option">37(23.5cm)</div></label>
+          <label class="mr-8 mb-8"><input type="radio" name="size" /><div class="size-option">38(24.0cm)</div></label>
+          <label class="mr-8 mb-8"><input type="radio" name="size" /><div class="size-option">39(24.5cm)</div></label>
+          <label class="mr-8 mb-8"><input type="radio" name="size" /><div class="size-option">40(25.0cm)</div></label>
+          <label class="mr-8 mb-8"><input type="radio" name="size" /><div class="size-option">41(26.0cm)</div></label>
+          <label class="mr-8 mb-8"><input type="radio" name="size" disabled /><div class="size-option">42(26.5cm)</div></label>
+          <label class="mr-8 mb-8"><input type="radio" name="size" disabled /><div class="size-option">43(27.0cm)</div></label>
+        </div>
         <p class="f-14 text-danger-300">僅剩 3 雙</p>
         <div class="row gx-4 mt-48">
           <div class="col">
-            <a href="#" class="d-block text-align-center text-primary font-weight-medium border-primary border-radius-5 py-12">
-              <i class="bi bi-heart f-20"></i>加入收藏
+            <a href="#" class="btn btn-outline btn-like py-8">
+              <i class="bi bi-heart non-like f-20 mr-8"></i>
+              <i class="bi bi-heart-fill liked f-20 mr-8"></i>
+              <div class="non-like">加入收藏</div>
+              <div class="liked">已收藏</div>
             </a>
           </div>
           <div class="col">
-            <a href="#" class="d-block text-align-center text-on-dark font-weight-medium bg-primary border-radius-5 py-12">
-              <i class="bi bi-handbag f-20"></i>門市預約試穿
+            <a href="#" class="btn border-primary py-8">
+              <i class="bi bi-handbag f-20 mr-8"></i>
+              <div>門市預約試穿</div>
             </a>
           </div>
         </div>
