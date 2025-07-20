@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import { resolve } from 'path'
 import fs from 'fs'
+import { ViteEjsPlugin } from 'vite-plugin-ejs'
 
 export default defineConfig(({ mode }) =>{
   const week = process.env.WEEK
@@ -24,6 +25,7 @@ export default defineConfig(({ mode }) =>{
   return {
     root: rootDir,
     base: './',
+    plugins: [ ViteEjsPlugin() ],
     build: {
       modulePreload: {
         polyfill: false, // 不加載 polyfill

@@ -13,19 +13,8 @@
   <link rel="stylesheet" href="./css/product.scss">
 </head>
 <body>
-  <div class="header">
-    <div class="container d-flex justify-content-between align-items-center">
-      <div class="d-flex">
-        <img class="logo" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week1/logo.svg" alt="URBNSTEP logo">
-        <ul class="d-flex">
-          <li><a class="link text-link font-weight-medium" href="#">商品列表</a></li>
-          <li><a class="link text-link font-weight-medium" href="#">品牌故事</a></li>
-        </ul>
-      </div>
-      <a href="#" class="person"><i class="bi bi-person"></i></a>
-    </div>
-  </div>
-  <div class="container mt-48">
+  <%- include('./partials/header.ejs') %>
+  <div class="container py-64">
     <div class="row">
       <div class="col-7">
         <div class="row gx-4">
@@ -80,28 +69,80 @@
           <li class="mr-8"><input type="button" value="43(27.0cm)" class="size-btn" /></li>
         </ul>
         <p class="f-14 text-danger-300">僅剩 3 雙</p>
-        
+        <div class="row gx-4 mt-48">
+          <div class="col">
+            <a href="#" class="d-block text-align-center text-primary font-weight-medium border-primary border-radius-5 py-12">
+              <i class="bi bi-heart f-20"></i>加入收藏
+            </a>
+          </div>
+          <div class="col">
+            <a href="#" class="d-block text-align-center text-on-dark font-weight-medium bg-primary border-radius-5 py-12">
+              <i class="bi bi-handbag f-20"></i>門市預約試穿
+            </a>
+          </div>
+        </div>
+        <div class="py-12 mt-32">
+          <p class="font-weight-medium">商品材質</p>
+          <p class="text-secondary mt-4">
+            鞋面：合成皮革（Synthetic Leather）<br>
+            內裡：透氣網布材質，提升舒適與排汗性<br>
+            鞋底：EVA 輕量發泡橡膠，具備良好緩震與止滑效果<br>
+            鞋帶：聚酯纖維，耐拉扯不易鬆脫
+          </p>
+        </div>
+        <div class="py-12">
+          <p class="font-weight-medium">購買須知</p>
+          <p class="text-secondary mt-4">
+            商品顏色因螢幕顯示可能略有差異，請以實品為準。<br>
+            建議首次穿著前試穿確認尺寸，避免影響退換貨權益。<br>
+            本商品為限量發售，庫存有限，如需更換尺寸請儘早聯繫客服協助處理。
+          </p>
+        </div>
+        <div class="py-12">
+          <p class="font-weight-medium">保養方式</p>
+          <p class="text-secondary mt-4">
+            建議以乾布或微濕軟布擦拭表面汙漬，避免機洗或長時間浸水。<br>
+            收納時請放置於乾燥通風處，避免日曬及高溫導致變形或龜裂。<br>
+            若需深層清潔，建議使用中性清潔劑並搭配柔刷輕刷，勿使用漂白水或強酸強鹼清潔劑。
+          </p>
+        </div>
       </div>
     </div>
   </div>
-  <div class="banner d-flex justify-content-center align-items-center">
-    <h4>加入會員取得 9 折優惠</h4>
-    <a href="#" class="font-weight-medium">馬上註冊</a>
+  <div class="container py-48 mb-40">
+    <h4>你可能也喜歡...</h4>
+    <ul class="row mt-16">
+      <li class="col-3">
+        <a href="#" class="card">
+          <img class="card-img" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product-2.png" alt="">
+          <h6 class="card-title">VM001</h6>
+          <p class="card-price font-weight-medium">NT$2,600</p>
+        </a>
+      </li>
+      <li class="col-3">
+        <a href="#" class="card">
+          <img class="card-img" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product-3.png" alt="">
+          <h6 class="card-title">Melty Kiss</h6>
+          <p class="card-price font-weight-medium">NT$4,000</p>
+        </a>
+      </li>
+      <li class="col-3">
+        <a href="#" class="card">
+          <img class="card-img" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product-4.png" alt="">
+          <h6 class="card-title">BOOMBLOK</h6>
+          <p class="card-price font-weight-medium">NT$3,200</p>
+        </a>
+      </li>
+      <li class="col-3">
+        <a href="#" class="card">
+          <img class="card-img" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product-5.png" alt="">
+          <h6 class="card-title">Sugar Snap</h6>
+          <p class="card-price font-weight-medium">NT$3,200</p>
+        </a>
+      </li>
+    </ul>
   </div>
-  <div class="footer text-align-center">
-    <div class="container">
-      <div class="d-flex justify-content-between align-items-center">
-        <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week1/logo.svg" alt="URBNSTEP logo">
-        <ul class="d-flex">
-          <li><a href="#" class="text-link">商品列表</a></li>
-          <li><a href="#" class="text-link">品牌故事</a></li>
-        </ul>
-      </div>
-      <div class="copyright">
-        <p>Copyright ©2025 URBNSTYLE</p>
-        <p>All Rights Reserved.</p>
-      </div>
-    </div>
-  </div>
+  <%- include('./partials/banner.ejs') %>
+  <%- include('./partials/footer.ejs') %>
 </body>
 </html>

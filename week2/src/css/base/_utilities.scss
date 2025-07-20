@@ -6,6 +6,9 @@
 .f-16 {
   font-size: 16px;
 }
+.f-20 {
+  font-size: 20px;
+}
 .font-weight-medium {
   font-weight: 500;
 }
@@ -38,6 +41,10 @@
   text-align: center;
 }
 
+.bg-primary {
+  background-color: $gray-900;
+}
+
 .w-64 {
   width: 64px;
 }
@@ -64,8 +71,33 @@
   flex-direction: column;
 }
 
+.border-primary {
+  border: 1px solid $gray-900;
+}
+.border-radius-4 {
+  border-radius: 4px;
+}
 .border-radius-5 {
   border-radius: 5px;
+}
+
+.pt-24 {
+  padding-top: 24px;
+}
+.py-12 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.py-48 {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+.py-64 {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+.pb-80 {
+  padding-bottom: 80px;
 }
 
 .mt-4 {
@@ -88,6 +120,9 @@
 }
 .mt-32 {
   margin-top: 32px;
+}
+.mb-40 {
+  margin-bottom: 40px;
 }
 .mt-48 {
   margin-top: 48px;

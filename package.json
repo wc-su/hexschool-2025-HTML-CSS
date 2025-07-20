@@ -13,6 +13,7 @@
   },
   "devDependencies": {
     "sass": "^1.89.2",
-    "vite": "^7.0.4"
+    "vite": "^7.0.4",
+    "vite-plugin-ejs": "^1.7.0"
   }
 }

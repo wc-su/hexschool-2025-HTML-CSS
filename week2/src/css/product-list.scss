@@ -20,6 +20,7 @@
 // 可重複使用元件
 @use 'components/text-link' as *;
 @use 'components/breadcrumb' as *;
+@use 'components/card' as *;
 
 // 頁面
 @use 'pages/product-list' as *;

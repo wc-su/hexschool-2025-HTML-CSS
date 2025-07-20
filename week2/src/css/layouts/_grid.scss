@@ -19,6 +19,10 @@
   width: 16.6666%;
   @extend %py-12;
 }
+.col-3 {
+  width: 25%;
+  @extend %py-12;
+}
 .col-4 {
   width: 33.3333%;
   @extend %py-12;
