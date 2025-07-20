@@ -121,6 +121,10 @@ input {
   font-size: 16px;
 }
 
+.f-20 {
+  font-size: 20px;
+}
+
 .font-weight-medium {
   font-weight: 500;
 }
@@ -161,6 +165,10 @@ input {
   text-align: center;
 }
 
+.bg-primary {
+  background-color: #212529;
+}
+
 .w-64 {
   width: 64px;
 }
@@ -193,8 +201,39 @@ input {
   flex-direction: column;
 }
 
+.border-primary {
+  border: 1px solid #212529;
+}
+
+.border-radius-4 {
+  border-radius: 4px;
+}
+
 .border-radius-5 {
   border-radius: 5px;
+}
+
+.pt-24 {
+  padding-top: 24px;
+}
+
+.py-12 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.py-48 {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.py-64 {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.pb-80 {
+  padding-bottom: 80px;
 }
 
 .mt-4 {
@@ -225,6 +264,10 @@ input {
   margin-top: 32px;
 }
 
+.mb-40 {
+  margin-bottom: 40px;
+}
+
 .mt-48 {
   margin-top: 48px;
 }
@@ -241,7 +284,7 @@ input {
   padding-right: 12px;
 }
 
-.col-10, .col-7, .col-6, .col-5, .col-4, .col-2, .col {
+.col-10, .col-7, .col-6, .col-5, .col-4, .col-3, .col-2, .col {
   padding-left: 12px;
   padding-right: 12px;
 }
@@ -259,6 +302,10 @@ input {
 
 .col-2 {
   width: 16.6666%;
+}
+
+.col-3 {
+  width: 25%;
 }
 
 .col-4 {
@@ -292,6 +339,11 @@ input {
 }
 
 .gx-4 > .col-2 {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.gx-4 > .col-3 {
   padding-left: 4px;
   padding-right: 4px;
 }
@@ -371,7 +423,6 @@ input {
   background: #e8fec5;
   padding-top: 24px;
   padding-bottom: 24px;
-  margin-top: 40px;
 }
 .banner h4 {
   margin-right: 24px;
@@ -418,6 +469,21 @@ input {
 .breadcrumb .now-page {
   color: #212529;
   font-weight: 500;
+}
+
+.card {
+  display: block;
+}
+.card:hover .card-img {
+  opacity: 0.8;
+}
+.card-title {
+  color: #212529;
+  margin-top: 12px;
+}
+.card-price {
+  color: #212529;
+  margin-top: 4px;
 }
 
 .size-btn {
