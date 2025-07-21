@@ -1,3 +1,4 @@
+@use "sass:map";
 @use '../abstracts/variables' as *;
 
 .f-14 {
@@ -12,16 +13,16 @@
 }
 
 .text-secondary {
-  color: map-get($grays, "600");
+  color: map.get($grays, "600");
 }
 .text-muted {
-  color: map-get($grays, "500");
+  color: map.get($grays, "500");
 }
 .text-highlight {
-  color: map-get($primarys, "400");
+  color: map.get($primarys, "400");
 }
 .text-danger-300 {
-  color: map-get($dangers, "300");
+  color: map.get($dangers, "300");
 }
 // @each $key, $value in $grays {
 //   .text-gray-#{$key} {
@@ -38,7 +39,7 @@
 }
 
 .bg-primary-200 {
-  background-color: map-get($primarys, "200");
+  background-color: map.get($primarys, "200");
 }
 .bg-primary-gray-100 {
   background: $gray-100;
@@ -58,11 +59,11 @@
 }
 
 .border-primary {
-  border: 1px solid map-get($grays, "900");
+  border: 1px solid map.get($grays, "900");
 }
 .border-top-primary {
-  border-top: 1px solid map-get($grays, "900");
+  border-top: 1px solid map.get($grays, "900");
 }
 .border-color-gray-300 {
-  border-color: map-get($grays, "300");
+  border-color: map.get($grays, "300");
 }

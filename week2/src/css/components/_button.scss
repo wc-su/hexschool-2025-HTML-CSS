@@ -1,3 +1,4 @@
+@use "sass:map";
 @use '../abstracts/variables' as *;
 
 @mixin button-variant(
@@ -32,18 +33,18 @@
 .btn {
   @include button-variant(
     $text-color: $white,
-    $bg-color: map-get($grays, "900"),
-    $hover-bg: map-get($grays, "700"),
-    $focus-shadow-color: map-get($grays, "900")
+    $bg-color: map.get($grays, "900"),
+    $hover-bg: map.get($grays, "700"),
+    $focus-shadow-color: map.get($grays, "900")
   );
 }
 
 .btn-outline {
   @include button-variant(
-    $text-color: map-get($grays, "900"),
-    $bg-color: map-get($grays, "900"),
-    $hover-bg: map-get($grays, "900"),
-    $focus-shadow-color: map-get($grays, "900"),
+    $text-color: map.get($grays, "900"),
+    $bg-color: map.get($grays, "900"),
+    $hover-bg: map.get($grays, "900"),
+    $focus-shadow-color: map.get($grays, "900"),
     $is-outline: true
   );
 }

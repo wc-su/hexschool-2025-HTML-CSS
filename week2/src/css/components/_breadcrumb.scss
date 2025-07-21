@@ -1,13 +1,14 @@
+@use "sass:map";
 @use '../abstracts/variables' as *;
 
 .breadcrumb {
   .prev-page {
-    color: map-get($grays, "600");
+    color: map.get($grays, "600");
     font-weight: $font-weight-medium;
     margin-right: 12px;
   }
   .slash {
-    color: map-get($grays, "300");
+    color: map.get($grays, "300");
     font-weight: $font-weight-bold;
     margin-right: 12px;
   }
