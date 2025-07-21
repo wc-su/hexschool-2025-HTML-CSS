@@ -2,17 +2,16 @@
 
 .breadcrumb {
   .prev-page {
-    color: $gray-600;
-    font-weight: 500;
+    color: map-get($grays, "600");
+    font-weight: $font-weight-medium;
     margin-right: 12px;
   }
   .slash {
-    color: $gray-300;
-    font-weight: 700;
+    color: map-get($grays, "300");
+    font-weight: $font-weight-bold;
     margin-right: 12px;
   }
   .now-page {
-    color: $gray-900;
-    font-weight: 500;
+    font-weight: $font-weight-medium;
   }
 }

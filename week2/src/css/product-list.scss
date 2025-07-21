@@ -20,8 +20,6 @@
 @use 'components/breadcrumb' as *;
 @use 'components/card' as *;
 @use 'components/button' as *;
+@use 'components/pagination' as *;
 
 @use 'utilities/spacing' as *;
-
-// 頁面
-@use 'pages/product-list' as *;

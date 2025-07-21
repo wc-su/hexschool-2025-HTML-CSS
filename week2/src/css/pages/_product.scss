@@ -3,30 +3,27 @@
 .color-selector {
   display: flex;
   text-align: center;
-  .color-option {
-    width: 64px;
-    color: $gray-600;
-    text-align: center;
-    cursor: pointer;
-    &:hover {
-      img {
-        opacity: 0.8;
-      }
-    }
-  }
   input[type="radio"] {
     display: none;
   }
+  .color-option {
+    width: 64px;
+    color: map-get($grays, "600");
+    cursor: pointer;
+    &:hover img {
+      opacity: 0.8;
+    }
+  }
   input[type="radio"]:checked + .color-option {
-    color: $gray-900;
+    color: map-get($grays, "900");
     img {
       opacity: 1;
-      border: 1px solid $gray-900;
+      border: 1px solid map-get($grays, "900");
     }
   }
   input[type="radio"]:disabled + .color-option {
     cursor: default;
-    color: $gray-300;
+    color: map-get($grays, "300");
     img {
       opacity: 0.4;
     }
@@ -36,29 +33,29 @@
 .size-selector {
   display: flex;
   flex-wrap: wrap;
+  input[type="radio"] {
+    display: none;
+  }
   .size-option {
     width: 160px;
     text-align: center;
     padding-top: 12px;
     padding-bottom: 12px;
-    border: 1px solid $gray-300;
-    border-radius: 4px;
-    font-weight: 500;
+    border: 1px solid map-get($grays, "300");
+    border-radius: $border-radius-sm;
+    font-weight: $font-weight-medium;
     cursor: pointer;
     &:hover {
-      border-color: $gray-600;
+      border-color: map-get($grays, "600");
     }
   }
-  input[type="radio"] {
-    display: none;
-  }
   input[type="radio"]:checked + .size-option {
-    border-color: $gray-900;
+    border-color: map-get($grays, "900");
   }
   input[type="radio"]:disabled + .size-option {
     cursor: default;
-    color: $gray-500;
-    border-color: $gray-300;
+    color: map-get($grays, "500");
+    border-color: map-get($grays, "300");
   }
 }
 

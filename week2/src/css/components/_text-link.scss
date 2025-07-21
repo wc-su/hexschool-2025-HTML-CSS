@@ -2,15 +2,14 @@
 
 .text-link {
   display: inline-block;
-  color: $gray-900;
-  padding: 12px 0;
+  color: map-get($grays, "900");
+  padding-top: 12px;
+  padding-bottom: 12px;
   &:hover {
-    color: $gray-600;
+    color: map-get($grays, "600");
   }
   &:focus {
-    color: $gray-900;
-    border-bottom: 2px solid $gray-900;
-    padding-top: 12px;
-    padding-bottom: 10px;
+    color: map-get($grays, "900");
+    box-shadow: inset 0 -2px 0 map-get($grays, "900");
   }
 }
