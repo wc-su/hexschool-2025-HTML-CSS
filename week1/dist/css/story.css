@@ -67,12 +67,12 @@ body {
   color: #212529;
   line-height: 1.5;
   font-family: "Noto Sans TC", -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
-  letter-spacing: 0.05em;
 }
 
 .h1, .h2, .h3, .h4 {
   line-height: 1.2;
   font-weight: 700;
+  letter-spacing: 0.05em;
 }
 
 .h1 {
@@ -125,6 +125,7 @@ body {
   margin-bottom: 12px;
 }
 .quote p {
+  letter-spacing: 0.05em;
   margin-top: 4px;
 }
 
@@ -142,6 +143,7 @@ body {
   color: #57a203;
 }
 .intro-content p {
+  letter-spacing: 0.05em;
   margin-top: 16px;
 }
 
@@ -153,6 +155,7 @@ body {
   margin-left: 24px;
 }
 .history ol li {
+  letter-spacing: 0.05em;
   margin-top: 12px;
 }
 .history ol li span {
@@ -165,6 +168,7 @@ body {
   margin-top: 48px;
 }
 .concept li {
+  letter-spacing: 0.05em;
   border-left: 3px solid #dee2e6;
   padding-left: 12px;
   margin-top: 12px;
@@ -184,6 +188,7 @@ body {
 }
 .story a span {
   display: inline-block;
+  letter-spacing: 0.05em;
   padding-bottom: 3px;
   border-bottom: 1px solid #57a203;
 }

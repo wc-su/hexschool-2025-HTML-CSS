@@ -5,6 +5,8 @@ $primary-color: #212529;
 $second-color: #57a203;
 $white-color: #ffffff;
 
+$letter-spacing-base: 0.05em;
+
 *,
 *::before,
 *::after {
@@ -20,12 +22,12 @@ body {
   color: $primary-color;
   line-height: 1.5;
   font-family: "Noto Sans TC", -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
-  letter-spacing: 0.05em;
 }
 
 .h1, .h2, .h3, .h4 {
   line-height: 1.2;
   font-weight: 700;
+  letter-spacing: $letter-spacing-base;
 }
 .h1 {
   font-size: 40px;
@@ -72,6 +74,7 @@ body {
     margin-bottom: 12px;
   }
   p {
+    letter-spacing: $letter-spacing-base;
     margin-top: 4px;
   }
 }
@@ -87,6 +90,7 @@ body {
       color: $second-color;
     }
     p {
+      letter-spacing: $letter-spacing-base;
       margin-top: 16px;
     }
   }
@@ -97,6 +101,7 @@ body {
     list-style-type: disc;
     margin-left: 24px;
     li {
+      letter-spacing: $letter-spacing-base;
       margin-top: 12px;
       span {
         margin-left: 8px;
@@ -109,6 +114,7 @@ body {
 .concept {
   margin-top: 48px;
   li {
+    letter-spacing: $letter-spacing-base;
     border-left: 3px solid #dee2e6;
     padding-left: 12px;
     margin-top: 12px;
@@ -126,6 +132,7 @@ body {
     }
     span {
       display: inline-block;
+      letter-spacing: $letter-spacing-base;
       padding-bottom: 3px;
       border-bottom: 1px solid $second-color;
     }
