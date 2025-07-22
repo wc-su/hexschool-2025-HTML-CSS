@@ -4,7 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "commit": "git-cz",
     "dev": "vite",
+    "dev:week1": "WEEK=week1 vite",
     "dev:week2": "WEEK=week2 vite",
     "preview": "vite preview",
     "build": "vite build",
@@ -12,8 +14,18 @@
     "build:week2": "WEEK=week2 vite build"
   },
   "devDependencies": {
+    "commitizen": "^4.3.1",
+    "cz-customizable": "^7.4.0",
     "sass": "^1.89.2",
     "vite": "^7.0.4",
     "vite-plugin-ejs": "^1.7.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "./.cz-config.cjs"
+    }
   }
 }

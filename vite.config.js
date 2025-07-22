@@ -5,10 +5,10 @@ import { ViteEjsPlugin } from 'vite-plugin-ejs'
 
 export default defineConfig(({ mode }) =>{
   const week = process.env.WEEK
-  const rootDir = `${week}/src`
-  if (!week) {
-    throw new Error(`❌ 請使用 WEEK=weekX vite build 來指定週目錄`);
-  }
+  // if (!week) {
+  //   throw new Error(`❌ 請使用 WEEK=weekX vite build 來指定週目錄`);
+  // }
+  const rootDir = week ? `${week}/src` : './';
 
   const htmlFiles = fs
     .readdirSync(resolve(__dirname, rootDir))
