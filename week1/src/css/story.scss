@@ -13,34 +13,30 @@ $white-color: #ffffff;
 
 img {
   max-width: 100%;
+  vertical-align: middle;
 }
 
 body {
+  color: $primary-color;
   line-height: 1.5;
   font-family: "Noto Sans TC", -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.05em;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
+.h1, .h2, .h3, .h4 {
   line-height: 1.2;
   font-weight: 700;
 }
-h1 {
+.h1 {
   font-size: 40px;
 }
-h2 {
-  font-size: 32px;
-}
-h3 {
+.h2 {
   font-size: 28px;
 }
-h4 {
+.h3 {
   font-size: 24px;
 }
-h5 {
+.h4 {
   font-size: 20px;
 }
 
@@ -50,7 +46,7 @@ h5 {
   text-align: center;
   color: $white-color;
   padding: 151px 0;
-  h3 {
+  .h2 {
     margin-top: 16px;
   }
 }
@@ -63,7 +59,6 @@ h5 {
   padding-bottom: 48px;
   border-bottom: 1px solid #dee2e6;
   .card-title {
-    color: $primary-color;
     margin-bottom: 24px;
   }
 }
@@ -72,12 +67,11 @@ h5 {
   text-align: center;
   padding: 32px;
   margin-top: 64px;
-  h5 {
+  .h4 {
     color: $second-color;
     margin-bottom: 12px;
   }
   p {
-    color: $primary-color;
     margin-top: 4px;
   }
 }
@@ -86,28 +80,23 @@ h5 {
   &-img {
     max-width: 1076px;
     margin: 0 auto;
-    img {
-      vertical-align: middle;
-    }
   }
   &-content {
     margin-top: 24px;
-    h5 {
+    .h4 {
       color: $second-color;
     }
     p {
-      color: $primary-color;
       margin-top: 16px;
     }
   }
 }
 .history {
   margin-top: 48px;
-  ul {
+  ol {
     list-style-type: disc;
     margin-left: 24px;
     li {
-      color: $primary-color;
       margin-top: 12px;
       span {
         margin-left: 8px;
