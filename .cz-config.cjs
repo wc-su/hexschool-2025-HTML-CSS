@@ -9,23 +9,28 @@ module.exports = {
     { value: 'test',     name: 'test:     增加測試' },
     { value: 'chore',    name: 'chore:    架構建設、工具設定等' }
   ],
-  scopes: [
-    { name: 'html' },
-    { name: 'css' },
-    { name: 'js' },
-    { name: 'config' }
+  useEmoji: false,
+  scopes: ['html', 'css', 'js', 'config'],
+  enableMultipleScopes: true,
+  scopeEnumSeparator: ",",
+  issuePrefixs: [
+    { value: 'close', name: 'close: issue 關閉' },
+    { value: 'fix', name: 'fix: issue 修正' },
+    { value: 'resolve', name: 'resolve: issue 解決' },
+    { value: 'ref', name: 'ref: issue 參考' }
   ],
   messages: {
-    type: '選擇本次 commit 類型:',
-    scope: '選擇影響範圍（可選）:',
-    customScope: '自訂範圍:',
-    subject: '簡短描述（必填）:',
-    body: '詳細說明（選填）:',
-    breaking: '有重大變更嗎？（選填）:',
-    footer: '關閉的 issue（選填）例如：#31, #34:',
-    confirmCommit: '確定送出上述 commit 嗎？'
+    type: '請選擇本次提交的變更類型：',
+    scope: '說明此變更所影響的範圍（可複選）：',
+    customScope: '請輸入此變更所影響的範圍:',
+    subject: '簡要描述這次的變更內容（必填）：',
+    body: '提供較詳細的變更說明（選填），使用 "|" 換行:',
+    breaking: '有列出任何重大變更（選填），使用 "|" 換行:',
+    footerPrefixesSelect: "請選擇此次變更對應的 issue 類型（選填）",
+    customFooterPrefix: "請輸入 issue 類型",
+    footer: '列出與此次變更相關的 issue（選填）例如：#31, #34:',
+    confirmCommit: '確定要提交以上內容嗎？'
   },
-  allowCustomScopes: true,
-  allowBreakingChanges: ['feat', 'fix'],
-  subjectLimit: 72
+  breaklineNumber: 72,
+  skipQuestions: ['breaking', 'footerPrefix', 'footer']
 };

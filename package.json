@@ -15,17 +15,15 @@
   },
   "devDependencies": {
     "commitizen": "^4.3.1",
-    "cz-customizable": "^7.4.0",
+    "cz-git": "^1.12.0",
     "sass": "^1.89.2",
     "vite": "^7.0.4",
     "vite-plugin-ejs": "^1.7.0"
   },
   "config": {
     "commitizen": {
-      "path": "cz-customizable"
-    },
-    "cz-customizable": {
-      "config": "./.cz-config.cjs"
+      "path": "cz-git",
+      "czConfig": "./.cz-config.cjs"
     }
   }
 }
