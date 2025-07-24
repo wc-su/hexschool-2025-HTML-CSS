@@ -9,3 +9,6 @@ node_modules
 
 # 改用 Vite，留之前 webpack 的設定檔
 webpack_backup
+
+# 使用 gh-pages，打包內容不上傳
+dist

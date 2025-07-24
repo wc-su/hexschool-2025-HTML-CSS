@@ -1,0 +1,43 @@
+@use "sass:map";
+@use '../abstracts/variables' as *;
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  .page-item {
+    flex-basis: 40px;
+    margin-right: 8px;
+    &:first-child {
+      margin-right: 12px;
+    }
+    &:last-child {
+      margin-right: 0;
+      margin-left: 4px;
+    }
+    .page-link {
+      display: inline-block;
+      text-align: center;
+      color: map.get($grays, "900");
+      width: 100%;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      &.prev-link,
+      &.next-link {
+        font-size: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+    }
+    &:hover .page-link {
+      background: map.get($grays, "100");
+    }
+    &.selected .page-link {
+      background: map.get($primarys, "300");
+    }
+    &.disabled .page-link {
+      color: $gray-500;
+      background: transparent;
+      cursor: default;
+    }
+  }
+}

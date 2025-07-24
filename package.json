@@ -6,16 +6,14 @@
   "scripts": {
     "commit": "git-cz",
     "dev": "vite",
-    "dev:week1": "WEEK=week1 vite",
-    "dev:week2": "WEEK=week2 vite",
     "preview": "vite preview",
     "build": "vite build",
-    "build:week1": "WEEK=week1 vite build",
-    "build:week2": "WEEK=week2 vite build"
+    "deploy": "vite build && gh-pages -d dist"
   },
   "devDependencies": {
     "commitizen": "^4.3.1",
     "cz-git": "^1.12.0",
+    "gh-pages": "^6.3.0",
     "sass": "^1.89.2",
     "vite": "^7.0.4",
     "vite-plugin-ejs": "^1.7.0"

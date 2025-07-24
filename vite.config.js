@@ -1,30 +1,35 @@
 import { defineConfig } from 'vite'
-import { resolve } from 'path'
+import path from 'path'
 import fs from 'fs'
 import { ViteEjsPlugin } from 'vite-plugin-ejs'
 
 export default defineConfig(({ mode }) =>{
-  const week = process.env.WEEK
-  // if (!week) {
-  //   throw new Error(`❌ 請使用 WEEK=weekX vite build 來指定週目錄`);
-  // }
-  const rootDir = week ? `${week}/src` : './';
 
-  const htmlFiles = fs
-    .readdirSync(resolve(__dirname, rootDir))
-    .filter(file => file.endsWith('.html'))
+  function findHtmlEntries() {
+    const entries = {
+      index: path.resolve(__dirname, 'src/index.html')  // 首頁
+    }
 
-  // 自動產生 input 對應 { 'page-name': '/path/to/file.html' }
-  const input = Object.fromEntries(
-    htmlFiles.map(file => [
-      file.replace(/\.html$/, ''), // name: a.html -> a
-      resolve(__dirname, rootDir, file) // path
-    ])
-  )
+    const weekDirs = fs.readdirSync(path.resolve(__dirname, 'src')).filter(dir =>
+      /^week\d+$/.test(dir)
+    )
+
+    for (const dir of weekDirs) {
+      const htmlFiles = fs.readdirSync(path.resolve(__dirname, 'src', dir))
+        .filter(f => f.endsWith('.html'))
+
+      for (const file of htmlFiles) {
+        const name = `${dir}/${file.replace('.html', '')}` // e.g., week1/week1
+        entries[name] = path.resolve(__dirname, 'src', dir, file)
+      }
+    }
+
+    return entries
+  }  
 
   return {
-    root: rootDir,
-    base: './',
+    root: 'src',
+    base: '/hexschool-2025-HTML-CSS/',
     plugins: [ ViteEjsPlugin() ],
     build: {
       modulePreload: {
@@ -34,18 +39,30 @@ export default defineConfig(({ mode }) =>{
       outDir: '../dist',      // 可改輸出目錄
       emptyOutDir: true,
       rollupOptions: {
-        input,
+        input: findHtmlEntries(),
         output: {
-          // JS chunk 檔案輸出到 js 資料夾
-          chunkFileNames: 'js/[name].js',
-          entryFileNames: 'js/[name].js',
-          // CSS 輸出到 css 資料夾（由 Vite 處理）
-          assetFileNames: chunkInfo => {
-            if (chunkInfo.name && chunkInfo.name.endsWith('.css')) {
-              return 'css/[name].[ext]';
-            }
-            return 'assets/[name].[ext]'; // 其他資源（如圖片等）
+          entryFileNames: chunk => {
+            const match = chunk.name.match(/^(week\d+)\//)
+            const weekDir = match ? match[1] : ''
+            return weekDir ? `${weekDir}/js/[name].js` : `js/[name].js`
           },
+          chunkFileNames: `chunks/[name].js`, // 共用 chunk 統一存放
+          assetFileNames: assetInfo => {
+            const original = assetInfo.originalFileNames?.[0] || ''
+            const name = assetInfo.names?.[0] || ''
+            const match = original.match(/^(week\d+)\//)
+            const weekDir = match ? match[1] : ''
+            
+            if (name.endsWith('.css')) {
+              return weekDir ? `${weekDir}/css/[name].[ext]` : `css/[name].[ext]`
+            }
+
+            if (/\.(png|jpe?g|svg|gif|webp)$/.test(name)) {
+              return weekDir ? `${weekDir}/images/[name].[ext]` : `images/[name].[ext]`
+            }
+
+            return weekDir ? `${weekDir}/assets/[name].[ext]` : `assets/[name].[ext]`
+          }
         },
       },
     },
