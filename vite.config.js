@@ -25,7 +25,7 @@ export default defineConfig(({ mode }) =>{
     }
 
     return entries
-  }  
+  }
 
   return {
     root: 'src',
