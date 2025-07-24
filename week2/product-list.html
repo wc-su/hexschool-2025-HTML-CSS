@@ -10,10 +10,23 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/product-list.scss">
+  <link rel="stylesheet" crossorigin href="/hexschool-2025-HTML-CSS/week2/css/product-list.css">
 </head>
 <body>
-  <%- include('./week2/partials/header.ejs') %>
+  <header class="header py-16">
+  <div class="container d-flex justify-content-between align-items-center">
+    <div class="d-flex">
+      <img class="mr-48" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week1/logo.svg" alt="URBNSTEP logo">
+      <nav aria-label="主選單">
+        <ul class="d-flex">
+          <li class="mr-40"><a class="link text-link fw-medium" href="./product-list.html">商品列表</a></li>
+          <li><a class="link text-link fw-medium" href="../week1/story.html">品牌故事</a></li>
+        </ul>
+      </nav>
+    </div>
+    <a href="#" class="person p-8"><i class="bi bi-person"></i></a>
+  </div>
+</header>
   <main>
     <div class="container pt-32 pb-80">
       <nav aria-label="頁面路徑">
@@ -116,7 +129,26 @@
       </div>
     </div>
   </main>
-  <%- include('./week2/partials/banner.ejs') %>
-  <%- include('./week2/partials/footer.ejs') %>
+  <div class="d-flex justify-content-center align-items-center bg-primary-200 py-24">
+  <h4 class="mr-24">加入會員取得 9 折優惠</h4>
+  <a href="#" class="btn">馬上註冊</a>
+</div>
+  <footer class="text-align-center bg-primary-gray-100 py-64">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center">
+      <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week1/logo.svg" alt="URBNSTEP logo">
+      <nav aria-label="頁尾選單">
+        <ul class="d-flex">
+          <li class="ml-40"><a href="./product-list.html" class="text-link">商品列表</a></li>
+          <li class="ml-40"><a href="../week1/story.html" class="text-link">品牌故事</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="pt-32 mt-24 border-top-primary border-color-gray-300">
+      <p class="f-14 text-secondary">Copyright ©2025 URBNSTYLE</p>
+      <p class="f-14 text-secondary mt-4">All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
