@@ -31,7 +31,7 @@ if [ -z "$REMOTE_EXISTS" ]; then
   # 建立 worktree 不綁定分支，並切換到 orphan gh-pages 分支（無歷史）
   git worktree add --detach ${WORKTREE_DIR}
   cd ${WORKTREE_DIR}
-  
+
   # 設定 Git 身分，避免 Actions commit 失敗
   git config user.name "github-actions[bot]"
   git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -57,6 +57,11 @@ rm -rf *
 # 5. 複製 dist 資料夾內容到 worktree
 echo "📂 複製 ${DIST_DIR} 內容到 ${WORKTREE_DIR}"
 cp -r ../${DIST_DIR}/* ./
+
+# 若在 GitHub Actions 中執行，設定遠端 URL 為 token 模式
+if [ -n "${GITHUB_ACTIONS}" ]; then
+  git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+fi
 
 # 6. 新增變更並檢查是否有差異，有則提交並推送
 git add -A

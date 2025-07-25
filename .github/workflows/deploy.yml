@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main  # push main 就觸發
 
 jobs:
   deploy:
@@ -23,3 +23,6 @@ jobs:
 
       - name: Run deploy script
         run: bash ./deploy.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
