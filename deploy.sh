@@ -31,15 +31,24 @@ if [ -z "$REMOTE_EXISTS" ]; then
   # 建立 worktree 不綁定分支，並切換到 orphan gh-pages 分支（無歷史）
   git worktree add --detach ${WORKTREE_DIR}
   cd ${WORKTREE_DIR}
+  
+  # 設定 Git 身分，避免 Actions commit 失敗
+  git config user.name "github-actions[bot]"
+  git config user.email "github-actions[bot]@users.noreply.github.com"
+
   git checkout --orphan ${DEPLOY_BRANCH}
 else
   echo "📥 遠端 ${DEPLOY_BRANCH} 存在，建立對應 worktree"
 
   # 確保本地有 gh-pages 分支可以 worktree
   git fetch origin ${DEPLOY_BRANCH}:${DEPLOY_BRANCH} || true
-  
+
   git worktree add -B ${DEPLOY_BRANCH} ${WORKTREE_DIR} origin/${DEPLOY_BRANCH}
   cd ${WORKTREE_DIR}
+
+  # 設定 Git 身分，避免 Actions commit 失敗
+  git config user.name "github-actions[bot]"
+  git config user.email "github-actions[bot]@users.noreply.github.com"
 fi
 
 # 4. 清空 worktree 目錄內容（保留 .git）
