@@ -34,6 +34,10 @@ if [ -z "$REMOTE_EXISTS" ]; then
   git checkout --orphan ${DEPLOY_BRANCH}
 else
   echo "📥 遠端 ${DEPLOY_BRANCH} 存在，建立對應 worktree"
+
+  # 確保本地有 gh-pages 分支可以 worktree
+  git fetch origin ${DEPLOY_BRANCH}:${DEPLOY_BRANCH} || true
+  
   git worktree add -B ${DEPLOY_BRANCH} ${WORKTREE_DIR} origin/${DEPLOY_BRANCH}
   cd ${WORKTREE_DIR}
 fi
