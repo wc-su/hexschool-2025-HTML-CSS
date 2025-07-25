@@ -89,3 +89,16 @@
 .border-color-gray-300 {
   border-color: map.get($grays, "300");
 }
+
+.bg-logo {
+  background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week1/logo.svg");
+	width: 129px;
+	height: 46px;
+  display:block;
+}
+
+.hide-text {
+  text-indent: 101%;
+	overflow: hidden;
+	white-space: nowrap;
+}
