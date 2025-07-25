@@ -6,6 +6,12 @@ DEPLOY_BRANCH="gh-pages"         # 部署目標分支
 CURRENT_BRANCH=$(git symbolic-ref --short HEAD)  # 目前所在分支名稱
 WORKTREE_DIR="deploy-gh-pages"   # 暫存 git worktree 目錄
 
+if [ -z "${GITHUB_ACTIONS}" ]; then
+  echo "🔧 目前是本地手動部署"
+else
+  echo "🤖 目前是在 GitHub Actions 中部署"
+fi
+
 echo "🚀 部署流程開始..."
 echo "目前所在分支：${CURRENT_BRANCH}"
 
