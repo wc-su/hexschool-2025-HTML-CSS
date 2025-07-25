@@ -7,5 +7,5 @@ node_modules
 # 忽略 Mac 系統自動產生的 DS_Store
 .DS_Store
 
-# 使用 gh-pages，打包內容不上傳
+# 打包內容不上傳（使用 deploy.sh 取代套件 gh-pages）
 dist
