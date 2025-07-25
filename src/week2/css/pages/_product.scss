@@ -10,6 +10,7 @@
   .color-option {
     width: 64px;
     color: map.get($grays, "600");
+    letter-spacing: $letter-spacing-base;
     cursor: pointer;
     &:hover img {
       opacity: 0.8;
@@ -45,6 +46,7 @@
     border: 1px solid map.get($grays, "300");
     border-radius: $border-radius-sm;
     font-weight: $font-weight-medium;
+    letter-spacing: $letter-spacing-base;
     cursor: pointer;
     &:hover {
       border-color: map.get($grays, "600");

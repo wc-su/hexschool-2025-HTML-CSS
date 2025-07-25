@@ -5,6 +5,7 @@
   display: flex;
   &-item {
     font-weight: $font-weight-medium;
+    letter-spacing: $letter-spacing-base;
     a {
       color: map.get($grays, "600");
       &:hover {

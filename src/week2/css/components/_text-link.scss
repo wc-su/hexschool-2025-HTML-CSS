@@ -4,6 +4,8 @@
 .text-link {
   display: inline-block;
   color: map.get($grays, "900");
+  font-weight: $font-weight-medium;
+  letter-spacing: $letter-spacing-base;
   padding-top: 12px;
   padding-bottom: 12px;
   &:hover {
