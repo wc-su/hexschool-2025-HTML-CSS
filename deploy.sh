@@ -5,6 +5,7 @@ DIST_DIR="dist"                  # build 出來的資料夾
 DEPLOY_BRANCH="gh-pages"         # 部署目標分支
 CURRENT_BRANCH=$(git symbolic-ref --short HEAD)  # 目前所在分支名稱
 WORKTREE_DIR="deploy-gh-pages"   # 暫存 git worktree 目錄
+TIME_STR=$(TZ="Asia/Taipei" date '+%Y-%m-%d %H:%M:%S (Asia/Taipei UTC%z)')  # 台灣時區
 
 if [ -z "${GITHUB_ACTIONS}" ]; then
   echo "🔧 目前是本地手動部署"
@@ -74,7 +75,7 @@ git add -A
 if git diff --cached --quiet; then
   echo "✅ 沒有變更內容，跳過推送。"
 else
-  git commit -m "Deploy: 更新網站內容 $(date '+%Y-%m-%d %H:%M:%S')"
+  git commit -m "Deploy: 更新網站內容 ${TIME_STR}"
   git push origin ${DEPLOY_BRANCH}
   echo "🚀 已成功推送至遠端 ${DEPLOY_BRANCH}"
 fi
