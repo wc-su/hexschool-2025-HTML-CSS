@@ -6,15 +6,15 @@
   $bg-color,
   $hover-bg: $bg-color,
   $focus-shadow-color: $bg-color,
-  $is-outline: false
+  $padding: $padding,
+  $is-outline: false,
 ) {
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: $font-weight-medium;
-  letter-spacing: $letter-spacing-base;
   border-radius: $border-radius-sm;
-  padding: 12px 24px;
+  padding: $padding;
   color: $text-color;
   background: if($is-outline, $white, $bg-color);
   border: 1px solid if($is-outline, $bg-color, transparent);
@@ -31,12 +31,29 @@
   }
 }
 
+@mixin icon-button-style($font-size, $color, $hover-color, $focus-bg-color, $padding) {
+  display: inline-block;
+  color: $color;
+  font-size: $font-size;
+  padding: $padding;
+
+  &:hover {
+    color: $hover-color;
+  }
+
+  &:focus {
+    color: $color;
+    background: $focus-bg-color;
+  }
+}
+
 .btn {
   @include button-variant(
     $text-color: $white,
     $bg-color: map.get($grays, "900"),
     $hover-bg: map.get($grays, "700"),
-    $focus-shadow-color: map.get($grays, "900")
+    $focus-shadow-color: map.get($grays, "900"),
+    $padding: 12px 24px
   );
 }
 
@@ -46,6 +63,17 @@
     $bg-color: map.get($grays, "900"),
     $hover-bg: map.get($grays, "900"),
     $focus-shadow-color: map.get($grays, "900"),
+    $padding: 12px 24px,
     $is-outline: true
+  );
+}
+
+.icon-btn {
+  @include icon-button-style(
+    $font-size: 24px,
+    $color: map.get($grays, "900"),
+    $hover-color: map.get($primarys, "400"),
+    $focus-bg-color: map.get($primarys, "100"),
+    $padding: 6px 12px
   );
 }
