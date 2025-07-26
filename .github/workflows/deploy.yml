@@ -4,12 +4,14 @@ permissions:
 name: Deploy to GitHub Pages
 
 on:
-  push:
+  pull_request:
+    types: [closed]
     branches:
-      - main  # push main 就觸發
+      - main
 
 jobs:
   deploy:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     steps:
