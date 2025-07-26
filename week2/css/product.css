@@ -62,6 +62,7 @@ body {
   color: #212529;
   line-height: 1.5;
   font-family: "Noto Sans TC", -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.05em;
 }
 
 img {
@@ -172,6 +173,10 @@ input {
 
 .border-top-primary {
   border-top: 1px solid #212529;
+}
+
+.border-bottom-primary {
+  border-bottom: 1px solid #212529;
 }
 
 .border-color-gray-300 {
@@ -288,26 +293,10 @@ input {
   padding-right: 4px;
 }
 
-.header a.person {
-  display: block;
-  color: #212529;
-  font-size: 24px;
-  line-height: 1;
-  cursor: pointer;
-}
-.header a.person:hover {
-  color: #57a203;
-}
-.header a.person:focus {
-  color: #212529;
-  background: #f5fee7;
-}
-
 .text-link {
   display: inline-block;
   color: #212529;
   font-weight: 500;
-  letter-spacing: 0.05em;
   padding-top: 12px;
   padding-bottom: 12px;
 }
@@ -324,10 +313,10 @@ input {
 }
 .breadcrumb-item {
   font-weight: 500;
-  letter-spacing: 0.05em;
+  color: #6c757d;
 }
 .breadcrumb-item a {
-  color: #6c757d;
+  color: inherit;
 }
 .breadcrumb-item a:hover {
   color: #212529;
@@ -336,6 +325,7 @@ input {
   content: "/";
   color: #dee2e6;
   font-weight: 700;
+  letter-spacing: 0;
   margin-right: 12px;
   margin-left: 12px;
 }
@@ -356,7 +346,6 @@ input {
 .card-price {
   color: #212529;
   font-weight: 500;
-  letter-spacing: 0.05em;
   margin-top: 4px;
 }
 
@@ -365,7 +354,6 @@ input {
   justify-content: center;
   align-items: center;
   font-weight: 500;
-  letter-spacing: 0.05em;
   border-radius: 4px;
   padding: 12px 24px;
   color: #fff;
@@ -387,7 +375,6 @@ input {
   justify-content: center;
   align-items: center;
   font-weight: 500;
-  letter-spacing: 0.05em;
   border-radius: 4px;
   padding: 12px 24px;
   color: #212529;
@@ -402,6 +389,20 @@ input {
   color: #fff;
   background: #212529;
   box-shadow: 0 0 0 3px rgba(33, 37, 41, 0.1);
+}
+
+.icon-btn {
+  display: inline-block;
+  color: #212529;
+  font-size: 24px;
+  padding: 6px 12px;
+}
+.icon-btn:hover {
+  color: #57a203;
+}
+.icon-btn:focus {
+  color: #212529;
+  background: #f5fee7;
 }
 
 .p-8 {
@@ -528,7 +529,6 @@ input {
 .color-selector .color-option {
   width: 64px;
   color: #6c757d;
-  letter-spacing: 0.05em;
   cursor: pointer;
 }
 .color-selector .color-option:hover img {
@@ -564,7 +564,6 @@ input {
   border: 1px solid #dee2e6;
   border-radius: 4px;
   font-weight: 500;
-  letter-spacing: 0.05em;
   cursor: pointer;
 }
 .size-selector .size-option:hover {
