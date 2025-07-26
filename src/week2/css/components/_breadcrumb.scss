@@ -5,9 +5,9 @@
   display: flex;
   &-item {
     font-weight: $font-weight-medium;
-    letter-spacing: $letter-spacing-base;
+    color: map.get($grays, "600");
     a {
-      color: map.get($grays, "600");
+      color: inherit;
       &:hover {
         color: map.get($grays, "900");
       }
@@ -16,6 +16,7 @@
       content: "/";
       color: map.get($grays, "300");
       font-weight: $font-weight-bold;
+      letter-spacing: $letter-spacing-0;
       margin-right: 12px;
       margin-left: 12px;
     }

@@ -86,6 +86,9 @@
 .border-top-primary {
   border-top: 1px solid map.get($grays, "900");
 }
+.border-bottom-primary {
+  border-bottom: 1px solid map.get($grays, "900");
+}
 .border-color-gray-300 {
   border-color: map.get($grays, "300");
 }
