@@ -22,5 +22,8 @@
       "path": "cz-git",
       "czConfig": "./.cz-config.cjs"
     }
+  },
+  "dependencies": {
+    "bootstrap-icons": "^1.13.1"
   }
 }
