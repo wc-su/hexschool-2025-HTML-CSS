@@ -1,0 +1,15 @@
+@use 'sass:map';
+@use '../abstracts/variables' as var;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  color: map.get(var.$grays, "900");
+  line-height: var.$line-height-base;
+  font-family: var.$font-family-base;
+  letter-spacing: var.$letter-spacing-base;
+}

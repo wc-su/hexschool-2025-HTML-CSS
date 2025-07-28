@@ -1,0 +1,144 @@
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$grays: (
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900
+);
+
+$danger-100: #FCF1F1;
+$danger-200: #EBA7A7;
+$danger-300: #D74F4F;
+$dangers: (
+  "100": $danger-100,
+  "200": $danger-200,
+  "300": $danger-300
+);
+
+$success-100: #EFF8F4;
+$success-200: #9AD1BA;
+$success-300: #36A375;
+$successs: (
+  "100": $success-100,
+  "200": $success-200,
+  "300": $success-300
+);
+
+$warning-100: #FEF6EC;
+$warning-200: #F9C588;
+$warning-300: #F38B12;
+$warnings: (
+  "100": $warning-100,
+  "200": $warning-200,
+  "300": $warning-300
+);
+
+$info-100: #EEF5FC;
+$info-200: #97C3ED;
+$info-300: #3087DB;
+$infos: (
+  "100": $info-100,
+  "200": $info-200,
+  "300": $info-300
+);
+
+$primary: #477a11;
+$primary-100: #f5fee7;
+$primary-200: #e8fec5;
+$primary-300: #c0fa73;
+$primary-400: #57a203;
+$primary-500: #477A11;
+$primarys: (
+  "100": $primary-100,
+  "200": $primary-200,
+  "300": $primary-300,
+  "400": $primary-400,
+  "500": $primary-500
+);
+
+$white: #fff;
+$black: #000;
+
+
+$font-family-base: "Noto Sans TC", -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+
+$border-radius-sm: 4px;
+$border-radius-md: 12px;
+$border-radius-rounded: 50%;
+
+
+$line-height-base: 1.5;
+$line-height-sm: 1.2;
+$line-height-xs: 1;
+
+$letter-spacing-0: 0;
+$letter-spacing-base: 0.05em;
+
+// $spacer: 1rem !default;
+// $spacers: (
+//   1: $spacer * 4,
+//   2: $spacer * 3,
+//   3: $spacer * 2.5,
+//   4: $spacer * 2,
+//   5: $spacer * 1.75,
+//   6: $spacer * 1.5,
+//   7: $spacer * 1.25,
+//   8: $spacer,
+//   9: $spacer * 0.875,
+//   10: $spacer * 0.75
+// );
+
+$font-size-base: 1rem;
+$font-size-lg: $font-size-base * 1.25;
+$font-size-md: $font-size-base;
+$font-size-sm: $font-size-base * 0.875;
+$font-size-zs: $font-size-base * 0.75;
+
+$font-sizes: (
+  1: $font-size-base * 2.5,
+  2: $font-size-base * 2,
+  3: $font-size-base * 1.75,
+  4: $font-size-base * 1.5,
+  5: $font-size-base * 1.25,
+  6: $font-size-base
+);
+
+$display-font-sizes: (
+  1: $font-size-base * 4,
+  2: $font-size-base * 3
+) !default;
+
+
+// $grid-breakpoints: (
+//   xs: 0,
+//   sm: 576px,
+//   md: 768px,
+//   lg: 992px,
+//   xl: 1200px,
+//   xxl: 1400px
+// ) !default;
+
+$gutters: (
+  4: 4px,
+  8: 8px,
+);
+
+$cols: col, col-1, col-2, col-3, col-4, col-5, col-6, col-7, col-8, col-9, col-10, col-11;

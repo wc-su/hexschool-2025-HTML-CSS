@@ -1,0 +1,74 @@
+@use "sass:map";
+@use '../abstracts/variables' as var;
+
+@mixin text-link(
+  $color: map.get(var.$grays, "900"),
+  $hover-color: map.get(var.$grays, "600"),
+  $focus-color: map.get(var.$grays, "900"),
+  $focus-shadow-color: map.get(var.$grays, "900"),
+  $padding-y: 12px,
+  $is-primary: false,
+  $border-color: map.get(var.$primarys, "400")
+) {
+  display: inline-block;
+  font-weight: var.$font-weight-medium;
+  color: $color;
+  padding-top: $padding-y;
+  padding-bottom: $padding-y;
+
+  .text-icon {
+    font-size: 20px;
+    margin-right: 8px;
+  }
+
+  @if $is-primary {
+    border: 1px solid transparent;
+    .text {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        bottom: -4px;
+        left: 0;
+        border-bottom: 1px solid $color;
+      }
+    }
+  }
+
+  &:hover {
+    color: $hover-color;
+    @if $is-primary {
+      .text::after {
+        border-bottom-color: $hover-color;
+      }
+    }
+  }
+
+  &:focus {
+    color: $focus-color;
+    @if not $is-primary {
+      box-shadow: inset 0 -2px 0 $focus-shadow-color;
+    }
+    @if $is-primary {
+      .text::after {
+        border-bottom-width: 2px;
+      }
+    }
+  }
+}
+
+.text-link {
+  @include text-link();
+}
+
+.text-link-primary {
+  @include text-link(
+    $color: map.get(var.$primarys, "400"),
+    $hover-color: map.get(var.$primarys, "500"),
+    $focus-color: map.get(var.$primarys, "500"),
+    $padding-y: 8px,
+    $is-primary: true,
+    $border-color: map.get(var.$primarys, "500")
+  );
+}
