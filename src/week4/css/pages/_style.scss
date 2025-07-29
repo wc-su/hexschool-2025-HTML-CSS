@@ -1,14 +1,46 @@
+@use '../abstracts/mixin' as mixin;
+
 .banner {
-  background: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/banner.png") no-repeat center / cover;
+  background: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/banner.png")
+    no-repeat center / cover;
   padding-left: 10%;
   padding-top: 288px;
   padding-bottom: 288px;
+  @include mixin.max-width-mobile {
+    background: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/banner-sm.png")
+      no-repeat bottom / cover;
+    padding-left: 6%;
+    padding-top: 155px;
+    padding-bottom: 155px;
+  }
 }
 
 .sale {
-  background: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/banner-co-branded.png") no-repeat center / cover;
+  background: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/banner-co-branded.png")
+    no-repeat center / cover;
   padding-top: 100px;
   padding-bottom: 100px;
+  @include mixin.max-width-mobile {
+    background: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/banner-co-branded-sm.png")
+      no-repeat center / cover;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    &-target {
+      position: relative;
+      &::before {
+        content: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/star.svg");
+        position: absolute;
+        top: -38px;
+        left: -74px;
+      }
+      &::after {
+        content: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/sparkle.svg");
+        position: absolute;
+        bottom: 18px;
+        right: -86px;
+      }
+    }
+  }
 }
 
 .outfit-inspiration {
@@ -17,6 +49,12 @@
     transition: transform 0.3s ease;
     &:hover {
       transform: scale(1.2);
+    }
+    @include mixin.max-width-mobile {
+      cursor: default;
+      &:hover {
+        transform: none;
+      }
     }
   }
 }

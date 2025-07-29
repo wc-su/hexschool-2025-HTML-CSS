@@ -1,7 +1,10 @@
+@use 'sass:map';
+@use '../abstracts/variables' as var;
+
 .container {
-  max-width: 1320px; // 1296+24
+  max-width: map.get(var.$container-max-widths, "xl");
   margin-left: auto;
   margin-right: auto;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-left: var.$grid-gutter-width * 0.5;
+  padding-right: var.$grid-gutter-width * 0.5;
 }

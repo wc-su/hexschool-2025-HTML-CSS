@@ -1,7 +1,35 @@
+@use '../abstracts/mixin' as mixin;
+
 .d-block {
   display: block;
 }
 
+.d-inline-block {
+  display: inline-block;
+}
+
 .d-flex {
   display: flex;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-md-none {
+  @include mixin.max-width-mobile {
+    display: none;
+  }
+}
+
+.d-md-block {
+  @include mixin.max-width-mobile {
+    display: block;
+  }
+}
+
+.d-md-flex {
+  @include mixin.max-width-mobile {
+    display: flex;
+  }
 }

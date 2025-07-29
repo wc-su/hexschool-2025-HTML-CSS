@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 $gray-100: #f8f9fa;
 $gray-200: #e9ecef;
 $gray-300: #dee2e6;
@@ -127,18 +129,21 @@ $display-font-sizes: (
 ) !default;
 
 
-// $grid-breakpoints: (
-//   xs: 0,
-//   sm: 576px,
-//   md: 768px,
-//   lg: 992px,
-//   xl: 1200px,
-//   xxl: 1400px
-// ) !default;
+$grid-gutter-width: 1.5rem;
+
+$grid-breakpoints: (
+  md: 768px,
+  xl: 1296px
+) !default;
+
+$container-max-widths: (
+  md: calc(map.get($grid-breakpoints, "md") + $grid-gutter-width),
+  xl: calc(map.get($grid-breakpoints, "xl") + $grid-gutter-width)
+) !default;
+
 
 $gutters: (
   4: 4px,
+  6: 6px,
   8: 8px,
 );
-
-$cols: col, col-1, col-2, col-3, col-4, col-5, col-6, col-7, col-8, col-9, col-10, col-11;

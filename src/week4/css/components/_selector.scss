@@ -1,0 +1,94 @@
+@use 'sass:map';
+@use '../abstracts/variables' as var;
+
+@mixin selector (
+  $width,
+  $color,
+  $hover-img-opacity: 0.8,
+  $checked-color,
+  $checked-img-opacity: 1,
+  $disabled-color,
+  $disabled-img-opacity: 0.4,
+  $only-text,
+  $padding-y: 12px,
+  $border-color: map.get(var.$grays, "300"),
+  $border-radius: var.$border-radius-sm,
+  $hover-border-color: map.get(var.$grays, "600"),
+  $disabled-border-color: map.get(var.$grays, "300")
+) {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  font-weight: var.$font-weight-medium;
+  .selector-content {
+    width: $width;
+    color: $color;
+    cursor: pointer;
+    @if $only-text {
+      padding-top: $padding-y;
+      padding-bottom: $padding-y;
+      border: 1px solid $border-color;
+      border-radius: $border-radius;
+    }
+
+    &:hover {
+      .selector-img {
+        opacity: $hover-img-opacity;
+      }
+      @if $only-text {
+        border-color: $hover-border-color;
+      }
+    }
+  }
+  input.selector-radio[type="radio"]:checked + .selector-content {
+    color: $checked-color;
+    .selector-img {
+      opacity: $checked-img-opacity;
+      border: 1px solid $checked-color;
+    }
+    @if $only-text {
+      border-color: map.get(var.$grays, "900");
+    }
+  }
+  input.selector-radio[type="radio"]:disabled + .selector-content {
+    cursor: default;
+    color: $disabled-color;
+    .selector-img {
+      opacity: $disabled-img-opacity;
+    }
+    @if $only-text {
+      color: map.get(var.$grays, "500");
+      border-color: $disabled-border-color;
+    }
+  }
+}
+
+// Img + Text
+.color-selector {
+  @include selector(
+    $width: 64px,
+    $color: map.get(var.$grays, "600"),
+    $hover-img-opacity: 0.8,
+    $checked-color: map.get(var.$grays, "900"),
+    $checked-img-opacity: 1,
+    $disabled-color: map.get(var.$grays, "300"),
+    $disabled-img-opacity: 0.4,
+    $only-text: false
+  );
+}
+
+// Text Only
+.size-selector {
+  @include selector(
+    $width: 160px,
+    $color: map.get(var.$grays, "900"),
+    $checked-color: map.get(var.$grays, "900"),
+    $disabled-color: map.get(var.$grays, "500"),
+    $only-text: true,
+    $padding-y: 12px,
+    $border-color: map.get(var.$grays, "300"),
+    $border-radius: var.$border-radius-sm,
+    $hover-border-color: map.get(var.$grays, "600"),
+    $disabled-border-color: map.get(var.$grays, "300")
+  );
+}
