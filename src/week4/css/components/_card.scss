@@ -1,0 +1,43 @@
+@use "sass:map";
+@use '../abstracts/variables' as var;
+
+.card {
+  display: block;
+  position: relative;
+  &:hover &-img {
+    opacity: 0.8;
+  }
+  &:hover .overlay-category {
+    color: map.get(var.$primarys, "300")
+  }
+  &-title {
+    color: map.get(var.$grays, "900");
+    margin-top: 12px;
+  }
+  &-price {
+    color: map.get(var.$grays, "900");
+    font-weight: var.$font-weight-medium;
+    margin-top: 4px;
+  }
+  &-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: var.$font-size-sm;
+    color: map.get(var.$primarys, "400");
+    background: map.get(var.$primarys, "100");
+    padding: 8px 12px;
+  }
+  &-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(var.$black, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

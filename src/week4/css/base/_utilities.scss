@@ -1,0 +1,123 @@
+@use "sass:map";
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixin' as mixin;
+
+@each $level, $size in var.$font-sizes {
+  .h#{$level} {
+    @include mixin.font-size($size, var.$line-height-sm, var.$font-weight-bold);
+  }
+}
+@each $level, $size in var.$font-sizes {
+  .fs-#{$level} {
+    @include mixin.font-size($size);
+  }
+}
+@each $level, $size in var.$display-font-sizes {
+  .display-#{$level} {
+    @include mixin.font-size($size, var.$line-height-sm, var.$font-weight-bold);
+  }
+}
+.small {
+  @include mixin.font-size(var.$font-size-sm);
+}
+
+
+.fw-medium {
+  font-weight: var.$font-weight-medium;
+}
+.fw-bold {
+  font-weight: var.$font-weight-bold;
+}
+
+.letter-spacing-base {
+  letter-spacing: var.$letter-spacing-base;
+}
+.text-primay {
+  color: map.get(var.$grays, "900");
+}
+.text-secondary {
+  color: map.get(var.$grays, "600");
+}
+.text-muted {
+  color: map.get(var.$grays, "500");
+}
+.text-highlight {
+  color: map.get(var.$primarys, "400");
+}
+.text-on-dark {
+  color: var.$white;
+}
+.text-danger-300 {
+  color: map.get(var.$dangers, "300");
+}
+.text-primary-300 {
+  color: map.get(var.$primarys, "300");
+}
+// @each $key, $value in var.$grays {
+//   .text-gray-#{$key} {
+//     color: #{$value};
+//   }
+// }
+
+.text-line-through {
+  text-decoration: line-through;;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.line-height-sm {
+  line-height: var.$line-height-sm;
+}
+
+.bg-primary-100 {
+  background-color: map.get(var.$primarys, "100");
+}
+.bg-primary-200 {
+  background-color: map.get(var.$primarys, "200");
+}
+.bg-primary-gray-100 {
+  background: map.get(var.$grays, "100");
+}
+
+
+.border-primary {
+  border: 1px solid map.get(var.$grays, "900");
+}
+.border-top-primary {
+  border-top: 1px solid map.get(var.$grays, "900");
+}
+.border-bottom-primary {
+  border-bottom: 1px solid map.get(var.$grays, "900");
+}
+.border-left-primary {
+  border-left: 1px solid map.get(var.$grays, "900");
+}
+.border-color-gray-300 {
+  border-color: map.get(var.$grays, "300");
+}
+.border-color-primary-400 {
+  border-color: map.get(var.$grays, "400");
+}
+.border-width-3 {
+  border-width: 3px;
+}
+
+.list-style-disc {
+  list-style-type: disc;
+}
+
+
+.bg-logo {
+  background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week1/logo.svg");
+	width: 129px;
+	height: 46px;
+  display: block;
+}
+
+.hide-text {
+  text-indent: 101%;
+	overflow: hidden;
+	white-space: nowrap;
+}

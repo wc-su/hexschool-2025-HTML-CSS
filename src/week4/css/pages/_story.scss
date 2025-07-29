@@ -1,0 +1,8 @@
+@use 'sass:map';
+@use '../abstracts/variables' as var;
+
+.title {
+  background: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week1/hero.png")
+    no-repeat center / cover;
+  padding: 151px 0;
+}

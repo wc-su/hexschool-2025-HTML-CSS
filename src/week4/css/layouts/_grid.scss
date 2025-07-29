@@ -1,0 +1,56 @@
+@use '../abstracts/variables' as var;
+
+.row {
+  margin-right: -12px;
+  margin-left: -12px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.col {
+  flex: 1;
+}
+.col-2 {
+  width: 16.6666%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.3333%;
+}
+.col-5 {
+  width: 41.6666%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.3333%;
+}
+.col-8 {
+  width: 66.6666%;
+}
+.col-10 {
+  width: 83.3333%;
+}
+
+@each $col in var.$cols {
+  .row > .#{$col} {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+@each $name, $px in var.$gutters {
+  .gx-#{$name}.row {
+    margin-left: -$px;
+    margin-right: -$px;
+  }
+
+  @each $col in var.$cols {
+    .gx-#{$name} > .#{$col} {
+      padding-left: $px;
+      padding-right: $px;
+    }
+  }
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>產品列表頁</title>
+  <link rel="stylesheet" href="./css/product-list.scss">
+</head>
+<body>
+  <%- include('./week4/partials/header.ejs') %>
+  <main>
+    <div class="container pt-32 pb-80">
+      <nav aria-label="頁面路徑">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">首頁</a></li>
+          <li class="breadcrumb-item active" aria-current="page">所有商品</li>
+        </ol>
+      </nav>
+      <h2 class="h3 py-32">所有商品</h2>
+      <div class="row">
+        <aside class="menu col-2" aria-label="商品分類">
+          <p class="fw-medium text-highlight py-8">所有商品</p>
+          <nav>
+            <ul>
+              <li><a href="#" class="text-link mt-12">慢跑鞋</a></li>
+              <li><a href="#" class="text-link mt-12">滑板鞋</a></li>
+              <li><a href="#" class="text-link mt-12">厚底鞋</a></li>
+              <li><a href="#" class="text-link mt-12">限定 / 聯名企劃</a></li>
+            </ul>
+          </nav>
+        </aside>
+        <div class="col-10" role="region" aria-label="商品列表">
+          <div class="row" role="list">
+            <article class="col-4 mb-48" role="listitem">
+              <a href="./product.html" class="card">
+                <img class="card-img" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product.png" alt="PLATFORM 404，黑色">
+                <h3 class="h6 card-title">PLATFORM 404</h3>
+                <p class="card-price">NT$2,600</p>
+              </a>
+            </article>
+            <article class="col-4 mb-48" role="listitem">
+              <a href="#" class="card">
+                <img class="card-img" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product-1.png" alt="PLATFORM 404，卡其色">
+                <h3 class="h6 card-title">PLATFORM 404</h3>
+                <p class="card-price">NT$2,600</p>
+              </a>
+            </article>
+            <article class="col-4 mb-48" role="listitem">
+              <a href="#" class="card">
+                <img class="card-img" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product-2.png" alt="VM001，灰色">
+                <h3 class="h6 card-title">VM001</h3>
+                <p class="card-price">NT$2,600</p>
+              </a>
+            </article>
+            <article class="col-4 mb-48" role="listitem">
+              <a href="#" class="card">
+                <img class="card-img" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product-3.png" alt="Melty Kiss，粉紫色">
+                <h3 class="h6 card-title">Melty Kiss</h3>
+                <p class="card-price">NT$4,000</p>
+              </a>
+            </article>
+            <article class="col-4 mb-48" role="listitem">
+              <a href="#" class="card">
+                <img class="card-img" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product-4.png" alt="BOOMBLOK，白色">
+                <h3 class="h6 card-title">BOOMBLOK</h3>
+                <p class="card-price">NT$3,200</p>
+              </a>
+            </article>
+            <article class="col-4 mb-48" role="listitem">
+              <a href="#" class="card">
+                <img class="card-img" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product-5.png" alt="BOOMBLOK，水藍色">
+                <h3 class="h6 card-title">BOOMBLOK</h3>
+                <p class="card-price">NT$3,200</p>
+              </a>
+            </article>
+            <article class="col-4 mb-48" role="listitem">
+              <a href="#" class="card">
+                <img class="card-img" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product-6.png" alt="R:UNER，米色">
+                <h3 class="h6 card-title">R:UNER</h3>
+                <p class="card-price">NT$4,000</p>
+              </a>
+            </article>
+            <article class="col-4 mb-48" role="listitem">
+              <a href="#" class="card">
+                <img class="card-img" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product-7.png" alt="Sugar Snap，米黃色">
+                <h3 class="h6 card-title">Sugar Snap</h3>
+                <p class="card-price">NT$4,000</p>
+              </a>
+            </article>
+            <article class="col-4 mb-48" role="listitem">
+              <a href="#" class="card">
+                <img class="card-img" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product-8.png" alt="Neofoam，灰色">
+                <h3 class="h6 card-title">Neofoam</h3>
+                <p class="card-price">NT$4,000</p>
+              </a>
+            </article>
+          </div>
+          <nav aria-label="商品頁碼導航">
+            <ul class="pagination">
+              <li class="page-item disabled"><a href="#" class="page-link prev-link"><i class="bi bi-chevron-left"></i></a></li>
+              <li class="page-item selected" aria-current="page"><a href="#" class="page-link">1</a></li>
+              <li class="page-item"><a href="#" class="page-link">2</a></li>
+              <li class="page-item"><a href="#" class="page-link">3</a></li>
+              <li class="page-item disabled"><a href="#" class="page-link">...</a></li>
+              <li class="page-item"><a href="#" class="page-link">10</a></li>
+              <li class="page-item"><a href="#" class="page-link next-link"><i class="bi bi-chevron-right"></i></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </main>
+  <%- include('./week4/partials/banner.ejs') %>
+  <%- include('./week4/partials/footer.ejs') %>
+</body>
+</html>

@@ -1,0 +1,104 @@
+@use "sass:map";
+@use '../abstracts/variables' as var;
+
+@mixin button-variant(
+  $text-color,
+  $bg-color,
+  $border-color: false,
+  $hover-color: $text-color,
+  $hover-bg: $bg-color,
+  $focus-color: $hover-color,
+  $focus-bg: $hover-bg,
+  $focus-shadow-color: $bg-color,
+  $focus-shadow-opacity: 0.1,
+  $border-radius: var.$border-radius-sm,
+  $padding: 12px 24px,
+  $is-outline: false,
+) {
+  // display: flex;
+  // display: inline-flex;
+  display: inline-block;
+  // justify-content: center;
+  // align-items: center;
+  font-weight: var.$font-weight-medium;
+  border-radius: $border-radius;
+  padding: $padding;
+  color: $text-color;
+  background: $bg-color;
+  border: 1px solid if($is-outline, $text-color, transparent);
+  cursor: pointer;
+
+  &:hover {
+    color: $hover-color;
+    background: $hover-bg;
+  }
+
+  &:focus {
+    color: $focus-color;
+    background: $focus-bg;
+    box-shadow: 0 0 0 3px rgba($focus-shadow-color, $focus-shadow-opacity);
+  }
+}
+
+@mixin icon-button-style($font-size, $color, $hover-color, $focus-bg-color, $padding) {
+  display: inline-block;
+  color: $color;
+  font-size: $font-size;
+  padding: $padding;
+
+  &:hover {
+    color: $hover-color;
+  }
+
+  &:focus {
+    color: $color;
+    background: $focus-bg-color;
+  }
+}
+
+.btn-fill {
+  @include button-variant(
+    $text-color: var.$white,
+    $bg-color: map.get(var.$grays, "900"),
+    $hover-color: var.$white,
+    $hover-bg: map.get(var.$grays, "700"),
+    $focus-shadow-color: map.get(var.$grays, "900"),
+    $focus-shadow-opacity: 0.1,
+    $padding: 12px 24px
+  );
+}
+
+.btn-outline {
+  @include button-variant(
+    $text-color: map.get(var.$grays, "900"),
+    $bg-color: var.$white,
+    $hover-color: var.$white,
+    $hover-bg: map.get(var.$grays, "900"),
+    $focus-shadow-color: map.get(var.$grays, "900"),
+    $focus-shadow-opacity: 0.1,
+    $padding: 12px 24px,
+    $is-outline: true
+  );
+}
+
+.btn-primary {
+  @include button-variant(
+    $text-color: map.get(var.$grays, "900"),
+    $bg-color: map.get(var.$primarys, "300"),
+    $hover-color: map.get(var.$primarys, "500"),
+    $hover-bg: map.get(var.$primarys, "300"),
+    $focus-shadow-color: map.get(var.$primarys, "300"),
+    $focus-shadow-opacity: 0.4,
+    $padding: 12px 24px
+  );
+}
+
+.icon-btn {
+  @include icon-button-style(
+    $font-size: 24px,
+    $color: map.get(var.$grays, "900"),
+    $hover-color: map.get(var.$primarys, "400"),
+    $focus-bg-color: map.get(var.$primarys, "100"),
+    $padding: 6px 12px
+  );
+}

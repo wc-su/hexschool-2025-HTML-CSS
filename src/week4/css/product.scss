@@ -1,0 +1,31 @@
+// 抽象層（變數、函式、mixin）
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixin' as *;
+
+// 第三方套件（reset 等）
+@use 'vendors/bootstrap-icons' as *;
+@use 'vendors/reset' as *;
+
+// 基底樣式
+@use 'base/font' as *;
+@use 'base/base' as *;
+@use 'base/elements' as *;
+@use 'base/utilities' as *;
+
+// layout 結構
+@use 'layouts/container' as *;
+@use 'layouts/grid' as *;
+
+// 可重複使用元件
+@use 'components/text-link' as *;
+@use 'components/breadcrumb' as *;
+@use 'components/card' as *;
+@use 'components/button' as *;
+
+// 最後引入，覆蓋其他類別
+@use 'utilities/spacing' as *;
+@use 'utilities/display' as *;
+@use 'utilities/flex' as *;
+
+// 頁面
+@use 'pages/product' as *;

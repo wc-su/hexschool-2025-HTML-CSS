@@ -1,0 +1,27 @@
+@use "sass:map";
+@use '../abstracts/variables' as *;
+
+.breadcrumb {
+  display: flex;
+  &-item {
+    font-weight: $font-weight-medium;
+    color: map.get($grays, "600");
+    a {
+      color: inherit;
+      &:hover {
+        color: map.get($grays, "900");
+      }
+    }
+    & + &::before {
+      content: "/";
+      color: map.get($grays, "300");
+      font-weight: $font-weight-bold;
+      letter-spacing: $letter-spacing-0;
+      margin-right: 12px;
+      margin-left: 12px;
+    }
+    &.active {
+      color: map.get($grays, "900");
+    }
+  }
+}
