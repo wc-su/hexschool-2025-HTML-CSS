@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>產品詳情頁</title>
+  <link rel="stylesheet" crossorigin href="/hexschool-2025-HTML-CSS/week4/css/product.css">
+</head>
+<body>
+  <header class="header py-16">
+  <div class="container d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center">
+      <h1>
+        <a href="./index.html" alt="" class="bg-logo hide-text mr-48">URBNSTEP</a>
+      </h1>
+      <nav aria-label="主選單">
+        <ul class="d-flex">
+          <li class="mr-40"><a class="text-link" href="./product-list.html">商品列表</a></li>
+          <li><a class="text-link" href="./story.html">品牌故事</a></li>
+        </ul>
+      </nav>
+    </div>
+    <a href="#" class="icon-btn"><i class="bi bi-person"></i></a>
+  </div>
+</header>
+  <main>
+    <div class="container py-64">
+      <div class="row">
+        <div class="col-7" role="region" aria-label="商品圖片">
+          <ul class="row gx-4">
+            <li class="col-6 mb-8"><img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/image.png" alt="Platform 404，黑色 左邊"></li>
+            <li class="col-6 mb-8"><img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/image-1.png" alt="Platform 404，黑色 正左邊"></li>
+            <li class="col-6 mb-8"><img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/image-2.png" alt="Platform 404，黑色 右邊"></li>
+            <li class="col-6 mb-8"><img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/image-3.png" alt="Platform 404，黑色 正面"></li>
+            <li class="col-6 mb-8"><img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/image-4.png" alt="Platform 404，黑色 正左邊(一雙)"></li>
+            <li class="col-6 mb-8"><img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/image-5.png" alt="Platform 404，黑色 右後方"></li>
+            <li class="col-6 mb-8"><img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/image-6.png" alt="Platform 404，黑色 背面"></li>
+            <li class="col-6 mb-8"><img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/image-7.png" alt="Platform 404，黑色 鞋頭特徵"></li>
+          </ul>
+        </div>
+        <div class="col-5" role="region" aria-label="商品詳細資訊">
+          <nav aria-label="頁面路徑">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="">首頁</a></li>
+              <li class="breadcrumb-item"><a href="">女鞋</a></li>
+              <li class="breadcrumb-item"><a href="">滑板鞋</a></li>
+              <li class="breadcrumb-item active" aria-current="page">所有商品</li>
+            </ol>
+          </nav>
+          <h2 class="h2 mt-12">Platform 404</h2>
+          <div class="d-flex align-items-center mt-16">
+            <h3 class="h5 text-highlight mr-8">NT$2,600</h3>
+            <p class="small text-muted text-line-through">NT$3,200</p>
+          </div>
+          <p class="mt-16">Platform 404 以柔和奶白為底，搭配深藍色皮革點綴，走在街上自帶回頭率。鞋型採用復古運動風輪廓，結合輕量厚底與柔軟泡棉鞋舌，兼顧美感與舒適。</p>
+          <p class="mt-12">鞋身選用柔軟皮革材質，打造出清新卻不失個性的氛圍，並以鞋面透氣孔設計提升穿著體驗，兼顧質感與舒適度，適合日常長時間著用。無論是街頭穿搭、日常通勤或週末出遊都能輕鬆駕馭。</p> 
+          <p class="mt-32">顏色</p>
+          <div class="color-selector mt-8">
+            <label class="mr-8">
+              <input type="radio" name="color" />
+              <div class="color-option">
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product.png" alt="">
+                <p class="mt-4">藍色</p>
+              </div>
+            </label>
+            <label>
+              <input type="radio" name="color" />
+              <div class="color-option">
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product-1.png" alt="">
+                <p class="mt-4">卡其色</p>
+              </div>
+            </label>
+          </div>
+          <p class="mt-32">尺寸</p>
+          <div class="size-selector mt-8">
+            <label class="mr-8 mb-8"><input type="radio" name="size" checked /><p class="size-option">35(22.5cm)</p></label>
+            <label class="mr-8 mb-8"><input type="radio" name="size" /><p class="size-option">36(23.0cm)</p></label>
+            <label class="mr-8 mb-8"><input type="radio" name="size" /><p class="size-option">37(23.5cm)</p></label>
+            <label class="mr-8 mb-8"><input type="radio" name="size" /><p class="size-option">38(24.0cm)</p></label>
+            <label class="mr-8 mb-8"><input type="radio" name="size" /><p class="size-option">39(24.5cm)</p></label>
+            <label class="mr-8 mb-8"><input type="radio" name="size" /><p class="size-option">40(25.0cm)</p></label>
+            <label class="mr-8 mb-8"><input type="radio" name="size" /><p class="size-option">41(26.0cm)</p></label>
+            <label class="mr-8 mb-8"><input type="radio" name="size" disabled /><p class="size-option">42(26.5cm)</p></label>
+            <label class="mr-8 mb-8"><input type="radio" name="size" disabled /><p class="size-option">43(27.0cm)</p></label>
+          </div>
+          <p class="small text-danger-300 letter-spacing-base">僅剩 3 雙</p>
+          <div class="row gx-4 mt-48">
+            <div class="col">
+              <a href="#" class="btn-outline d-block btn-like py-8">
+                <div class="d-flex justify-content-center align-items-center">
+                  <i class="bi bi-heart non-like fs-5 mr-8"></i>
+                  <i class="bi bi-heart-fill liked fs-5 mr-8"></i>
+                  <p class="non-like">加入收藏</p>
+                  <p class="liked">已收藏</p>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="#" class="btn-fill d-block py-8">
+                <div class="d-flex justify-content-center align-items-center">
+                  <i class="bi bi-handbag fs-5 mr-8"></i>
+                  <p>門市預約試穿</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="border-bottom-primary border-color-gray-300 py-12 mt-32">
+            <p class="fw-medium">商品材質</p>
+            <p class="text-secondary mt-4">
+              鞋面：合成皮革（Synthetic Leather）<br>
+              內裡：透氣網布材質，提升舒適與排汗性<br>
+              鞋底：EVA 輕量發泡橡膠，具備良好緩震與止滑效果<br>
+              鞋帶：聚酯纖維，耐拉扯不易鬆脫
+            </p>
+          </div>
+          <div class="border-bottom-primary border-color-gray-300 py-12">
+            <p class="fw-medium">購買須知</p>
+            <p class="text-secondary mt-4">
+              商品顏色因螢幕顯示可能略有差異，請以實品為準。<br>
+              建議首次穿著前試穿確認尺寸，避免影響退換貨權益。<br>
+              本商品為限量發售，庫存有限，如需更換尺寸請儘早聯繫客服協助處理。
+            </p>
+          </div>
+          <div class="border-bottom-primary border-color-gray-300 py-12">
+            <p class="fw-medium">保養方式</p>
+            <p class="text-secondary mt-4">
+              建議以乾布或微濕軟布擦拭表面汙漬，避免機洗或長時間浸水。<br>
+              收納時請放置於乾燥通風處，避免日曬及高溫導致變形或龜裂。<br>
+              若需深層清潔，建議使用中性清潔劑並搭配柔刷輕刷，勿使用漂白水或強酸強鹼清潔劑。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container py-48 mb-40">
+      <h4 class="h4">你可能也喜歡...</h4>
+      <div class="row mt-16" role="list">
+        <article class="col-3" role="listitem">
+          <a href="#" class="card">
+            <img class="card-img" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product-2.png" alt="VM001，灰色">
+            <h5 class="h6 card-title">VM001</h5>
+            <p class="card-price">NT$2,600</p>
+          </a>
+        </article>
+        <article class="col-3" role="listitem">
+          <a href="#" class="card">
+            <img class="card-img" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product-3.png" alt="Melty Kiss，粉紫色">
+            <h5 class="h6 card-title">Melty Kiss</h5>
+            <p class="card-price">NT$4,000</p>
+          </a>
+        </article>
+        <article class="col-3" role="listitem">
+          <a href="#" class="card">
+            <img class="card-img" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product-4.png" alt="BOOMBLOK，白色">
+            <h5 class="h6 card-title">BOOMBLOK</h5>
+            <p class="card-price">NT$3,200</p>
+          </a>
+        </article>
+        <article class="col-3" role="listitem">
+          <a href="#" class="card">
+            <img class="card-img" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product-5.png" alt="Sugar Snap，水藍色">
+            <h5 class="h6 card-title">Sugar Snap</h5>
+            <p class="card-price">NT$3,200</p>
+          </a>
+        </article>
+      </div>
+    </div>
+  </main>
+  <div class="d-flex justify-content-center align-items-center bg-primary-200 py-24">
+  <p class="h4 mr-24">加入會員取得 9 折優惠</p>
+  <a href="#" class="btn-fill">馬上註冊</a>
+</div>
+  <footer class="text-align-center bg-primary-gray-100 py-64">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center">
+      <a href="./index.html" alt="" class="bg-logo hide-text mr-48">URBNSTEP</a>
+      <nav aria-label="頁尾選單">
+        <ul class="d-flex">
+          <li class="ml-40"><a href="./product-list.html" class="text-link">商品列表</a></li>
+          <li class="ml-40"><a href="./story.html" class="text-link">品牌故事</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="pt-32 mt-24 border-top-primary border-color-gray-300">
+      <p class="small text-secondary">Copyright ©2025 URBNSTYLE</p>
+      <p class="small text-secondary mt-4">All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
