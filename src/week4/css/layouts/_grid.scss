@@ -21,14 +21,28 @@
     }
   }
 
+}
+
+@mixin generate-gutter-cols($cols: 12) {
   @each $name, $px in var.$gutters {
     .gx-#{$name}.row {
       margin-left: -$px;
       margin-right: -$px;
     }
-
+    .gx-#{$name} > .col {
+      padding-left: $px;
+      padding-right: $px;
+    }
+    .gx-#{$name} > .col-md {
+      padding-left: $px;
+      padding-right: $px;
+    }
     @for $i from 1 through $cols {
       .gx-#{$name} > .col-#{$i} {
+        padding-left: $px;
+        padding-right: $px;
+      }
+      .gx-#{$name} > .col-md-#{$i} {
         padding-left: $px;
         padding-right: $px;
       }
@@ -56,11 +70,23 @@
         width: percentage($i / $cols);
       }
     }
+  }
+}
 
+@mixin generate-gutter-cols-md($cols: 12) {
+  @include mixin.max-width-mobile {
     @each $name, $px in var.$gutters {
       .gx-md-#{$name}.row {
         margin-left: -$px;
         margin-right: -$px;
+      }
+      .gx-md-#{$name} > .col {
+        padding-left: $px;
+        padding-right: $px;
+      }
+      .gx-md-#{$name} > .col-md {
+        padding-left: $px;
+        padding-right: $px;
       }
       @for $i from 1 through $cols {
         .gx-md-#{$name} > .col-#{$i} {
@@ -85,3 +111,5 @@
 
 @include generate-cols();
 @include generate-cols-md();
+@include generate-gutter-cols();
+@include generate-gutter-cols-md();

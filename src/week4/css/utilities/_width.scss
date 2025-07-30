@@ -1,7 +1,10 @@
 @use '../abstracts/mixin' as mixin;
 
-.w-md-300 {
-  @include mixin.max-width-mobile {
+@include mixin.max-width-mobile {
+  .w-md-300 {
     width: 300px;
+  }
+  .w-md-100 {
+    width: 100%;
   }
 }

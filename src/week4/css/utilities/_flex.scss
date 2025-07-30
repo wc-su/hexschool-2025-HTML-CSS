@@ -10,24 +10,20 @@
   align-items: center;
 }
 
-.flex-direction-md-column {
-  @include mixin.max-width-mobile {
+@include mixin.max-width-mobile {
+  .flex-direction-md-column {
     flex-direction: column;
   }
-}
-.flex-md-nowrap {
-  @include mixin.max-width-mobile {
+  .flex-md-nowrap {
     flex-wrap: nowrap;
   }
-}
-
-.align-items-md-stretch {
-  @include mixin.max-width-mobile {
+  .align-items-md-stretch {
     align-items: stretch;
   }
-}
-.align-items-md-start {
-  @include mixin.max-width-mobile {
+  .align-items-md-start {
     align-items: start;
+  }
+  .flex-grow-0 {
+    flex-grow: 0;
   }
 }

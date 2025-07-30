@@ -14,3 +14,19 @@
     }
   }
 }
+
+.heart-wrapper {
+  color: map.get(var.$grays, "900");
+  padding: 6px 12px;
+  & .liked {
+    display: none;
+  }
+  &:hover, &.active {
+    & .liked {
+      display: block;
+    }
+    & .non-like {
+      display: none;
+    }
+  }
+}
