@@ -87,6 +87,11 @@
 .text-align-center {
   text-align: center;
 }
+.text-align-md-left {
+  @include mixin.max-width-mobile {
+    text-align: left;
+  }
+}
 
 .line-height-sm {
   line-height: var.$line-height-sm;

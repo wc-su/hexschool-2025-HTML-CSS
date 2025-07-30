@@ -31,6 +31,12 @@
   padding-top: 24px;
   padding-bottom: 24px;
 }
+.p-32 {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-right: 32px;
+  padding-left: 32px;
+}
 .py-32 {
   padding-top: 32px;
   padding-bottom: 32px;
@@ -156,12 +162,21 @@
   .pl-md-16 {
     padding-left: 16px;
   }
+  .p-md-24 {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-right: 24px;
+    padding-left: 24px;
+  }
   .py-md-24 {
     padding-top: 24px;
     padding-bottom: 24px;
   }
   .py-md-32 {
     padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .pb-md-32 {
     padding-bottom: 32px;
   }
   .py-md-40 {
