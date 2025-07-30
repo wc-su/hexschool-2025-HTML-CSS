@@ -116,96 +116,80 @@
 }
 
 
-.py-md-0 {
-  @include mixin.max-width-mobile {
+@include mixin.max-width-mobile {
+  .py-md-0 {
     padding-top: 0;
     padding-bottom: 0;
   }
-}
-.py-md-8 {
-  @include mixin.max-width-mobile {
+  .py-md-8 {
     padding-top: 8px;
     padding-bottom: 8px;
   }
-}
-.py-md-12 {
-  @include mixin.max-width-mobile {
+  .py-md-12 {
     padding-top: 12px;
     padding-bottom: 12px;
   }
-}
-.px-md-16 {
-  @include mixin.max-width-mobile {
+  .pt-md-12 {
+    padding-top: 12px;
+  }
+  .px-md-16 {
     padding-right: 16px;
     padding-left: 16px;
   }
-}
-.pl-md-16 {
-  @include mixin.max-width-mobile {
+  .py-md-16 {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .pt-md-16 {
+    padding-top: 16px;
+  }
+  .pl-md-16 {
     padding-left: 16px;
   }
-}
-.py-md-24 {
-  @include mixin.max-width-mobile {
+  .py-md-24 {
     padding-top: 24px;
     padding-bottom: 24px;
   }
-}
-.py-md-32 {
-  @include mixin.max-width-mobile {
+  .py-md-32 {
     padding-top: 32px;
     padding-bottom: 32px;
   }
-}
-.py-md-40 {
-  @include mixin.max-width-mobile {
+  .py-md-40 {
     padding-top: 40px;
     padding-bottom: 40px;
   }
-}
+  .pb-md-40 {
+    padding-bottom: 40px;
+  }
 
-.m-md-0 {
-  @include mixin.max-width-mobile {
+  .m-md-0 {
     margin: 0;
   }
-}
-.mt-md-4 {
-  @include mixin.max-width-mobile {
+  .mb-md-0 {
+    margin-bottom: 0;
+  }
+  .mt-md-4 {
     margin-top: 4px;
   }
-}
-.mt-md-8 {
-  @include mixin.max-width-mobile {
+  .mt-md-8 {
     margin-top: 8px;
   }
-}
-.mb-md-12 {
-  @include mixin.max-width-mobile {
+  .mb-md-12 {
     margin-bottom: 12px;
   }
-}
-.ml-md-12 {
-  @include mixin.max-width-mobile {
+  .ml-md-12 {
     margin-left: 12px;
   }
-}
-.mr-md-16 {
-  @include mixin.max-width-mobile {
+  .mr-md-16 {
     margin-right: 16px;
   }
-}
-.mt-md-24 {
-  @include mixin.max-width-mobile {
+  .mt-md-24 {
     margin-top: 24px;
   }
-}
-.mb-md-24 {
-  @include mixin.max-width-mobile {
+  .mb-md-24 {
     margin-bottom: 24px;
   }
-}
-.mt-md-32 {
-  @include mixin.max-width-mobile {
+  .mt-md-32 {
     margin-top: 32px;
   }
 }
