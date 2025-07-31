@@ -3,42 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>品牌故事頁</title>
+  <title>品牌故事</title>
   <link rel="stylesheet" href="./css/story.scss">
 </head>
 <body>
   <%- include('./week4/partials/header.ejs') %>
   <main>
     <div class="title text-align-center">
-      <h2 class="h1 text-on-dark">品牌故事</h2>
-      <p class="h3 text-on-dark mt-16">Brand Story</p>
+      <h2 class="h1 h3-md text-on-dark">品牌故事</h2>
+      <p class="h3 h5-md text-on-dark mt-16 mt-md-8">Brand Story</p>
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-8 m0-a">
-          <div class="text-align-center bg-primary-100 py-32 mt-64">
+        <div class="col-8 m0-a col-md-12">
+          <div class="text-align-center bg-primary-100 p-32 mt-64 text-align-md-left p-md-24 mt-md-32">
             <p class="h5 text-highlight mb-12">走出城市的節奏，穿上自己的步調。</p>
             <p class="mt-12">我們相信，每一雙鞋都該帶著個性出場。</p>
             <p class="mt-4">在 URBNSTEP，我們認為鞋履不只是穿戴飾品，更是你與世界連結的語言。</p>
             <p class="mt-4">融合城市結構與機能語彙，我們打造適合都會節奏的風格鞋款，陪你自信穿梭每一場風景。</p>
           </div>
         </div>
-        <section aria-labelledby="brand-intro">
-          <div class="col-10 m0-a mt-48">
-            <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week1/about.png" alt="URBNSTEP brand intro">
-          </div>
-          <div class="col-8 m0-a">
-            <div class="border-bottom-primary border-color-gray-300 pb-48">
-              <h3 id="brand-intro" class="h3 mt-24">品牌簡介</h3>
-              <h4 class="h4 text-highlight mt-24">URBNSTEP 是來自台灣的街頭機能鞋品牌，致力於打造「風格與功能並存」的鞋履體驗。</h4>
-              <p class="mt-16">在城市與日常的交錯中，我們看見了步伐的力量。URBNSTEP 誕生於一群設計師與文化觀察者的交會點——一個相信風格應該來自「真實場景」而非伸展台的團隊。從都市的清晨街角，到午後光影灑落的人行道，我們捕捉的是那些不被刻意編排的時刻，那些用一雙鞋踏出的態度與節奏。每一款鞋的誕生，不只是設計與工藝的結晶，更是一段來自城市靈感的延伸，我們相信：鞋，是穿在腳上的語言。</p>
-              <p class="mt-16">URBNSTEP 的名字來自 Urban + Step，代表著我們對每一個走進城市生活的人致敬。我們不追逐潮流，我們關注輪廓、材質、穿著者的心境與身型，創造能陪伴你走進自我節奏的經典之作。選用高品質麂皮、織物與天然橡膠大底，並與獨立插畫家、攝影師合作，打造具有街頭詩意的形象風格。URBNSTEP 相信，美不是炫耀，而是由內而外的呼吸——一雙鞋，剛好說出你心中的樣子。</p>
+        <section aria-labelledby="brand-intro" class="col-12 mt-48 mt-md-32">
+          <div class="row">
+            <div class="col-10 m0-a col-md-12">
+              <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week1/about.png" alt="URBNSTEP brand intro">
+            </div>
+            <div class="col-8 m0-a col-md-12">
+              <div class="border-bottom-primary border-color-gray-300 pb-48 pb-md-32">
+                <h3 id="brand-intro" class="h3 h5-md mt-24 mt-md-16">品牌簡介</h3>
+                <h4 class="h4 h6-md text-highlight mt-24">
+                  URBNSTEP 是來自台灣的街頭機能鞋品牌，
+                  <span class="d-none d-md-block mt-md-8"></span>
+                  致力於打造「風格與功能並存」的鞋履體驗。</h4>
+                <p class="mt-16 mt-md-12">在城市與日常的交錯中，我們看見了步伐的力量。URBNSTEP 誕生於一群設計師與文化觀察者的交會點——一個相信風格應該來自「真實場景」而非伸展台的團隊。從都市的清晨街角，到午後光影灑落的人行道，我們捕捉的是那些不被刻意編排的時刻，那些用一雙鞋踏出的態度與節奏。每一款鞋的誕生，不只是設計與工藝的結晶，更是一段來自城市靈感的延伸，我們相信：鞋，是穿在腳上的語言。</p>
+                <p class="mt-16 mt-md-12">URBNSTEP 的名字來自 Urban + Step，代表著我們對每一個走進城市生活的人致敬。我們不追逐潮流，我們關注輪廓、材質、穿著者的心境與身型，創造能陪伴你走進自我節奏的經典之作。選用高品質麂皮、織物與天然橡膠大底，並與獨立插畫家、攝影師合作，打造具有街頭詩意的形象風格。URBNSTEP 相信，美不是炫耀，而是由內而外的呼吸——一雙鞋，剛好說出你心中的樣子。</p>
+              </div>
             </div>
           </div>
         </section>
-        <section class="col-8 m0-a mt-48" aria-labelledby="brand-history">
-          <div class="border-bottom-primary border-color-gray-300 pb-48">
-            <h3 id="brand-history" class="h3">品牌歷程</h3>
+        <section class="col-8 m0-a mt-48 col-md-12 mt-md-32" aria-labelledby="brand-history">
+          <div class="border-bottom-primary border-color-gray-300 pb-48 pb-md-32">
+            <h3 id="brand-history" class="h3 h5-md">品牌歷程</h3>
             <ol class="list-style-disc ml-24 mt-24">
               <li class="mt-12"><time datetime="2019">2019</time><span class="border-left-primary pl-8 ml-8">URBNSTEP 在台北東區的創意工作室誕生。</span></li>
               <li class="mt-12"><time datetime="2021">2021</time><span class="border-left-primary pl-8 ml-8">首款【Urban Flow 系列】誕生，結合針織鞋面與城市靈感。</span></li>
@@ -46,9 +51,9 @@
             </ol>
           </div>
         </section>
-        <section class="col-8 m0-a mt-48" aria-labelledby="brand-concept">
-          <div class="border-bottom-primary border-color-gray-300 pb-48">
-            <h3 id="brand-concept" class="h3">品牌理念</h3>
+        <section class="col-8 m0-a mt-48 col-md-12 mt-md-32" aria-labelledby="brand-concept">
+          <div class="border-bottom-primary border-color-gray-300 pb-48 pb-md-32">
+            <h3 id="brand-concept" class="h3 h5-md">品牌理念</h3>
             <ul class="mt-24">
               <li class="border-left-primary border-color-gray-300 border-width-3 pl-12">機能先行：輕量、透氣、防潑水</li>
               <li class="border-left-primary border-color-gray-300 border-width-3 pl-12 mt-12">美學延伸：極簡線條 + 實驗配色</li>
@@ -56,9 +61,9 @@
             </ul>
           </div>
         </section>
-        <section class="col-8 m0-a mt-48 mb-64" aria-labelledby="brand-story">
-          <div class="border-bottom-primary border-color-gray-300 pb-48">
-            <h3 id="brand-story" class="h3">品牌小故事</h3>
+        <section class="col-8 m0-a mt-48 mb-64 col-md-12 mt-md-32 mbm-md-32" aria-labelledby="brand-story">
+          <div class="border-bottom-primary border-color-gray-300 pb-48 pb-md-32">
+            <h3 id="brand-story" class="h3 h5-md">品牌小故事</h3>
             <ul class="mt-24">
               <li>
                 <a href="#" class="text-link-primary py-8">

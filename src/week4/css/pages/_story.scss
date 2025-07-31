@@ -1,8 +1,12 @@
 @use 'sass:map';
 @use '../abstracts/variables' as var;
+@use '../abstracts/mixin' as mixin;
 
 .title {
   background: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week1/hero.png")
     no-repeat center / cover;
   padding: 151px 0;
+  @include mixin.max-width-mobile {
+    padding: 87px 0;
+  }
 }

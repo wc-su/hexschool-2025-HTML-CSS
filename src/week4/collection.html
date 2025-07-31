@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的收藏</title>
+  <link rel="stylesheet" href="./css/collection.scss">
+</head>
+<body>
+  <%- include('./week4/partials/header.ejs') %>
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-6 m0-a py-64 col-md-12 py-md-24">
+          <div class="d-flex justify-content-center">
+            <i class="bi bi-check-lg fs-4 text-primary-500 bg-primary-300 broder-radius-rounded line-height-xs p-8 mr-16 p-md-4"></i>
+            <h2 class="h3 h4-md">我的收藏</h2>
+          </div>
+          <div class="d-flex align-items-center text-highlight bg-primary-100 line-height-xs p-16 mt-32 mt-md-24">
+            <i class="bi bi-truck fs-4 mr-12"></i>
+            <p>門市營業時間：<span class="d-none d-md-block"></span>週一至週五 10:00 - 22:00</p>
+          </div>
+          <article>
+            <div class="d-flex border-bottom-primary border-color-gray-300 pb-32 mt-32 mt-md-24">
+              <img class="collection-img mr-16" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product.png" alt="">
+              <div class="w-100">
+                <h3 class="h5 mt-8 h6-md">PLATFORM 404</h3>
+                <p class="mt-8 small-md"><span class="text-secondary">尺寸</span><span class="fw-medium ml-12">38</span></p>
+                <p class="mt-8 small-md"><span class="text-secondary">顏色</span><span class="fw-medium ml-12">Navy</span></p>
+                <h4 class="h6 text-align-right mt-8 text-align-md-left">NT12,600</h4>
+              </div>
+            </div>
+          </article>
+          <article>
+            <div class="d-flex border-bottom-primary border-color-gray-300 pb-32 mt-32 mt-md-24">
+              <img class="collection-img mr-16" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product-4.png" alt="">
+              <div class="w-100">
+                <h3 class="h5 mt-8 h6-md">BOOMLOK</h3>
+                <p class="mt-8 small-md"><span class="text-secondary">尺寸</span><span class="fw-medium ml-12">38</span></p>
+                <p class="mt-8 small-md"><span class="text-secondary">顏色</span><span class="fw-medium ml-12">White</span></p>
+                <h4 class="h6 text-align-right mt-8 text-align-md-left">NT3,200</h4>
+              </div>
+            </div>
+          </article>
+          <article>
+            <div class="d-flex border-bottom-primary border-color-gray-300 pb-32 mt-32 mt-md-24">
+              <img class="collection-img mr-16" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product-3.png" alt="">
+              <div class="w-100">
+                <h3 class="h5 mt-8 h6-md">MELTY KISS</h3>
+                <p class="mt-8 small-md"><span class="text-secondary">尺寸</span><span class="fw-medium">38</span></p>
+                <p class="mt-8 small-md"><span class="text-secondary">顏色</span><span class="fw-medium">Violet</span></p>
+                <h4 class="h6 text-align-right mt-8 text-align-md-left">NT4,000</h4>
+              </div>
+            </div>
+          </article>
+          <div class="text-align-center mt-32 mt-md-24">
+            <a href="#" class="btn-fill">立即預約門市試穿</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <%- include('./week4/partials/footer.ejs') %>
+</body>
+</html>

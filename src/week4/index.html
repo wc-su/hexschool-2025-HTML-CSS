@@ -3,30 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>首頁</title>
+  <title>URBNSTEP</title>
   <link rel="stylesheet" href="./css/style.scss">
 </head>
 <body>
   <%- include('./week4/partials/header.ejs') %>
   <main>
+    <nav aria-label="主選單-手機" class="d-none d-md-block">
+      <ul class="d-flex">
+        <li class="col bg-primary-200"><a class="text-link d-block text-align-center" href="./product-list.html">商品列表</a></li>
+        <li class="col bg-primary-100"><a class="text-link d-block text-align-center" href="./story.html">品牌故事</a></li>
+      </ul>
+    </nav>
     <div class="banner py-288">
-      <h2 class="display-1 text-on-dark">URBNSTEP</h2>
-      <h3 class="h3 text-on-dark mt-16">Your Step, Your Statement</h3>
-      <button type="button" class="btn-primary mt-48">立即選購</button>
+      <h2 class="display-1 display-md-2 text-on-dark">URBNSTEP</h2>
+      <h3 class="h3 h5-md text-on-dark mt-16 mt-md-8">Your Step, Your Statement</h3>
+      <a href="./product-list.html" class="btn-primary mt-48 mt-md-32">立即選購</a>
     </div>
     <div class="container">
-      <section class="py-64">
-        <h4 class="display-2 text-align-center">New Arrival</h4>
-        <div class="h2 text-align-center">新品上市</div>
-        <div class="row mt-32">
-          <article class="col-6 mb-40">
+      <section class="py-64 py-md-40">
+        <h4 class="display-2 h2-md text-align-center">New Arrival</h4>
+        <div class="h2 h4-md text-align-center mt-12 mt-md-8">新品上市</div>
+        <div class="row gx-md-6 mt-32 mt-md-24">
+          <article class="col-6 mb-40 mb-md-24">
             <a class="card" href="#">
               <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/new-1.png" alt="" class="card-img">
               <h5 class="h5 card-title">Monoverse</h5>
               <p class="card-price">NT$3,600</p>
             </a>
           </article>
-          <article class="col-6 mb-40">
+          <article class="col-6 mb-40 mb-md-24">
             <a class="card" href="#">
               <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/new-2.png" alt="" class="card-img">
               <h5 class="h5 card-title">Monoverse</h5>
@@ -49,37 +55,37 @@
           </article>
         </div>
       </section>
-      <section class="py-64">
+      <section class="py-64 py-md-40">
         <h4 class="h2">熱銷補貨</h4>
-        <div class="row mt-16">
-          <div class="col-3">
+        <div class="row mt-16 gx-md-8 flex-md-nowrap overflow-x-md-auto">
+          <div class="col-3 col-md-auto">
             <a href="#">
               <div class="card">
-                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product-3.png" alt="" class="card-img">
+                <img class="card-img img-md-fixed-300" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product-3.png" alt="">
                 <p class="card-badge">人氣 No.1</p>
               </div>
             </a>
           </div>
-          <div class="col-3">
+          <div class="col-3 col-md-auto">
             <a href="#">
               <div class="card">
-                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product.png" alt="" class="card-img">
+                <img class="card-img img-md-fixed-300" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product.png" alt="">
                 <p class="card-badge">人氣 No.1</p>
               </div>
             </a>
           </div>
-          <div class="col-3">
+          <div class="col-3 col-md-auto">
             <a href="#">
               <div class="card">
-                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product-6.png" alt="" class="card-img">
+                <img class="card-img img-md-fixed-300" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product-6.png" alt="">
                 <p class="card-badge">人氣 No.1</p>
               </div>
             </a>
           </div>
-          <div class="col-3">
+          <div class="col-3 col-md-auto">
             <a href="#">
               <div class="card">
-                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product-4.png" alt="" class="card-img">
+                <img class="card-img img-md-fixed-300" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product-4.png" alt="">
                 <p class="card-badge">人氣 No.1</p>
               </div>
             </a>
@@ -87,108 +93,117 @@
         </div>
       </section>
     </div>
-    <section class="py-48">
-      <div class="sale text-align-center">
-        <div class="d-flex justify-content-center align-items-center">
-          <p class="display-2 text-on-dark mr-24">URBNSTEP</p>
-          <p class="fs-1 fw-bold text-primary-300 line-height-sm mr-24">x</p>
-          <p class="display-2 text-on-dark">Kevin Chen</p>
+    <section class="py-48 py-md-24">
+      <div class="sale text-align-center overflow-md-hidden">
+        <div class="sale-target d-inline-block m0-a">
+          <div class="d-flex justify-content-center flex-direction-md-column">
+            <p class="display-2 h2-md text-on-dark mr-24 m-md-0">URBNSTEP</p>
+            <p class="h1 h3-md fw-bold text-primary-300 line-height-sm mr-24 m-md-0 mt-md-8">x</p>
+            <p class="display-2 h2-md text-on-dark mt-md-8">Kevin Chen</p>
+          </div>
+          <p class="h2 h5-md text-on-dark mt-16">跨界聯名，限量發售</p>
+          <p class="fs-5 fs-md-6 text-muted mt-32 mt-md-24">
+            <span>新銳漫畫家 Kevin Chen 親自操刀設計</span>
+            <span class="d-md-none">，</span>
+            <span class="d-none d-md-block"></span>
+            <span class="d-md-block mt-md-4">街頭能量全面引爆！</span>
+          </p>
+          <a href="#" class="btn-primary mt-48 mt-md-32">立即搶購</a>
         </div>
-        <p class="h2 text-on-dark mt-16">跨界聯名，限量發售</p>
-        <p class="fs-5 text-muted mt-32">新銳漫畫家 Kevin Chen 親自操刀設計，街頭能量全面引爆！</p>
-        <button type="button" class="btn-primary mt-48">立即搶購</button>
       </div>
     </section>
     <div class="container">
-      <section class="py-64">
-        <h4 class="h2">依系列選購</h4>
-        <div class="row mt-16">
-          <div class="col-3">
+      <section class="py-64 py-md-40">
+        <h4 class="h2 h4-md">依系列選購</h4>
+        <div class="row gx-md-6 mt-16">
+          <div class="col-3 col-md-6 mb-md-12">
             <a href="#" class="card">
               <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product-6.png" alt="" class="card-img">
               <div class="card-overlay">
-                <h5 class="h3 text-on-dark overlay-category">URBN RUNNER</h5>
-                <p class="h4 text-on-dark mt-8">慢跑系列</p>
+                <h5 class="h3 h6-md text-on-dark overlay-category">URBN RUNNER</h5>
+                <p class="h4 h6-md text-on-dark mt-8">慢跑系列</p>
               </div>
             </a>
           </div>
-          <div class="col-3">
+          <div class="col-3 col-md-6 mb-md-12">
             <a href="#" class="card">
               <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/product-11.png" alt="" class="card-img">
               <div class="card-overlay">
-                <h5 class="h3 text-on-dark overlay-category">STREETMODE</h5>
-                <p class="h4 text-on-dark mt-8">滑板系列</p>
+                <h5 class="h3 h6-md text-on-dark overlay-category">STREETMODE</h5>
+                <p class="h4 h6-md text-on-dark mt-8">滑板系列</p>
               </div>
             </a>
           </div>
-          <div class="col-3">
+          <div class="col-3 col-md-6">
             <a href="#" class="card">
               <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product-9.png" alt="" class="card-img">
               <div class="card-overlay">
-                <h5 class="h3 text-on-dark overlay-category">CHUNK DISTRICT</h5>
-                <p class="h4 text-on-dark mt-8">厚底系列</p>
+                <h5 class="h3 h6-md text-on-dark overlay-category">CHUNK DISTRICT</h5>
+                <p class="h4 h6-md text-on-dark mt-8">厚底系列</p>
               </div>
             </a>
           </div>
-          <div class="col-3">
+          <div class="col-3 col-md-6">
             <a href="#" class="card">
               <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/product-10.png" alt="" class="card-img">
               <div class="card-overlay">
-                <h5 class="h3 text-on-dark overlay-category">COLLAB ZONE</h5>
-                <p class="h4 text-on-dark mt-8">聯名企劃</p>
+                <h5 class="h3 h6-md text-on-dark overlay-category">COLLAB ZONE</h5>
+                <p class="h4 h6-md text-on-dark mt-8">聯名企劃</p>
               </div>
             </a>
           </div>
         </div>
       </section>
-      <section class="outfit-inspiration py-64 mb-48">
+      <section class="outfit-inspiration py-64 py-md-40 mb-48 mb-md-24">
         <h4 class="h2">穿搭靈感</h2>
-        <div class="row gx-4 mt-16">
-          <div class="col-8">
-            <div class="row gx-4">
-              <div class="col-3">
-                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/inspiration-1.png" alt="" class="card-img">
+        <div class="row gx-4 mt-16 gx-md-8 flex-md-nowrap overflow-x-md-auto">
+          <div class="col-8 col-md-auto d-md-flex">
+            <div class="row gx-4 gx-md-8 flex-md-nowrap">
+              <div class="col-3 col-md-auto">
+                <img class="card-img img-md-fixed-300" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/inspiration-1.png" alt="">
               </div>
-              <div class="col-3">
-                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/inspiration-2.png" alt="" class="card-img">
+              <div class="col-3 col-md-auto">
+                <img class="card-img img-md-fixed-300" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/inspiration-2.png" alt="">
               </div>
-              <div class="col-3">
-                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/inspiration-4.png" alt="" class="card-img">
+              <div class="col-3 col-md-auto">
+                <img class="card-img img-md-fixed-300" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/inspiration-4.png" alt="">
               </div>
-              <div class="col-3">
-                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/inspiration-5.png" alt="" class="card-img">
+              <div class="col-3 col-md-auto">
+                <img class="card-img img-md-fixed-300" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/inspiration-5.png" alt="">
               </div>
             </div>
-            <div class="row gx-4 mt-8">
-              <div class="col-6">
-                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/inspiration-3.png" alt="" class="card-img">
+            <div class="row gx-4 mt-8 gx-md-8 m-md-0 pl-md-16 flex-md-nowrap">
+              <div class="col-6 col-md-auto">
+                <img class="card-img img-md-fixed-300" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/inspiration-3.png" alt="">
               </div>
-              <div class="col-6">
-                <div class="row gx-4">
-                  <div class="col-6 mb-8">
-                    <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/inspiration-6.png" alt="" class="card-img">
+              <div class="col-6 col-md-auto">
+                <div class="row gx-4 gx-md-8 flex-md-nowrap">
+                  <div class="col-6 col-md-auto mb-8 m-mb-0">
+                    <img class="card-img img-md-fixed-300" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/inspiration-6.png" alt="">
                   </div>
-                  <div class="col-6 mb-8">
-                    <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/inspiration-7.png" alt="" class="card-img">
+                  <div class="col-6 col-md-auto mb-8 m-mb-0">
+                    <img class="card-img img-md-fixed-300" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/inspiration-7.png" alt="">
                   </div>
-                  <div class="col-6">
-                    <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/inspiration-8.png" alt="" class="card-img">
+                  <div class="col-6 col-md-auto">
+                    <img class="card-img img-md-fixed-300" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/inspiration-8.png" alt="">
                   </div>
-                  <div class="col-6">
-                    <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/inspiration-9.png" alt="" class="card-img">
+                  <div class="col-6 col-md-auto">
+                    <img class="card-img img-md-fixed-300" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/inspiration-9.png" alt="">
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-4">
-            <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/inspiration-10.png" alt="" class="card-img">
-            <div class="row gx-4 mt-8">
-              <div class="col-6">
-                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/inspiration-11.png" alt="" class="card-img">
+          <div class="col-4 col-md-auto d-md-flex">
+            <div class="col col-md-auto">
+              <img class="card-img img-md-fixed-300" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/inspiration-10.png" alt="">
+            </div>
+            <div class="row gx-4 gx-md-8 mt-8 m-md-0 pl-md-16 flex-md-nowrap">
+              <div class="col-6 col-md-auto">
+                <img class="card-img img-md-fixed-300" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/inspiration-11.png" alt="">
               </div>
-              <div class="col-6">
-                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/inspiration-12.png" alt="" class="card-img">
+              <div class="col-6 col-md-auto">
+                <img class="card-img img-md-fixed-300" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/inspiration-12.png" alt="">
               </div>
             </div>
           </div>

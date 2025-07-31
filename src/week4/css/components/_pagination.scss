@@ -1,5 +1,5 @@
 @use "sass:map";
-@use '../abstracts/variables' as *;
+@use '../abstracts/variables' as var;
 
 .pagination {
   display: flex;
@@ -17,7 +17,7 @@
     .page-link {
       display: inline-block;
       text-align: center;
-      color: map.get($grays, "900");
+      color: map.get(var.$grays, "900");
       width: 100%;
       padding-top: 8px;
       padding-bottom: 8px;
@@ -29,14 +29,14 @@
       }
     }
     &:hover .page-link {
-      background: map.get($grays, "100");
+      background: map.get(var.$grays, "100");
     }
     &.selected .page-link {
-      font-weight: $font-weight-medium;
-      background: map.get($primarys, "300");
+      font-weight: var.$font-weight-medium;
+      background: map.get(var.$primarys, "300");
     }
     &.disabled .page-link {
-      color: $gray-500;
+      color: map.get(var.$grays, "500");
       background: transparent;
       cursor: default;
     }
