@@ -144,11 +144,6 @@
     overflow-x: auto;
   }
 }
-.min-width-md-max-content {
-  @include mixin.max-width-mobile {
-    min-width: max-content;
-  }
-}
 
 
 .bg-logo {

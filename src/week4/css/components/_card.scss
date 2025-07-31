@@ -12,6 +12,13 @@
     color: map.get(var.$primarys, "300")
   }
   
+  &-img.img-md-fixed-300 {
+    @include mixin.max-width-mobile {
+      max-width: none;
+      width: 100%;
+      max-width: 300px;
+    }
+  }
   &-title {
     color: map.get(var.$grays, "900");
     margin-top: 12px;

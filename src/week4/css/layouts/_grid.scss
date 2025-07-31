@@ -6,8 +6,16 @@
     padding-left: var.$grid-gutter-width * 0.5;
     padding-right: var.$grid-gutter-width * 0.5;
   }
+  .row > .col-auto {
+    padding-left: var.$grid-gutter-width * 0.5;
+    padding-right: var.$grid-gutter-width * 0.5;
+  }
   .col {
     flex: 1 0 0;
+  }
+  .col-auto {
+    flex: 0 0 auto;
+    width: auto;
   }
 
   @for $i from 1 through $cols {
@@ -33,7 +41,15 @@
       padding-left: $px;
       padding-right: $px;
     }
+    .gx-#{$name} > .col-auto {
+      padding-left: $px;
+      padding-right: $px;
+    }
     .gx-#{$name} > .col-md {
+      padding-left: $px;
+      padding-right: $px;
+    }
+    .gx-#{$name} > .col-md-auto {
       padding-left: $px;
       padding-right: $px;
     }
@@ -58,6 +74,10 @@
     }
     .col-md {
       flex: 1 0 0;
+    }
+    .col-md-auto {
+      flex: 0 0 auto;
+      width: auto;
     }
 
     @for $i from 1 through $cols {
@@ -84,7 +104,15 @@
         padding-left: $px;
         padding-right: $px;
       }
+      .gx-md-#{$name} > .col-auto {
+        padding-left: $px;
+        padding-right: $px;
+      }
       .gx-md-#{$name} > .col-md {
+        padding-left: $px;
+        padding-right: $px;
+      }
+      .gx-md-#{$name} > .col-md-auto {
         padding-left: $px;
         padding-right: $px;
       }
