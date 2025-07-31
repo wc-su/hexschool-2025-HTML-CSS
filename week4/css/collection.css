@@ -1779,11 +1779,7 @@ q:before, q:after {
   .flex-grow-md-0 {
     flex-grow: 0;
   }
-}.title {
-  background: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week1/hero.png") no-repeat center/cover;
-  padding: 151px 0;
-}@media (max-width: calc(768px + 1.5rem)) {
-  .title {
-    padding: 87px 0;
-  }
+}.collection-img {
+  width: 100%;
+  max-width: 120px;
 }

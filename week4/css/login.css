@@ -1779,11 +1779,28 @@ q:before, q:after {
   .flex-grow-md-0 {
     flex-grow: 0;
   }
-}.title {
-  background: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week1/hero.png") no-repeat center/cover;
-  padding: 151px 0;
+}.auth-info {
+  background: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/login-bg.png") no-repeat center/cover;
+  border-radius: 4px;
+  height: 100%;
 }@media (max-width: calc(768px + 1.5rem)) {
-  .title {
-    padding: 87px 0;
+  .auth-info {
+    background: #fff;
   }
+}.auth-btn {
+  display: block;
+  color: #6c757d;
+  text-align: center;
+  border-bottom: 2px solid #dee2e6;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}.auth-btn:hover {
+  color: #212529;
+}.auth-btn:focus, .auth-btn.active {
+  cursor: default;
+  color: #212529;
+  border-color: #212529;
+}.auth-way:hover {
+  color: #6c757d;
+  border-color: #adb5bd;
 }
