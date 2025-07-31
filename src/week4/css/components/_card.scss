@@ -1,5 +1,6 @@
 @use "sass:map";
 @use '../abstracts/variables' as var;
+@use '../abstracts/mixin' as mixin;
 
 .card {
   display: block;
@@ -10,14 +11,22 @@
   &:hover .overlay-category {
     color: map.get(var.$primarys, "300")
   }
+  
   &-title {
     color: map.get(var.$grays, "900");
     margin-top: 12px;
+    @include mixin.max-width-mobile {
+      font-size: var.$font-size-base;
+      margin-top: 8px;
+    }
   }
   &-price {
     color: map.get(var.$grays, "900");
     font-weight: var.$font-weight-medium;
     margin-top: 4px;
+    @include mixin.max-width-mobile {
+      margin-top: 0;
+    }
   }
   &-badge {
     position: absolute;

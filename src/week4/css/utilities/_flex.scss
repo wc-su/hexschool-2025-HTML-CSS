@@ -1,3 +1,5 @@
+@use '../abstracts/mixin' as mixin;
+
 .justify-content-center {
   justify-content: center;
 }
@@ -6,4 +8,22 @@
 }
 .align-items-center {
   align-items: center;
+}
+
+@include mixin.max-width-mobile {
+  .flex-direction-md-column {
+    flex-direction: column;
+  }
+  .flex-md-nowrap {
+    flex-wrap: nowrap;
+  }
+  .align-items-md-stretch {
+    align-items: stretch;
+  }
+  .align-items-md-start {
+    align-items: start;
+  }
+  .flex-grow-0 {
+    flex-grow: 0;
+  }
 }

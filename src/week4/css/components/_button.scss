@@ -15,11 +15,7 @@
   $padding: 12px 24px,
   $is-outline: false,
 ) {
-  // display: flex;
-  // display: inline-flex;
   display: inline-block;
-  // justify-content: center;
-  // align-items: center;
   font-weight: var.$font-weight-medium;
   border-radius: $border-radius;
   padding: $padding;

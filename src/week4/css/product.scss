@@ -21,11 +21,13 @@
 @use 'components/breadcrumb' as *;
 @use 'components/card' as *;
 @use 'components/button' as *;
+@use 'components/selector' as *;
 
 // 最後引入，覆蓋其他類別
 @use 'utilities/spacing' as *;
 @use 'utilities/display' as *;
 @use 'utilities/flex' as *;
+@use 'utilities/width' as *;
 
 // 頁面
 @use 'pages/product' as *;

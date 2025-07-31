@@ -1,27 +1,31 @@
 @use "sass:map";
-@use '../abstracts/variables' as *;
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixin' as mixin;
 
 .breadcrumb {
   display: flex;
   &-item {
-    font-weight: $font-weight-medium;
-    color: map.get($grays, "600");
+    font-weight: var.$font-weight-medium;
+    color: map.get(var.$grays, "600");
+    @include mixin.max-width-mobile {
+      @include mixin.font-size(var.$font-size-sm);
+    }
     a {
       color: inherit;
       &:hover {
-        color: map.get($grays, "900");
+        color: map.get(var.$grays, "900");
       }
     }
     & + &::before {
       content: "/";
-      color: map.get($grays, "300");
-      font-weight: $font-weight-bold;
-      letter-spacing: $letter-spacing-0;
+      color: map.get(var.$grays, "300");
+      font-weight: var.$font-weight-bold;
+      letter-spacing: var.$letter-spacing-0;
       margin-right: 12px;
       margin-left: 12px;
     }
     &.active {
-      color: map.get($grays, "900");
+      color: map.get(var.$grays, "900");
     }
   }
 }

@@ -7,14 +7,35 @@
     @include mixin.font-size($size, var.$line-height-sm, var.$font-weight-bold);
   }
 }
+@each $level, $size in var.$display-font-sizes {
+  .display-#{$level} {
+    @include mixin.font-size($size, var.$line-height-sm, var.$font-weight-bold);
+  }
+}
 @each $level, $size in var.$font-sizes {
   .fs-#{$level} {
     @include mixin.font-size($size);
   }
 }
+@each $level, $size in var.$font-sizes {
+  .h#{$level}-md {
+    @include mixin.max-width-mobile {
+      @include mixin.font-size($size, var.$line-height-sm, var.$font-weight-bold);
+    }
+  }
+}
 @each $level, $size in var.$display-font-sizes {
-  .display-#{$level} {
-    @include mixin.font-size($size, var.$line-height-sm, var.$font-weight-bold);
+  .display-md-#{$level} {
+    @include mixin.max-width-mobile {
+      @include mixin.font-size($size, var.$line-height-sm, var.$font-weight-bold);
+    }
+  }
+}
+@each $level, $size in var.$font-sizes {
+  .fs-md-#{$level} {
+    @include mixin.max-width-mobile {
+      @include mixin.font-size($size);
+    }
   }
 }
 .small {
@@ -66,6 +87,11 @@
 .text-align-center {
   text-align: center;
 }
+.text-align-md-left {
+  @include mixin.max-width-mobile {
+    text-align: left;
+  }
+}
 
 .line-height-sm {
   line-height: var.$line-height-sm;
@@ -106,6 +132,22 @@
 
 .list-style-disc {
   list-style-type: disc;
+}
+
+.overflow-md-hidden {
+  @include mixin.max-width-mobile {
+    overflow: hidden;
+  }
+}
+.overflow-x-md-auto {
+  @include mixin.max-width-mobile {
+    overflow-x: auto;
+  }
+}
+.min-width-md-max-content {
+  @include mixin.max-width-mobile {
+    min-width: max-content;
+  }
 }
 
 
