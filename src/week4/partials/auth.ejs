@@ -1,0 +1,41 @@
+<div class="container px-md-0">
+  <div class="row py-64 gx-md-0 py-md-0">
+    <div class="col-5 col-md-12">
+      <img class="h-100 object-fit-cover d-md-none" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/login.png" alt="">
+      <img class="d-none d-md-block w-100" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/login-sm.png" alt="">
+    </div>
+    <div class="col-7 col-md-12">
+      <div class="container-md h-100">
+        <div class="auth-info px-80 py-120 px-md-0 py-md-32">
+          <h2 class="h3 h4-md text-align-center">歡迎！</h2>
+          <div class="row gx-0 mt-32">
+            <h3 class="col-6"><a href="./login.html" class="auth-btn <%= type === 'login' ? 'active' : '' %> h6">登入</a></h3>
+            <h3 class="col-6"><a href="./signup.html" class="auth-btn <%= type === 'signup' ? 'active' : '' %> h6">註冊</a></h3>
+          </div>
+          <div class="mt-32">
+            <ul>
+              <li>
+                <a href="#" class="auth-way d-block color-inherit bg-on-dark border-primary border-color-gray-300 broder-radius-sm p-12">
+                  <img class="mr-12" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/facebook.svg" alt="">
+                  <span>Facebook <%= switchText %></span>
+                </a>
+              </li>
+              <li class="mt-8">
+                <a href="#" class="auth-way d-block color-inherit bg-on-dark border-primary border-color-gray-300 broder-radius-sm p-12">
+                  <img class="mr-12" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/apple.svg" alt="">
+                  <span>Apple <%= switchText %></span>
+                </a>
+              </li>
+              <li class="mt-8">
+                <a href="#" class="auth-way d-block color-inherit bg-on-dark border-primary border-color-gray-300 broder-radius-sm p-12">
+                  <img class="mr-12" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/google.svg" alt="">
+                  <span>Google <%= switchText %></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

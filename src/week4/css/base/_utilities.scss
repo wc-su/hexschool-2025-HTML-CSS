@@ -41,6 +41,11 @@
 .small {
   @include mixin.font-size(var.$font-size-sm);
 }
+.small-md {
+  @include mixin.max-width-mobile {
+    @include mixin.font-size(var.$font-size-sm);
+  }
+}
 
 
 .fw-medium {
@@ -74,6 +79,9 @@
 .text-primary-300 {
   color: map.get(var.$primarys, "300");
 }
+.text-primary-500 {
+  color: map.get(var.$primarys, "500");
+}
 // @each $key, $value in var.$grays {
 //   .text-gray-#{$key} {
 //     color: #{$value};
@@ -87,6 +95,9 @@
 .text-align-center {
   text-align: center;
 }
+.text-align-right {
+  text-align: right;
+}
 .text-align-md-left {
   @include mixin.max-width-mobile {
     text-align: left;
@@ -96,15 +107,32 @@
 .line-height-sm {
   line-height: var.$line-height-sm;
 }
+.line-height-xs {
+  line-height: var.$line-height-xs;
+}
 
+.bg-on-dark {
+  background-color: var.$white;
+}
 .bg-primary-100 {
   background-color: map.get(var.$primarys, "100");
 }
 .bg-primary-200 {
   background-color: map.get(var.$primarys, "200");
 }
+.bg-primary-300 {
+  background-color: map.get(var.$primarys, "300");
+}
 .bg-primary-gray-100 {
   background: map.get(var.$grays, "100");
+}
+
+.color-inherit {
+  color: inherit;
+}
+
+.object-fit-cover {
+  object-fit: cover;
 }
 
 
@@ -129,11 +157,20 @@
 .border-width-3 {
   border-width: 3px;
 }
+.broder-radius-sm {
+  border-radius: var.$border-radius-sm; 
+}
+.broder-radius-rounded {
+  border-radius: var.$border-radius-rounded; 
+}
 
 .list-style-disc {
   list-style-type: disc;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
 .overflow-md-hidden {
   @include mixin.max-width-mobile {
     overflow: hidden;
@@ -143,6 +180,15 @@
   @include mixin.max-width-mobile {
     overflow-x: auto;
   }
+}
+
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
 }
 
 
