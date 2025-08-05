@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+TC:wght@100..900&display=swap");
 /*!
  * Bootstrap Icons v1.13.1 (https://icons.getbootstrap.com/)
  * Copyright 2019-2024 The Bootstrap Authors
@@ -235,6 +235,8 @@ q:before, q:after {
     font-size: 0.875rem;
     letter-spacing: 0.05em;
   }
+}.font-family-Montserrat {
+  font-family: "Montserrat", sans-serif;
 }.fw-medium {
   font-weight: 500;
 }.fw-bold {
