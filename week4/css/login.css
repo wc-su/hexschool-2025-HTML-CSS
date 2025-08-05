@@ -143,94 +143,94 @@ q:before, q:after {
   letter-spacing: 0.05em;
 }.fs-6 {
   font-size: 1rem;
-}@media (max-width: calc(768px + 1.5rem)) {
+}@media (max-width: calc(992px + 1.5rem)) {
   .h1-md {
     font-size: 2.5rem;
     line-height: 1.2;
     font-weight: 700;
     letter-spacing: 0.05em;
   }
-}@media (max-width: calc(768px + 1.5rem)) {
+}@media (max-width: calc(992px + 1.5rem)) {
   .h2-md {
     font-size: 2rem;
     line-height: 1.2;
     font-weight: 700;
     letter-spacing: 0.05em;
   }
-}@media (max-width: calc(768px + 1.5rem)) {
+}@media (max-width: calc(992px + 1.5rem)) {
   .h3-md {
     font-size: 1.75rem;
     line-height: 1.2;
     font-weight: 700;
     letter-spacing: 0.05em;
   }
-}@media (max-width: calc(768px + 1.5rem)) {
+}@media (max-width: calc(992px + 1.5rem)) {
   .h4-md {
     font-size: 1.5rem;
     line-height: 1.2;
     font-weight: 700;
     letter-spacing: 0.05em;
   }
-}@media (max-width: calc(768px + 1.5rem)) {
+}@media (max-width: calc(992px + 1.5rem)) {
   .h5-md {
     font-size: 1.25rem;
     line-height: 1.2;
     font-weight: 700;
     letter-spacing: 0.05em;
   }
-}@media (max-width: calc(768px + 1.5rem)) {
+}@media (max-width: calc(992px + 1.5rem)) {
   .h6-md {
     font-size: 1rem;
     line-height: 1.2;
     font-weight: 700;
   }
-}@media (max-width: calc(768px + 1.5rem)) {
+}@media (max-width: calc(992px + 1.5rem)) {
   .display-md-1 {
     font-size: 4rem;
     line-height: 1.2;
     font-weight: 700;
     letter-spacing: 0.05em;
   }
-}@media (max-width: calc(768px + 1.5rem)) {
+}@media (max-width: calc(992px + 1.5rem)) {
   .display-md-2 {
     font-size: 3rem;
     line-height: 1.2;
     font-weight: 700;
     letter-spacing: 0.05em;
   }
-}@media (max-width: calc(768px + 1.5rem)) {
+}@media (max-width: calc(992px + 1.5rem)) {
   .fs-md-1 {
     font-size: 2.5rem;
     letter-spacing: 0.05em;
   }
-}@media (max-width: calc(768px + 1.5rem)) {
+}@media (max-width: calc(992px + 1.5rem)) {
   .fs-md-2 {
     font-size: 2rem;
     letter-spacing: 0.05em;
   }
-}@media (max-width: calc(768px + 1.5rem)) {
+}@media (max-width: calc(992px + 1.5rem)) {
   .fs-md-3 {
     font-size: 1.75rem;
     letter-spacing: 0.05em;
   }
-}@media (max-width: calc(768px + 1.5rem)) {
+}@media (max-width: calc(992px + 1.5rem)) {
   .fs-md-4 {
     font-size: 1.5rem;
     letter-spacing: 0.05em;
   }
-}@media (max-width: calc(768px + 1.5rem)) {
+}@media (max-width: calc(992px + 1.5rem)) {
   .fs-md-5 {
     font-size: 1.25rem;
     letter-spacing: 0.05em;
   }
-}@media (max-width: calc(768px + 1.5rem)) {
+}@media (max-width: calc(992px + 1.5rem)) {
   .fs-md-6 {
     font-size: 1rem;
   }
 }.small {
   font-size: 0.875rem;
   letter-spacing: 0.05em;
-}@media (max-width: calc(768px + 1.5rem)) {
+}@media (max-width: calc(992px + 1.5rem)) {
   .small-md {
     font-size: 0.875rem;
     letter-spacing: 0.05em;
@@ -263,7 +263,7 @@ q:before, q:after {
   text-align: center;
 }.text-align-right {
   text-align: right;
-}@media (max-width: calc(768px + 1.5rem)) {
+}@media (max-width: calc(992px + 1.5rem)) {
   .text-align-md-left {
     text-align: left;
   }
@@ -307,11 +307,11 @@ q:before, q:after {
   list-style-type: disc;
 }.overflow-hidden {
   overflow: hidden;
-}@media (max-width: calc(768px + 1.5rem)) {
+}@media (max-width: calc(992px + 1.5rem)) {
   .overflow-md-hidden {
     overflow: hidden;
   }
-}@media (max-width: calc(768px + 1.5rem)) {
+}@media (max-width: calc(992px + 1.5rem)) {
   .overflow-x-md-auto {
     overflow-x: auto;
   }
@@ -334,9 +334,9 @@ q:before, q:after {
   margin-right: auto;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
-}@media (max-width: calc(768px + 1.5rem)) {
+}@media (max-width: calc(992px + 1.5rem)) {
   .container-md {
-    max-width: calc(768px + 1.5rem);
+    max-width: calc(992px + 1.5rem);
     margin-left: auto;
     margin-right: auto;
     padding-left: 0.75rem;
@@ -430,7 +430,7 @@ q:before, q:after {
 }.col-12 {
   flex: 0 0 auto;
   width: 100%;
-}@media (max-width: calc(768px + 1.5rem)) {
+}@media (max-width: calc(992px + 1.5rem)) {
   .row > .col-md {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
@@ -886,7 +886,7 @@ q:before, q:after {
 }.gx-8 > .col-md-12 {
   padding-left: 8px;
   padding-right: 8px;
-}@media (max-width: calc(768px + 1.5rem)) {
+}@media (max-width: calc(992px + 1.5rem)) {
   .gx-md-0.row {
     margin-left: 0;
     margin-right: 0;
@@ -1397,7 +1397,7 @@ q:before, q:after {
 }.breadcrumb-item {
   font-weight: 500;
   color: #6c757d;
-}@media (max-width: calc(768px + 1.5rem)) {
+}@media (max-width: calc(992px + 1.5rem)) {
   .breadcrumb-item {
     font-size: 0.875rem;
     letter-spacing: 0.05em;
@@ -1422,7 +1422,7 @@ q:before, q:after {
   opacity: 0.8;
 }.card:hover .overlay-category {
   color: #c0fa73;
-}@media (max-width: calc(768px + 1.5rem)) {
+}@media (max-width: calc(992px + 1.5rem)) {
   .card-img.img-md-fixed-300 {
     max-width: none;
     width: 100%;
@@ -1431,7 +1431,7 @@ q:before, q:after {
 }.card-title {
   color: #212529;
   margin-top: 12px;
-}@media (max-width: calc(768px + 1.5rem)) {
+}@media (max-width: calc(992px + 1.5rem)) {
   .card-title {
     font-size: 1rem;
     margin-top: 8px;
@@ -1440,7 +1440,7 @@ q:before, q:after {
   color: #212529;
   font-weight: 500;
   margin-top: 4px;
-}@media (max-width: calc(768px + 1.5rem)) {
+}@media (max-width: calc(992px + 1.5rem)) {
   .card-price {
     margin-top: 0;
   }
@@ -1634,7 +1634,7 @@ q:before, q:after {
   margin-top: 64px;
 }.mb-64 {
   margin-bottom: 64px;
-}@media (max-width: calc(768px + 1.5rem)) {
+}@media (max-width: calc(992px + 1.5rem)) {
   .p-md-0 {
     padding-top: 0;
     padding-bottom: 0;
@@ -1745,15 +1745,15 @@ q:before, q:after {
   display: flex;
 }.d-none {
   display: none;
-}@media (max-width: calc(768px + 1.5rem)) {
+}@media (max-width: calc(992px + 1.5rem)) {
   .d-md-none {
     display: none;
   }
-}@media (max-width: calc(768px + 1.5rem)) {
+}@media (max-width: calc(992px + 1.5rem)) {
   .d-md-block {
     display: block;
   }
-}@media (max-width: calc(768px + 1.5rem)) {
+}@media (max-width: calc(992px + 1.5rem)) {
   .d-md-flex {
     display: flex;
   }
@@ -1763,7 +1763,7 @@ q:before, q:after {
   justify-content: space-between;
 }.align-items-center {
   align-items: center;
-}@media (max-width: calc(768px + 1.5rem)) {
+}@media (max-width: calc(992px + 1.5rem)) {
   .flex-direction-md-column {
     flex-direction: column;
   }
@@ -1783,7 +1783,7 @@ q:before, q:after {
   background: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/login-bg.png") no-repeat center/cover;
   border-radius: 4px;
   height: 100%;
-}@media (max-width: calc(768px + 1.5rem)) {
+}@media (max-width: calc(992px + 1.5rem)) {
   .auth-info {
     background: #fff;
   }
