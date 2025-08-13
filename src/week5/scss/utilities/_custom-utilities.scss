@@ -1,5 +1,7 @@
-.flex-basis-300 {
-  flex-basis: 300px;
+.flex-basis-md-300 {
+  @include media-breakpoint-up(md) {
+    flex-basis: 300px;
+  }
 }
 
 .color-natural-50 {
