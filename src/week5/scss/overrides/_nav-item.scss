@@ -1,0 +1,13 @@
+.custom-nav-item {
+  & > .nav-link {
+    border-radius: $border-radius-lg;
+    transition: background-color 0.3s ease-out;
+  }
+  &.outline > .nav-link {
+    border: 1px solid $natural-85;
+  }
+  & > .nav-link:hover {
+    background-color: $natural-90;
+    border-color: transparent;
+  }
+}

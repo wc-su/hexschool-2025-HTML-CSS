@@ -1,0 +1,112 @@
+<form action="">
+  <!-- 個人資料 -->
+  <section class="d-flex">
+    <div class="flex-basis-300">
+      <h2 class="fs-4">個人資料</h2>
+    </div>
+    <div class="col ms-6">
+      <!-- 更新頭貼 -->
+      <div class="d-flex">
+        <img class="rounded-circle profile-avatar-img-height me-4" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/916c25d5a06bc1b73135d3acf0a22ad65c7af4c8/2025-week5/avatar.png" alt="">
+        <label for="avatar-upload" class="btn custom-btn-outline custom-btn-icon-start align-self-end">
+          <span class="material-symbols-outlined custom-btn-icon">upload</span>
+          <p>更新頭貼</p>
+        </label>
+        <input type="file" name="avatar-upload" id="avatar-upload" class="d-none">
+      </div>
+      <!-- 變更姓名 -->
+      <div class="form-floating custom-form-floating mt-6">
+        <input type="text" class="form-control rounded-1" id="person-name" placeholder="姓名" value="Mokumaru">
+        <label for="person-name" class="form-label">姓名</label>
+      </div>
+      <!-- 選擇性別 -->
+      <div class="mt-6">
+        <p class="mb-2">性別</p>
+        <!-- 性別選項 -->
+        <div class="custom-form-check form-check form-check-inline">
+          <input checked class="form-check-input" type="radio" name="gender-options" id="female" value="女性">
+          <label class="form-check-label" for="female">女性</label>
+        </div>
+        <div class="custom-form-check form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="gender-options" id="male" value="男性">
+          <label class="form-check-label" for="male">男性</label>
+        </div>
+        <div class="custom-form-check form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="gender-options" id="not-to-say" value="不願透露">
+          <label class="form-check-label" for="not-to-say">不願透露</label>
+        </div>
+      </div>
+      <!-- 變更生日 -->
+      <div class="form-floating custom-form-floating mt-6">
+        <input type="date" class="form-control rounded-1" id="birth" placeholder="生日" value="2000-01-10">
+        <label for="birth" class="form-label">生日</label>
+      </div>
+      <!-- 變更密碼 -->
+      <div class="mt-6">
+        <p>密碼</p>
+        <!-- 密碼變更按鈕 -->
+        <button type="button" class="btn custom-btn-outline custom-btn-icon-end mt-2" data-bs-toggle="modal" data-bs-target="#pwd-modal">
+          <p>修改密碼</p>
+          <span class="material-symbols-outlined custom-btn-icon">chevron_forward</span>
+        </button>
+        <!-- 密碼變更視窗 -->
+        <div class="modal fade" id="pwd-modal" tabindex="-1" aria-labelledby="change-pwd" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-white">
+              <div class="modal-header py-2 ps-6 pe-4">
+                <h1 class="modal-title fs-5" id="change-pwd">更新密碼</h1>
+                <button type="button" class="btn custom-btn-only-icon ms-auto" data-bs-dismiss="modal" aria-label="Close">
+                  <span class="material-symbols-outlined custom-btn-icon">close</span>
+                </button>
+              </div>
+              <div class="modal-body p-6">
+                <div class="form-floating custom-form-floating">
+                  <input type="password" class="form-control rounded-1" id="pwd" placeholder="新密碼">
+                  <label for="pwd" class="form-label">新密碼</label>
+                </div>
+                <div class="form-floating custom-form-floating mt-6">
+                  <input type="password" class="form-control rounded-1" id="pwd-again" placeholder="再次密碼">
+                  <label for="pwd-again" class="form-label">再次密碼</label>
+                </div>
+              </div>
+              <div class="modal-footer py-4 px-6">
+                <button class="btn custom-btn custom-btn-icon-end m-0" type="button">
+                  <p>更新密碼</p>
+                  <span class="material-symbols-outlined">chevron_forward</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 變更信箱 -->
+      <div class="form-floating custom-form-floating mt-6">
+        <input type="mail" class="form-control rounded-1" id="mail" placeholder="信箱" value="mokumaru@mail.com">
+        <label for="mail" class="form-label">信箱</label>
+        <p class="fs-sm ls-base color-natural-50 ps-2">盡量勿使用Yahoo或Hotmail郵件信箱，以免因擋信、漏信</p>
+      </div>
+      <!-- 變更聯絡電話 -->
+      <div class="form-floating custom-form-floating mt-6">
+        <input type="tel" class="form-control rounded-1" id="phone" placeholder="聯絡電話" value="09-1234-5678">
+        <label for="phone" class="form-label">聯絡電話</label>
+      </div>
+      <!-- 變更通訊地址 -->
+      <div class="form-floating custom-form-floating mt-6">
+        <input type="text" class="form-control rounded-1" id="address" placeholder="通訊地址" value="高雄市三民區九如一路 87 號">
+        <label for="address" class="form-label">通訊地址</label>
+      </div>
+    </div>
+  </section>
+  <div class="d-flex justify-content-center mt-9">
+    <!-- 按鈕：重新填寫 -->
+    <button class="btn custom-btn-outline custom-btn-icon-end me-4" type="button">
+      <p>重新填寫</p>
+      <span class="material-symbols-outlined custom-btn-icon">chevron_forward</span>
+    </button>
+    <!-- 按鈕：儲存更新 -->
+    <button class="btn custom-btn custom-btn-icon-end" type="button">
+      <p>儲存更新</p>
+      <span class="material-symbols-outlined custom-btn-icon">chevron_forward</span>
+    </button>
+  </div>
+</form>
