@@ -1,0 +1,68 @@
+@use "sass:map";
+
+.custom-form-check {
+  padding-left: map.get($spacers, 2);
+  margin-right: map.get($spacers, 4);
+  margin-bottom: map.get($spacers, 2);
+
+  & > .form-check-input {
+    font-size: map.get($font-sizes, 5);
+    float: none;
+    margin-top: 0;
+    margin-left: 0;
+  }
+  
+  & > .form-check-label {
+    font-size: $font-size-sm;
+    letter-spacing: $body-letter-spacing;
+  }
+
+  & > .form-check-input[type=checkbox],
+  & > .form-check-input[type=checkbox] + label.form-check-label {
+    cursor: pointer;
+  }
+  & > .form-check-input:checked[type=checkbox],
+  & > .form-check-input:hover[type=checkbox] {
+    background-color: $primary-60;
+    border-color: $primary-60;
+    --bs-form-check-bg-image: none;
+  }
+  & > .form-check-input:checked[type=checkbox],
+  & > .form-check-input:hover[type=checkbox] {
+    position: relative;
+    &::before {
+      content: "\f88b";
+      font-family: 'Material Symbols Outlined';
+      position: absolute;
+      font-weight: $font-weight-bold;
+      color: $white;
+      top: 50%; left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+
+  & > .form-check-input[type=radio],
+  & > .form-check-input[type=radio] + label.form-check-label {
+    cursor: pointer;
+  }
+  & > .form-check-input:checked[type=radio] {
+    // 移除 bootstrap 樣式
+    background-color: $white;
+    --bs-form-check-bg-image: none;
+  }
+  & > .form-check-input:checked[type=radio], .form-check-input:hover[type=radio] {
+    border-color: $primary-60;
+    // 手寫樣式
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      background-color: $primary-60;
+      border-radius: 50%;
+      width: 65%;
+      height: 65%;
+    }
+  }
+}
