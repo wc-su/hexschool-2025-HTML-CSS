@@ -6,7 +6,7 @@
   <title>職旅 Workway</title>
   <link rel="shortcut icon" href="/hexschool-2025-HTML-CSS/week5/images/favicon.png" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-  <script type="module" crossorigin src="/hexschool-2025-HTML-CSS/week5/js/week5/index.js"></script>
+  <script type="module" crossorigin src="/hexschool-2025-HTML-CSS/week5/js/index.js"></script>
   <link rel="stylesheet" crossorigin href="/hexschool-2025-HTML-CSS/week5/css/index.css">
 </head>
 <body>
@@ -92,8 +92,8 @@
               <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
                 <form action="">
   <!-- 個人資料 -->
-  <section class="d-flex">
-    <div class="flex-basis-300">
+  <section class="d-flex flex-column flex-md-row">
+    <div class="mb-4 flex-basis-md-300">
       <h2 class="fs-4">個人資料</h2>
     </div>
     <div class="col ms-6">
@@ -315,15 +315,15 @@
               <div class="tab-pane fade show active" id="career-plan-tab-pane" role="tabpanel" aria-labelledby="career-plan-tab" tabindex="0">
                 <form action="">
   <!-- 職旅計劃概況 -->
-  <section class="d-flex border-bottom pb-9">
-    <div class="flex-basis-300">
-      <h2 class="fs-4 fw-medium ls-base mb-3">職旅計劃概況</h2>
+  <section class="d-flex flex-column flex-md-row border-bottom pb-9">
+    <div class="d-flex justify-content-between mb-4 flex-md-column flex-basis-md-300">
+      <h2 class="fs-4 fw-medium ls-base mb-md-3">職旅計劃概況</h2>
       <div class="d-flex align-items-center">
         <p class="color-natural-50 me-1">欄位皆為</p>
         <p class="badge text-light bg-error lh-xs ls-base">必填</p>
       </div>
     </div>
-    <div class="col ms-6">
+    <div class="col ms-md-6">
       <!-- 目前職業狀態 -->
       <div class="mb-4">
         <p class="mb-2">目前職業狀態</p>
@@ -434,15 +434,15 @@
     </div>
   </section>
   <!-- 職涯規劃 -->
-  <section class="d-flex border-bottom py-9">
-    <div class="flex-basis-300">
-      <h2 class="fs-4 fw-medium ls-base mb-3">職涯規劃</h2>
+  <section class="d-flex flex-column flex-md-row border-bottom py-9">
+    <div class="d-flex justify-content-between mb-4 flex-md-column flex-basis-md-300">
+      <h2 class="fs-4 fw-medium ls-base mb-md-3">職涯規劃</h2>
       <div class="d-flex align-items-center">
         <p class="color-natural-50 me-1">欄位皆為</p>
         <p class="badge text-light bg-error lh-xs ls-base">必填</p>
       </div>
     </div>
-    <div class="col ms-6">
+    <div class="col ms-md-6">
       <!-- 1 年短期職涯目標 -->
       <div class="form-floating custom-form-floating mb-3">
         <textarea class="form-control textarea-resize-none rounded-1 form-contro-height-160" maxlength="300" placeholder="1 年短期職涯目標（最多 300 字）" id="short-term-career-goals"></textarea>
@@ -568,12 +568,12 @@
     </div>
   </section>
   <!-- 專業技能區塊 -->
-  <section class="d-flex border-bottom py-9">
-    <div class="flex-basis-300">
-      <h2 class="fs-4 fw-medium ls-base mb-3">專業技能區塊</h2>
+  <section class="d-flex flex-column flex-md-row border-bottom py-9">
+    <div class="d-flex justify-content-between mb-4 flex-md-column flex-basis-md-300">
+      <h2 class="fs-4 fw-medium ls-base mb-md-3">專業技能區塊</h2>
       <p class="color-natural-50">欄位皆為選填</p>
     </div>
-    <div class="col ms-6">
+    <div class="col ms-md-6">
       <!-- 核心專業領域 -->
       <p class="mb-2">核心專業領域</p>
       <div class="custom-form-check form-check form-check-inline">
@@ -639,12 +639,12 @@
     </div>
   </section>
   <!-- 教育背景 -->
-  <section class="d-flex py-9">
-    <div class="flex-basis-300">
-      <h2 class="fs-4 fw-medium ls-base mb-3">教育背景</h2>
+  <section class="d-flex flex-column flex-md-row py-9">
+    <div class="d-flex justify-content-between mb-4 flex-md-column flex-basis-md-300">
+      <h2 class="fs-4 fw-medium ls-base mb-md-3">教育背景</h2>
       <p class="color-natural-50">欄位皆為選填</p>
     </div>
-    <div class="col ms-6">
+    <div class="col ms-md-6">
       <!-- 學歷背景 -->
       <div class="form-floating custom-form-floating mb-6">
         <textarea class="form-control textarea-resize-none rounded-1 form-contro-height-160" maxlength="500" placeholder="學歷背景（最多500字）" id="education-background"></textarea>
@@ -677,16 +677,16 @@
       </div>
     </div>
   </main>
-  <footer class="border-top py-9">
+  <footer class="border-top py-6 py-xl-9">
   <div class="container">
-    <div class="d-flex justify-content-between align-items-center">
+    <div class="d-flex flex-column align-items-center flex-xl-row justify-content-xl-between">
       <nav>
-        <ul class="nav">
-          <li class="custom-nav-item"><a class="nav-link" href="#">服務方案</a></li>
-          <li class="custom-nav-item"><a class="nav-link" href="#">關於職旅</a></li>
-          <li class="custom-nav-item"><a class="nav-link" href="#">聯絡我們</a></li>
-          <li class="custom-nav-item"><a class="nav-link" href="#">隱私權政策</a></li>
-          <li class="custom-nav-item"><a class="nav-link" href="#">用戶條款</a></li>
+        <ul class="nav justify-content-center">
+          <li class="custom-nav-item"><a class="nav-link mb-2" href="#">服務方案</a></li>
+          <li class="custom-nav-item"><a class="nav-link mb-2" href="#">關於職旅</a></li>
+          <li class="custom-nav-item"><a class="nav-link mb-2" href="#">聯絡我們</a></li>
+          <li class="custom-nav-item"><a class="nav-link mb-2" href="#">隱私權政策</a></li>
+          <li class="custom-nav-item"><a class="nav-link mb-2" href="#">用戶條款</a></li>
         </ul>
       </nav>
       <p class="fs-sm color-natural-50 ls-base mb-0">Copyright © 2025 職旅 workway. All rights reserved.</p>
