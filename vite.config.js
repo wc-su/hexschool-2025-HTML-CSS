@@ -19,13 +19,13 @@ export default defineConfig(({ mode }) =>{
         .filter(f => f.endsWith('.html'))
 
       for (const file of htmlFiles) {
-        const name = `${dir}/${file.replace('.html', '')}` // e.g., week1/week1
+        const name = `${dir}/${file.replace('.html', '')}`
         entries[name] = path.resolve(__dirname, 'src', dir, file)
       }
     }
 
     return entries
-  }
+  }  
 
   return {
     root: 'src',
@@ -44,7 +44,8 @@ export default defineConfig(({ mode }) =>{
           entryFileNames: chunk => {
             const match = chunk.name.match(/^(week\d+)\//)
             const weekDir = match ? match[1] : ''
-            return weekDir ? `${weekDir}/js/[name].js` : `js/[name].js`
+            const pureName = chunk.name.split('/').pop();
+            return weekDir ? `${weekDir}/js/${pureName}.js` : `js/${pureName}.js`
           },
           chunkFileNames: `chunks/[name].js`, // 共用 chunk 統一存放
           assetFileNames: assetInfo => {
