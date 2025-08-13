@@ -1,0 +1,53 @@
+<header class="bg-light border-bottom">
+  <div class="container-lg">
+    <nav class="navbar navbar-expand justify-content-between py-3">
+      <h1 class="navbar-brand py-0 position-relative me-0">
+        <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/916c25d5a06bc1b73135d3acf0a22ad65c7af4c8/2025-week5/logo.svg" alt="職旅 Logo">
+        <a  class="stretched-link" href="./"><span class="visually-hidden">職旅</span></a>
+      </h1>
+      <ul class="navbar-nav d-none d-lg-flex h-100">
+        <li class="custom-nav-item me-3"><a class="nav-link" href="#">服務方案</a></li>
+        <li class="custom-nav-item me-3"><a class="nav-link" href="#">關於職旅</a></li>
+        <li class="custom-nav-item"><a class="nav-link" href="#">聯絡我們</a></li>
+      </ul>
+      <div class="d-flex align-items-center">
+        <div>
+          <!-- 登入/註冊 -->
+          <!-- <div class="navbar-nav d-block"> -->
+          <div class="navbar-nav d-none">
+            <div class="custom-nav-item outline">
+              <a class="nav-link px-4 px-lg-6" href="#">登入/註冊</a>
+            </div>
+          </div>
+          <!-- 已登入 -->
+          <!-- <div class="d-none align-items-center position-relative"> -->
+          <div class="d-flex align-items-center position-relative">
+            <img class="header-avatar-img-height rounded-circle me-2" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/916c25d5a06bc1b73135d3acf0a22ad65c7af4c8/2025-week5/avatar.png" alt="cat avatar">
+            <p class="fw-medium ls-0">Mokumaru</p>
+            <a href="#" class="stretched-link"></a>
+          </div>
+        </div>
+        <button class="d-lg-none btn custom-btn-only-icon ms-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="material-symbols-outlined custom-btn-icon">menu</span>
+        </button>
+      </div>
+    </nav>
+    <div class="offcanvas offcanvas-end w-100 p-6" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header p-0 mb-4">
+        <button type="button" class="btn custom-btn-only-icon ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <span class="material-symbols-outlined custom-btn-icon">close</span>
+        </button>
+      </div>
+      <div class="offcanvas-body d-flex flex-column p-0">
+        <ul class="navbar-nav">
+          <li class="custom-nav-item mb-6"><a class="nav-link py-4 rounded-0 text-center" href="#">服務方案</a></li>
+          <li class="custom-nav-item mb-6"><a class="nav-link py-4 rounded-0 text-center" href="#">關於職旅</a></li>
+          <li class="custom-nav-item"><a class="nav-link py-4 rounded-0 text-center" href="#">聯絡我們</a></li>
+        </ul>
+        <button type="button" class="btn custom-btn-lg w-100 fs-5 fw-bold lh-xs ls-base py-2 mt-auto">
+          登入/註冊
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

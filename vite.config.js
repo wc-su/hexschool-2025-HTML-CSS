@@ -69,6 +69,12 @@ export default defineConfig(({ mode }) =>{
     server: {
       port: 5173,
       open: true, // 自動開啟瀏覽器
+    },css: {
+      preprocessorOptions: {
+        scss: {
+          includePaths: ['node_modules']
+        }
+      }
     }
   }
 })

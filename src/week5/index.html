@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>職旅 Workway</title>
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <script type="module" src="./js/main.js"></script>
+</head>
+<body>
+  <%- include('./week5/partials/header.ejs') %>
+  <main>
+    <div class="container-lg py-12">
+      <ul class="d-flex justify-content-center list-unstyled mb-6 mx-auto" id="pills-tab" role="tablist">
+        <li class="me-6" role="presentation">
+          <button class="btn custom-btn-outline custom-btn-icon-start" id="profile-tab" data-bs-toggle="pill" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">
+            <span class="material-symbols-outlined custom-btn-icon">face</span>
+            <p>個人資料</p>
+          </button>
+        </li>
+        <li class="me-6" role="presentation">
+          <button class="btn custom-btn-outline custom-btn-icon-start" id="booking-history-tab" data-bs-toggle="pill" data-bs-target="#booking-history-tab-pane" type="button" role="tab" aria-controls="booking-history-tab-pane" aria-selected="false">
+            <span class="material-symbols-outlined custom-btn-icon">pending_actions</span>
+            <p>預約紀錄</p>
+          </button>
+        </li>
+        <li role="presentation">
+          <button class="btn custom-btn-outline custom-btn-icon-start active" id="career-plan-tab" data-bs-toggle="pill" data-bs-target="#career-plan-tab-pane" type="button" role="tab" aria-controls="career-plan-tab-pane" aria-selected="true">
+            <span class="material-symbols-outlined custom-btn-icon">list_alt</span>
+            <p>職旅計劃</p>
+          </button>
+        </li>
+      </ul>
+      <div class="row">
+        <div class="col-12 col-lg-10 mx-auto">
+          <div class="bg-white rounded-4 shadow-custom p-9">
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                <%- include('./week5/partials/profile.ejs') %>
+              </div>
+              <div class="tab-pane fade" id="booking-history-tab-pane" role="tabpanel" aria-labelledby="booking-history-tab" tabindex="0">
+                <%- include('./week5/partials/booking-history.ejs') %>
+              </div>
+              <div class="tab-pane fade show active" id="career-plan-tab-pane" role="tabpanel" aria-labelledby="career-plan-tab" tabindex="0">
+                <%- include('./week5/partials/career-plan.ejs') %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <%- include('./week5/partials/footer.ejs') %>
+</body>
+</html>
