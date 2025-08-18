@@ -1,0 +1,284 @@
+// =========================================
+//  Bootstrap Variables - Custom Setup
+// =========================================
+// 本檔案用來統一管理 Bootstrap 相關變數設定
+// 分為三部分：
+// * References    -> 從 Bootstrap 引用來後面用，但不改值
+// * Custom Vars   -> 自訂，Bootstrap 沒有的變數
+// * Overrides     -> 改 Bootstrap 預設值
+// =========================================
+
+
+// =========================================
+// * Bootstrap References
+// =========================================
+// Variables pulled from Bootstrap for later calculations
+
+$variable-prefix:             bs- !default; // Deprecated in v5.2.0 for the shorter `$prefix`
+$prefix:                      $variable-prefix !default;
+
+// color
+$red:     #dc3545 !default;
+$yellow:  #ffc107 !default;
+$green:   #198754 !default;
+$cyan:    #0dcaf0 !default;
+$gray-900: #212529 !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$dark:          $gray-900 !default;
+
+// font-size
+$font-size-base:              1rem !default;
+$font-size-sm:                $font-size-base * .875 !default;
+
+$font-weight-medium:          500 !default;
+$font-weight-bold:            700 !default;
+
+//$spacer
+$spacer: 1rem !default;
+
+
+// =========================================
+// * Custom Variables
+// =========================================
+
+// color
+$primary-97: #f1f4fd !default;
+$primary-90: #d2d9f9 !default;
+$primary-80: #a4b4f3 !default;
+$primary-70: #778eee !default;
+$primary-60: #4a69e8 !default;
+$primary-40: #1736b5 !default;
+$primary-25: #0e2271 !default;
+$primarys: (
+  "primary-97": $primary-97,
+  "primary-90": $primary-90,
+  "primary-80": $primary-80,
+  "primary-70": $primary-70,
+  "primary-60": $primary-60,
+  "primary-40": $primary-40,
+  "primary-25": $primary-25
+) !default;
+
+$secondary-90: #d7f4ec !default;
+$secondary-70: #87dec5 !default;
+$secondary-50: #36c99f !default;
+$secondary-35: #268c6f !default;
+$secondarys: (
+  "secondary-90": $secondary-90,
+  "secondary-70": $secondary-70,
+  "secondary-50": $secondary-50,
+  "secondary-35": $secondary-35
+) !default;
+
+$white:      #fcfcfd !default;
+$natural-95: #f0f3f5 !default;
+$natural-90: #e0e5eb !default;
+$natural-85: #d1d9e1 !default;
+$natural-75: #b2bfcc !default;
+$natural-60: #8599ad !default;
+$natural-50: #667f99 !default;
+$natural-30: #3d4d5c !default;
+$black:      #141a1f !default;
+$naturals: (
+  "natural-95": $natural-95,
+  "natural-90": $natural-90,
+  "natural-85": $natural-85,
+  "natural-75": $natural-75,
+  "natural-60": $natural-60,
+  "natural-50": $natural-50,
+  "natural-30": $natural-30,
+  "natural-10": $black
+) !default;
+
+$alpha:      rgba($black, 0.6) !default;
+
+$success-90: #defccf !default;
+$success-40: #47c20a !default;
+$success-30: #369108 !default;
+$successs: (
+  "success-90": $success-90,
+  "success-40": $success-40,
+  "success-30": $success-30
+) !default;
+
+$danger-90: #ffd0cc !default;
+$danger-70: #ff7467 !default;
+$danger-45: #e51300 !default;
+$dangers: (
+  "danger-90": $danger-90,
+  "danger-70": $danger-70,
+  "danger-45": $danger-45
+) !default;
+
+$warning-90: #ffeacc !default;
+$warning-48: #f58f00 !default;
+$warning-35: #b26800 !default;
+$warnings: (
+  "warning-90": $warning-90,
+  "warning-48": $warning-48,
+  "warning-35": $warning-35
+) !default;
+
+// letter-spacing
+$body-letter-spacing: 0.02em;
+
+// line-height
+$line-height-xs:              1.2 !default;
+
+
+// =========================================
+// * Bootstrap Overrides
+// =========================================
+
+$enable-rfs:                  false !default;
+
+$link-decoration:                         none !default;
+
+// heading
+$headings-margin-bottom:      0 !default;
+$headings-font-weight:        $font-weight-bold !default;
+
+// Paragraphs
+$paragraph-margin-bottom:     0 !default;
+
+// display
+$display-font-weight: $font-weight-bold !default;
+$display-line-height: 1 !default;
+
+
+$primary:       $primary-60 !default;
+$secondary:     $secondary-50 !default;
+$light:         $white !default;
+
+// theme-colors-map
+$theme-colors: (
+  "primary":        $primary,
+  "secondary":      $secondary,
+  "success":        $success,
+  "info":           $info,
+  "warning":        $warning,
+  "danger":         $danger,
+  "light":          $light,
+  "dark":           $dark,
+  "white":          $white,
+  "black":          $black,
+  "error":          $danger-45
+) !default;
+
+$body-color:                $black !default;
+
+$border-color:              $natural-85 !default;
+
+
+// font-size
+$font-size-xs:                $font-size-base * .75 !default;
+$font-size-lg:                $font-size-base * 1.125 !default;
+
+$h1-font-size:                $font-size-base * 3 !default;
+
+
+// font-family
+$font-family-custom: "Inter", "Noto Sans TC", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif: $font-family-custom !default;
+
+
+// border-radius
+$border-radius:               .75rem !default;
+$border-radius-sm:            .5rem !default;
+$border-radius-lg:            1rem !default;
+$border-radius-xl:            1.5rem !default;
+$border-radius-pill:          62.5rem !default;
+
+
+// breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1296px, // custom
+  xxl: 1400px
+) !default;
+
+
+// spacers
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer * .75,
+  4: $spacer,
+  5: $spacer * 1.25,
+  6: $spacer * 1.5,
+  7: $spacer * 2,
+  8: $spacer * 2.5,
+  9: $spacer * 3,
+  10: $spacer * 4,
+  11: $spacer * 4.5,
+  12: $spacer * 5,
+) !default;
+
+
+// dropdown
+$dropdown-item-padding-y:           $spacer * .5 !default;
+$dropdown-item-padding-x:           $spacer * 1.5 !default;
+$dropdown-link-hover-bg:            $natural-90 !default;
+
+
+// shadow
+$box-shadow-custom:                 0 0 1rem 0 rgba(black, .12) !default;
+
+
+// table
+$table-cell-padding-y:        1rem !default;
+$table-cell-padding-x:        .75rem !default;
+$table-th-font-weight:        $font-weight-medium !default;
+$table-bg:                    $white !default;
+
+$table-striped-order:         even !default;
+$table-striped-bg:            $natural-90 !default;
+$table-active-color:          $natural-60 !default;
+$table-hover-bg:              $primary-90 !default;
+
+
+$form-select-bg-position:           right 16px center;
+$form-select-bg-size:               18px 14px;
+
+
+// nav
+$nav-link-padding-x:                1rem !default;
+$nav-link-color:                    $black !default;
+$nav-link-hover-color:              $black !default;
+
+// navbar
+$navbar-nav-link-padding-x:         1.5rem !default;
+$navbar-light-color:                rgba(var(--#{$prefix}emphasis-color-rgb), 1) !default;  // 透明度調整為 1
+$navbar-light-hover-color:          rgba(var(--#{$prefix}emphasis-color-rgb), 1) !default;  // 透明度調整為 1
+
+
+// badge
+$badge-font-size:                   $font-size-sm !default;
+$badge-font-weight:                 $font-weight-medium !default;
+$badge-color:                       $natural-50 !default;
+$badge-padding-y:                   .25em !default;
+$badge-padding-x:                   .571em !default;
+
+// modal
+$modal-md:                          480px !default;
+$modal-xl:                          1200px !default;
+
+
+//accordion
+$accordion-padding-y:                     1.5rem !default;
+$accordion-padding-x:                     1.5rem !default;
+$accordion-button-color:                  $natural-50 !default;
+$accordion-button-active-bg:              var(--#{$prefix}accordion-bg) !default;
+$accordion-button-active-color:           $natural-50 !default;
+
+$accordion-icon-width:                    1.5rem !default;
+$accordion-icon-color:                    $black !default;
+$accordion-icon-active-color:             $primary !default;
+$accordion-icon-transform:                rotate(-90deg);

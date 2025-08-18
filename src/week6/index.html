@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>職旅 Workway</title>
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="./scss/layouts/_loader.scss">
+  <script type="module" src="./js/main.js"></script>
+</head>
+<body class="loading">
+  <%- include('./week6/partials/loader.ejs') %>
+  <%- include('./week6/partials/header.ejs') %>
+  <main>
+    <section class="header-bg py-9 py-md-12" aria-labelledby="title">
+      <div class="container text-center">
+        <div class="d-inline-block">
+          <h2 class="h2 header-md-title text-center lh-xs ls-base" id="title">一起陪伴、探索<br>還有你那些未完成的夢</h2>
+          <div class="d-flex flex-column justify-content-center align-items-center flex-md-row justify-content-md-between mt-6">
+            <p class="text-center color-natural-50 text-md-start">自由工作很美，也很難。<br>我們用 1 對 1 陪伴，陪你從第一步開始，直到夢想變成日常</p>
+            <button type="button" class="btn custom-btn-lg custom-btn-icon-end fs-5 p-3 pe-2 py-md-4 ps-md-5 pe-md-3 mt-4 mt-md-0">
+              <p>開始你的職旅</p>
+              <span class="material-symbols-outlined custom-btn-icon">chevron_forward</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid px-md-6 mt-8">
+        <div class="row">
+          <div class="col d-none d-md-block">
+            <img class="img-fluid" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/916c25d5a06bc1b73135d3acf0a22ad65c7af4c8/2025-week6/index/hero-1.png" alt="">
+          </div>
+          <div class="col d-none d-md-flex flex-column justify-content-between">
+            <img class="img-fluid" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/916c25d5a06bc1b73135d3acf0a22ad65c7af4c8/2025-week6/index/hero-2.png" alt="">
+            <img class="img-fluid" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/916c25d5a06bc1b73135d3acf0a22ad65c7af4c8/2025-week6/index/hero-3.png" alt="">
+          </div>
+          <div class="col">
+            <img class="img-fluid" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/916c25d5a06bc1b73135d3acf0a22ad65c7af4c8/2025-week6/index/hero-4.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="story-section overflow-hidden py-9 py-md-12" aria-labelledby="story-title">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 d-flex flex-column justify-content-center">
+            <img class="img-fluid story-icon" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/916c25d5a06bc1b73135d3acf0a22ad65c7af4c8/2025-week6/logo-icon.svg" alt="">
+            <h2 class="fs-md-1 ls-base mt-4 mt-md-6" id="story-title">他們已經踏上職旅<br>聽聽他們的故事</h2>
+            <p class="color-natural-50 fs-md-lg ls-base mt-4 mt-md-6">每一段職涯轉型都有獨特挑戰，這些曾經與你有相同疑惑的夥伴，現在正過著他們嚮往的生活</p>
+          </div>
+          <div class="col-md-8 mt-6 mt-md-0">
+            <div class="p-3">
+              <ul class="list-unstyled row gx-4 gx-md-6 flex-nowrap overflow-x-auto pb-4 mb-0" id="story-md-list">
+                <li class="col-auto">
+                  <div class="card story-card">
+                    <div class="card-img-top">
+                      <img class="img-fluid" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/916c25d5a06bc1b73135d3acf0a22ad65c7af4c8/2025-week6/index/story-cover-1.png" alt="">
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">轉型成功的設計師</h3>
+                      <p class="card-text">從企業設計師轉職自由接案，比我想的難太多。收入不穩時我幾乎想放棄，是職旅顧問幫我找回方向與差異化。半年後，我不僅維持收入，還能自由挑案，最重要的是，我終於有時間陪爸媽。</p>
+                      <p class="card-text-job-position">視覺設計師<span class="card-text-name-age">郭敏迪 (34y)</span></p>
+                    </div>
+                    <div class="card-badge">數位遊牧 2 年</div>
+                  </div>
+                </li>
+                <li class="col-auto">
+                  <div class="card story-card">
+                    <div class="card-img-top">
+                      <img class="img-fluid" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/916c25d5a06bc1b73135d3acf0a22ad65c7af4c8/2025-week6/index/story-cover-2.png" alt="">
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">數位遊牧生活實踐者</h3>
+                      <p class="card-text">兩年前我只想環遊世界，卻不知道怎麼開始。職旅給了我遠端工作與生活規劃的指導。現在我在五個國家工作過，收入比以前多 20%。每次打開電腦，看見窗外不同的風景，都慶幸當初那一個決定。</p>
+                      <p class="card-text-job-position">內容策略師<span class="card-text-name-age">林雨潔 (29y)</span></p>
+                    </div>
+                    <div class="card-badge">數位遊牧 2 年</div>
+                  </div>
+                </li>
+                <li class="col-auto">
+                  <div class="card story-card">
+                    <div class="card-img-top">
+                      <img class="img-fluid" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/916c25d5a06bc1b73135d3acf0a22ad65c7af4c8/2025-week6/index/story-cover-3.png" alt="">
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">中年轉型的工程師</h3>
+                      <p class="card-text">59 歲被裁員時，我以為職涯結束了。職旅顧問不只幫我轉職，更讓我相信自己還有價值。現在我每月穩定接案、收入翻倍。年齡不是限制，只是我還沒找到對的方向。</p>
+                      <p class="card-text-job-position">系統架構顧問<span class="card-text-name-age">張世明 (62y)</span></p>
+                    </div>
+                    <div class="card-badge">數位遊牧 3 年</div>
+                  </div>
+                </li>
+                <li class="col-auto">
+                  <div class="card story-card">
+                    <div class="card-img-top">
+                      <img class="img-fluid" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/916c25d5a06bc1b73135d3acf0a22ad65c7af4c8/2025-week6/index/story-cover-4.png" alt="">
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">轉型成功的設計師</h3>
+                      <p class="card-text">從企業設計師轉職自由接案，比我想的難太多。收入不穩時我幾乎想放棄，是職旅顧問幫我找回方向與差異化。半年後，我不僅維持收入，還能自由挑案，最重要的是，我終於有時間陪爸媽。</p>
+                      <p class="card-text-job-position">視覺設計師<span class="card-text-name-age">郭敏迪 (34y)</span></p>
+                    </div>
+                    <div class="card-badge">數位遊牧 2 年</div>
+                  </div>
+                </li>
+                <li class="col-auto">
+                  <div class="card story-card">
+                    <div class="card-img-top">
+                      <img class="img-fluid" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/916c25d5a06bc1b73135d3acf0a22ad65c7af4c8/2025-week6/index/story-cover-5.png" alt="">
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">轉型成功的設計師</h3>
+                      <p class="card-text">從企業設計師轉職自由接案，比我想的難太多。收入不穩時我幾乎想放棄，是職旅顧問幫我找回方向與差異化。半年後，我不僅維持收入，還能自由挑案，最重要的是，我終於有時間陪爸媽。</p>
+                      <p class="card-text-job-position">視覺設計師<span class="card-text-name-age">郭敏迪 (34y)</span></p>
+                    </div>
+                    <div class="card-badge">數位遊牧 2 年</div>
+                  </div>
+                </li>
+                <li class="col-auto">
+                  <div class="card story-card">
+                    <div class="card-img-top">
+                      <img class="img-fluid" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/916c25d5a06bc1b73135d3acf0a22ad65c7af4c8/2025-week6/index/story-cover-6.png" alt="">
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">轉型成功的設計師</h3>
+                      <p class="card-text">從企業設計師轉職自由接案，比我想的難太多。收入不穩時我幾乎想放棄，是職旅顧問幫我找回方向與差異化。半年後，我不僅維持收入，還能自由挑案，最重要的是，我終於有時間陪爸媽。</p>
+                      <p class="card-text-job-position">視覺設計師<span class="card-text-name-age">郭敏迪 (34y)</span></p>
+                    </div>
+                    <div class="card-badge">數位遊牧 2 年</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="choose-section py-9 py-lg-12">
+      <div class="container text-center position-relative">
+        <p class="choose-section-why">為什麼？</p>
+        <h2 class="fs-lg-1 mt-1">選擇職旅 WorkWay</h2>
+        <div class="row mt-6 mt-lg-9">
+          <div class="col-lg-4">
+            <div class="card adv-card">
+              <div class="card-img">
+                <img class="img-fluid" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/916c25d5a06bc1b73135d3acf0a22ad65c7af4c8/2025-week6/index/adv-1.png" alt="">
+              </div>
+              <div class="adv-card-badge">
+                <span class="material-symbols-outlined">ads_click</span>
+                <p>實戰經驗</p>
+              </div>
+              <div class="adv-card-hover-text">
+                <p>我們的顧問都是親身走過這條路的專家，不是紙上談兵的理論家。你所學到的每一個建議，都是經過無數次嘗試與錯誤後萃取的精華。</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="card adv-card">
+              <div class="card-img">
+                <img class="img-fluid" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/916c25d5a06bc1b73135d3acf0a22ad65c7af4c8/2025-week6/index/adv-2.png" alt="">
+              </div>
+              <div class="adv-card-badge">
+                <span class="material-symbols-outlined">ads_click</span>
+                <p>全方位支持</p>
+              </div>
+              <div class="adv-card-hover-text">
+                <p>從心態調整到實際操作，從品牌建立到財務規劃，我們提供你轉型路上需要的每一塊拼圖，讓不確定感不再阻礙你的決定。</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="card adv-card">
+              <div class="card-img">
+                <img class="img-fluid" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/916c25d5a06bc1b73135d3acf0a22ad65c7af4c8/2025-week6/index/adv-3.png" alt="">
+              </div>
+              <div class="adv-card-badge">
+                <span class="material-symbols-outlined">ads_click</span>
+                <p>社群力量</p>
+              </div>
+              <div class="adv-card-hover-text">
+                <p>加入職旅不只是獲得諮詢，更是連結到一群志同道合的夥伴。在這裡，你的疑惑有人解答，你的成就有人分享，你的旅程不再孤單。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-6 mt-lg-9">
+          <div class="col-auto">
+            <p class="color-natural-50">不是套模板的建議，而是為你量身打造的陪伴！</p>
+          </div>
+          <div class="col d-flex align-items-center">
+            <span class="d-block w-100 border-bottom"></span>
+          </div>
+        </div>
+        <img class="choose-section-svg" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/916c25d5a06bc1b73135d3acf0a22ad65c7af4c8/2025-week6/index/adv-vectors.svg" alt="">
+      </div>
+    </section>
+    <section class="bg-white py-9 py-md-12">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <img class="w-100 h-100 object-fit-cover rounded" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/916c25d5a06bc1b73135d3acf0a22ad65c7af4c8/2025-week6/index/team.png" alt="">
+          </div>
+          <div class="col-md-6 mt-6 mt-md-0">
+            <h2 class="fs-md-1 text-center text-md-start ls-base">遇見你的職涯夥伴</h2>
+            <p class="fs-md-lg color-natural-50 mt-4 mt-md-6">每位顧問都有獨特專長，更重要的是：</p>
+            <p class="h5 fs-md-4 text-primary text-center d-md-inline-block bg-natural-95 p-2 mt-4 mt-md-6">“ 他們都曾面對你正在經歷的挑戰 ”</p>
+            <p class="fs-md-lg color-natural-50 mt-4 mt-md-6">職旅 WorkWay 匯集了來自不同領域、擁有豐富實戰經驗的自由工作者與數位遊牧專家。我們的顧問不只教授理論，更分享親身經歷的挑戰與解決之道。</p>
+            <p class="fs-md-lg color-natural-50 mt-4 mt-md-6">我們相信，最好的指導來自於那些已經走過你想走的路，並願意伸出手拉你一把的人。</p>
+            <button type="button" class="btn custom-btn custom-btn-icon-end mx-auto mx-md-0 mt-4 mt-md-6">
+              <p>了解更多職旅夥伴</p>
+              <span class="material-symbols-outlined custom-btn-icon">chevron_forward</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-primary py-9 py-md-12">
+      <div class="container text-center text-white">
+        <h2 class="fs-md-1 ls-base">服務流程</h2>
+        <p class="fs-md-lg ls-base mt-4 mt-md-6">簡單四步，踏上你的職旅</p>
+        <div class="row flex-nowrap flex-md-wrap mt-6 mt-md-9 overflow-x-auto" id="serve-list">
+          <div class="col-auto col-md-3">
+            <div class="card serve-card">
+              <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/916c25d5a06bc1b73135d3acf0a22ad65c7af4c8/2025-week6/index/serve-1.svg" class="card-img-top" alt="">
+              <div class="card-body">
+                <h5 class="card-title">免費註冊會員</h5>
+                <p class="card-text">透過網站左上角按鈕，立即註冊免費會員，與我們開始建立連結。</p>
+              </div>
+              <div class="serve-card-badge">STEP 1</div>
+            </div>
+          </div>
+          <div class="col-auto col-md-3">
+            <div class="card serve-card">
+              <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/916c25d5a06bc1b73135d3acf0a22ad65c7af4c8/2025-week6/index/serve-2.svg" class="card-img-top" alt="">
+              <div class="card-body">
+                <h5 class="card-title">填寫職旅計劃</h5>
+                <p class="card-text">了解你的技能、熱情與市場需求的交會點，找出屬於你的獨特定位。</p>
+              </div>
+              <div class="serve-card-badge">STEP 2</div>
+            </div>
+          </div>
+          <div class="col-auto col-md-3">
+            <div class="card serve-card">
+              <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/916c25d5a06bc1b73135d3acf0a22ad65c7af4c8/2025-week6/index/serve-3.svg" class="card-img-top" alt="">
+              <div class="card-body">
+                <h5 class="card-title">初次諮詢</h5>
+                <p class="card-text">依據你的目標與現況，給予最直接的建議，建立清晰的轉型思路。</p>
+              </div>
+              <div class="serve-card-badge">STEP 3</div>
+            </div>
+          </div>
+          <div class="col-auto col-md-3">
+            <div class="card serve-card">
+              <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/916c25d5a06bc1b73135d3acf0a22ad65c7af4c8/2025-week6/index/serve-4.svg" class="card-img-top" alt="">
+              <div class="card-body">
+                <h5 class="card-title">實戰指導</h5>
+                <p class="card-text">專家一對一指導，從品牌建立到客戶開發，每一步都有明確方向。</p>
+              </div>
+              <div class="serve-card-badge">STEP 4</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="qa-section py-9 py-md-12">
+      <div class="container text-center">
+        <p class="qa-section-why">\ Q&A /</p>
+        <h2 class="mt-1">你可能有些困惑...</h2>
+        <div class="row mt-6 mt-md-9">
+          <div class="col-md-5 d-none d-md-flex align-items-end">
+            <img class="img-fluid" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/916c25d5a06bc1b73135d3acf0a22ad65c7af4c8/2025-week6/index/qa.svg" alt="">  
+          </div>
+          <div class="col-md-7">
+            <div class="accordion d-flex flex-column gap-4 gap-md-6" id="accordionPanelsStayOpenExample">
+              <div class="accordion-item rounded shadow-custom overflow-hidden">
+                <h3 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#one-on-one-consultation" aria-expanded="true" aria-controls="one-on-one-consultation">
+                    <div class="d-flex me-2">
+                      <p class="fs-lg fw-bold lh-xs ls-base me-2">Q.</p>
+                      <p class="fw-bold lh-xs">一對一諮詢是怎麼進行的？需要準備什麼嗎？</p>
+                    </div>
+                  </button>
+                </h3>
+                <div id="one-on-one-consultation" class="accordion-collapse collapse show">
+                  <div class="accordion-body">
+                    <div class="d-flex">
+                      <p class="fs-lg text-primary fw-bold lh-xs ls-base me-2">A.</p>
+                      <p class="fs-sm text-start">諮詢通常採 Google Meet 或 Zoom，時長約 30 分鐘。我們建議你在預約前先簡單整理目前的狀態、遇到的困難、或想達成的目標。如果你不確定，顧問也會從對話中引導你探索，無需擔心準備不夠。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item rounded shadow-custom overflow-hidden">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#freelance-career" aria-expanded="false" aria-controls="freelance-career">
+                    <div class="d-flex me-2">
+                      <p class="fs-lg fw-bold lh-xs ls-base me-2">Q.</p>
+                      <p class="fw-bold lh-xs">自由職涯真的可以養活自己嗎？你們怎麼協助？</p>
+                    </div>
+                  </button>
+                </h3>
+                <div id="freelance-career" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <div class="d-flex">
+                      <p class="fs-lg text-primary fw-bold lh-xs ls-base me-2">A.</p>
+                      <p class="fs-sm text-start">自由職涯可以養活自己，但需要有策略與持續調整。WorkWay 顧問會根據你的專業、興趣、可投入時間，設計客製化的變現路徑，例如自由接案、產品化服務、遠端職位申請等，同時協助你管理初期財務風險，避免因壓力過大中途放棄。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item rounded shadow-custom overflow-hidden">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pricing-method" aria-expanded="false" aria-controls="pricing-method">
+                    <div class="d-flex me-2">
+                      <p class="fs-lg fw-bold lh-xs ls-base me-2">Q.</p>
+                      <p class="fw-bold lh-xs">職旅 WorkWay 的收費方式是怎麼計算的？</p>
+                    </div>
+                  </button>
+                </h3>
+                <div id="pricing-method" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <div class="d-flex">
+                      <p class="fs-lg text-primary fw-bold lh-xs ls-base me-2">A.</p>
+                      <p class="fs-sm text-start">我們提供單次諮詢、短期方案（例如 3 次輔導包）、或專案長期陪跑計畫。每種方案都標示清楚金額與包含內容，無強制綁約或推銷額外商品。選擇前，我們也會依照你的需求與預算一起討論最適合的安排。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item rounded shadow-custom overflow-hidden">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#refund-guarantee" aria-expanded="false" aria-controls="refund-guarantee">
+                    <div class="d-flex me-2">
+                      <p class="fs-lg fw-bold lh-xs ls-base me-2">Q.</p>
+                      <p class="fw-bold lh-xs">如果諮詢後發現不適合，會有退款保障嗎？</p>
+                    </div>
+                  </button>
+                </h3>
+                <div id="refund-guarantee" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <div class="d-flex">
+                      <p class="fs-lg text-primary fw-bold lh-xs ls-base me-2">A.</p>
+                      <p class="fs-sm text-start">WorkWay 對每一位學員負責。如果你在第一次完整諮詢結束後，覺得方向不符合期待，可在 3 日內申請退款。我們也提供一次更換顧問的機會，確保你找到最適合自己的陪伴者。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item rounded shadow-custom overflow-hidden">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#book-consultation" aria-expanded="false" aria-controls="book-consultation">
+                    <div class="d-flex me-2">
+                      <p class="fs-lg fw-bold lh-xs ls-base me-2">Q.</p>
+                      <p class="fw-bold lh-xs">我現在還不確定自己要什麼，也可以預約諮詢嗎？</p>
+                    </div>
+                  </button>
+                </h3>
+                <div id="book-consultation" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <div class="d-flex">
+                      <p class="fs-lg text-primary fw-bold lh-xs ls-base me-2">A.</p>
+                      <p class="fs-sm text-start">很多人來找 WorkWay 時，其實也處於迷惘期。我們的一對一諮詢設計，就是從理解你的人生目標、價值觀與現實條件開始，逐步協助你釐清想要的生活方式與可能路徑。你不需要有答案，只需要願意開始對話。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-white py-8">
+      <div class="container">
+        <%- include('./week6/partials/cta-card.ejs') %>
+      </div>
+    </section>
+  </main>
+  <%- include('./week6/partials/footer.ejs') %>
+</body>
+</html>

@@ -1,0 +1,109 @@
+@use "sass:map";
+@use "../../abstracts/custom-mixin" as mixin;
+
+.plan-card {
+  box-shadow: $box-shadow-custom;
+  padding: map.get($spacers, 6);
+  padding-top: map.get($spacers, 9);
+  overflow: hidden;
+  position: relative;
+  @include media-breakpoint-up(md) {
+    padding: map.get($spacers, 9);
+  }
+  &.hot-plan {
+    border-width: 2px;
+    border-color: $secondary;
+  }
+  &.hot-plan::before {
+    content: "HOT";
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: $font-size-sm;
+    @include mixin.font-size($font-size-sm, $line-height-xs, $font-weight-bold);
+    background: $secondary;
+    border-end-end-radius: $border-radius;
+    padding: map.get($spacers, 2) map.get($spacers, 4);
+  }
+  .card-body {
+    padding: 0;
+  }
+  .plan-card-type {
+    color: $primary;
+    @include mixin.font-size($font-size-sm, $line-height-xs, $font-weight-medium);
+    margin-bottom: map.get($spacers, 2);
+    @include media-breakpoint-up(md) {
+      @include mixin.font-size($font-size-base);
+    }
+  }
+  .card-title {
+    @include mixin.font-size(map.get($font-sizes, 5), $line-height-xs, $font-weight-medium);
+    @include media-breakpoint-up(md) {
+      @include mixin.font-size(map.get($font-sizes, 4));
+    }
+  }
+  .card-text {
+    @include mixin.font-size($font-size-sm);
+    margin-bottom: map.get($spacers, 4);
+    @include media-breakpoint-up(md) {
+      @include mixin.font-size($font-size-base);
+      margin-bottom: map.get($spacers, 6);
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+      display: flex;
+      flex-direction: column;
+      gap: map.get($spacers, 1);
+      margin-top: map.get($spacers, 2);
+    }
+    ul li {
+      display: flex;
+    }
+    span.material-symbols-outlined {
+      color: $primary;
+    }
+  }
+  .card-text-target {
+    background-color: $natural-95;
+    border-radius: $border-radius;
+    padding: map.get($spacers, 4);
+    & > *:not(:first-child) {
+        margin-top: map.get($spacers, 2);
+      }
+    @include media-breakpoint-up(md) {
+      padding: map.get($spacers, 6);
+    }
+    .card-text-target-item {
+      display: flex;
+      align-items: center;
+      & > *:first-child {
+        flex-shrink: 0;
+      }
+    }
+    .card-text-target-audience {
+      font-weight: $font-weight-bold;
+    }
+    .card-text-target-price {
+      @include mixin.font-size(map.get($font-sizes, 5), $line-height-xs, $font-weight-bold);
+      @include media-breakpoint-up(md) {
+        @include mixin.font-size(map.get($font-sizes, 4));
+      }
+      letter-spacing: 0;
+      color: $primary;
+    }
+  }
+
+
+
+  .plan-card-img {
+    margin-left: map.get($spacers, 6);
+    display: none;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    @include media-breakpoint-up(md) {
+      display: block;
+    }
+  }
+}

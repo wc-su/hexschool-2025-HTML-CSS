@@ -1,0 +1,19 @@
+@use "sass:map";
+
+.custom-nav-item {
+  & > .nav-link {
+    border-radius: $border-radius-lg;
+    transition: background-color 0.3s ease-out;
+    @include media-breakpoint-up(lg) {
+      padding-left: map.get($spacers, 6);
+      padding-right: map.get($spacers, 6);
+    }
+  }
+  &.outline > .nav-link {
+    border: 1px solid $border-color;
+  }
+  & > .nav-link:hover {
+    background-color: $natural-90;
+    border-color: transparent;
+  }
+}

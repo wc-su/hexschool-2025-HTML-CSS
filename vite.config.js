@@ -25,13 +25,39 @@ export default defineConfig(({ mode }) =>{
     }
 
     return entries
-  }  
+  }
+  
+  // 找到每個資料夾下的圖片
+  function getImagesData() {
+    const weeks = fs.readdirSync(path.resolve(__dirname, 'src'))
+      .filter(dir => /^week\d+$/.test(dir))
+
+    const allWeeks = {}
+
+    weeks.forEach(week => {
+      const weekPath = path.resolve(__dirname, 'src', week, 'images')
+      if (fs.existsSync(weekPath)) {
+        const files = fs.readdirSync(weekPath).filter(f => /\.(png|jpe?g|svg|gif|webp)$/.test(f))
+        allWeeks[week] = {}
+        files.forEach(f => {
+          allWeeks[week][f] = `/${week}/images/${f}`
+        })
+      }
+    })
+    
+    return allWeeks
+  }
 
   return {
     root: 'src',
     base: '/hexschool-2025-HTML-CSS/',
-    plugins: [ ViteEjsPlugin() ],
+    plugins: [
+      ViteEjsPlugin({
+        images: getImagesData()
+      }),
+    ],
     build: {
+      // assetsInlineLimit: 0, // 0 表示完全不轉 Base64
       modulePreload: {
         polyfill: false, // 不加載 polyfill
       },

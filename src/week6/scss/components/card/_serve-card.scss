@@ -1,0 +1,92 @@
+@use "sass:map";
+@use "../../abstracts/custom-mixin" as mixin;
+
+.serve-card {
+  text-align: center;
+  position: relative;
+  padding: map.get($spacers, 6);
+  overflow: hidden;
+  border: 0;
+  max-width: 306px;
+  height: 100%;
+  &.consulting-service {
+    max-width: none;
+    box-shadow: $box-shadow-custom;
+  }
+  &.consulting-service.hot-service {
+    border: 2px solid $secondary;
+  }
+  .card-img-top {
+    max-width: 160px;
+    max-height: 160px;
+    margin-top: map.get($spacers, 8);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &.consulting-service .card-img-top {
+    margin-top: 0;
+  }
+  .card-body {
+    padding: 0;
+    padding-top: map.get($spacers, 6);
+    padding-bottom: map.get($spacers, 6);
+    display: flex;
+    flex-direction: column;
+    gap: map.get($spacers, 4);
+    @include media-breakpoint-up(md) {
+      gap: map.get($spacers, 6);
+    }
+  }
+  &.consulting-service .card-body {
+    padding-top: map.get($spacers, 4);
+    padding-bottom: map.get($spacers, 4);
+    gap: map.get($spacers, 2);
+    @include media-breakpoint-up(md) {
+      padding-top: map.get($spacers, 6);
+      padding-bottom: map.get($spacers, 6);
+    }
+  }
+  .card-title {
+    font-size: map.get($font-sizes, 5);
+    font-weight: $font-weight-bold;
+    line-height: $line-height-xs;
+    letter-spacing: $body-letter-spacing;
+    margin-bottom: 0;
+    @include media-breakpoint-up(md) {
+      font-size: map.get($font-sizes, 4);
+    }
+  }
+  .card-text {
+    color: $natural-50;
+    font-size: $font-size-sm;
+    letter-spacing: $body-letter-spacing;
+    margin-top: auto;
+  }
+  &.consulting-service .service-price {
+    color: $primary;
+    @include mixin.font-size(map.get($font-sizes, 5), $line-height-xs, $font-weight-bold);
+    @include media-breakpoint-up(md) {
+      font-size: map.get($font-sizes, 4);
+    }
+  }
+  .serve-card-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: $primary;
+    background-color: $natural-95;
+    @include mixin.font-size($font-size-sm, $line-height-xs, $font-weight-bold);
+    border-bottom-right-radius: $border-radius;
+    padding: 9px map.get($spacers, 4);
+    @include media-breakpoint-up(md) {
+      padding-top: 10.5px;
+      padding-bottom: 10.5px;
+    }
+  }
+  &.consulting-service.hot-service .serve-card-badge {
+    color: $black;
+    background-color: $secondary;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}

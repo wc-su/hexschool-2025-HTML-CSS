@@ -1,0 +1,27 @@
+@use "sass:map";
+
+.auth-btn-close {
+  top: map.get($spacers, 3);
+  right: map.get($spacers, 3);
+  @include media-breakpoint-up(md) {
+    top: map.get($spacers, 6);
+    right: map.get($spacers, 6);
+  }
+}
+
+.auth-img {
+  & > img {
+    object-position: 20% center;
+  }
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.auth-width-500 {
+  // 配合圖片設定，有圖片時限制最多 500px
+  @media (min-width: 1025px) {
+    width: 100%;
+    max-width: 500px;
+  }
+}
