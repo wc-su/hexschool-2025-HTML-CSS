@@ -1,0 +1,65 @@
+.service-heading-section {
+  background: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/916c25d5a06bc1b73135d3acf0a22ad65c7af4c8/2025-week6/service/banner-bg.png");
+  background-size: auto 50%;
+  position: relative;
+  z-index: 1;
+  @media (min-width: 1024px) {
+    &::before {
+      content: "";
+      background: url("../../images/service-bg-part-1.svg");
+      background-repeat: no-repeat;
+      background-position: right top;
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+    }
+    &::after {
+      content: "";
+      background: url("../../images/service-bg-part-2.svg");
+      background-repeat: no-repeat;
+      background-position: left bottom;
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+    }
+  }
+}
+.service-heading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (min-width: 1024px) {
+    & > *:last-child {
+      position: relative;
+      &::after {
+        content: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/916c25d5a06bc1b73135d3acf0a22ad65c7af4c8/2025-week6/service/banner-person.svg");
+        position: absolute;
+        bottom: -96px;
+        left: calc(100% - 40px);
+      }
+    }
+  }
+}
+
+.support-section {
+  background: linear-gradient(to bottom, $natural-95 0 300px, $white 300px 100%);
+}
+.support-content {
+  background: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/916c25d5a06bc1b73135d3acf0a22ad65c7af4c8/2025-week6/service/subscribe-3.svg")
+    $secondary-90 no-repeat top right;
+  position: relative;
+  &-img-start, &-img-end {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
+  }
+  &-img-start {
+    left: 0;
+  }
+  &-img-end {
+    right: 0;
+  }
+}

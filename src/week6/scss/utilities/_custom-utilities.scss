@@ -1,0 +1,17 @@
+.flex-basis-md-300 {
+  @include media-breakpoint-up(md) {
+    flex-basis: 300px;
+  }
+}
+
+.color-natural-50 {
+  color: $natural-50;
+}
+
+.bg-natural-95 {
+  background-color: $natural-95;
+}
+
+.list-disc {
+  list-style-type: disc;
+}

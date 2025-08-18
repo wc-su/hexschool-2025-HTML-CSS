@@ -1,0 +1,14 @@
+.custom-form-floating {
+  & > .form-control ~ label {
+    color: $black;
+  }
+
+  & > .form-control:focus ~ label,
+  & > .form-control:not(:placeholder-shown) ~ label {
+    color: $natural-50;
+  }
+
+  & > .form-contro-height-160 {
+    height: 160px;
+  }
+}
