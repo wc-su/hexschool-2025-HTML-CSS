@@ -1,0 +1,26 @@
+.custom-table {
+  & th:first-child{
+    width: 60%;
+  }
+  & th, & td {
+    white-space: nowrap;
+  }
+
+  .table-active > * {
+    // Bootstrap 使用 box-shadow 填滿背景色
+    // --bs-table-bg-state: 狀態背景色，例如 active, hover
+    // --bs-table-bg-type: 類型背景色，例如 striped
+    // --bs-table-accent-bg: 主要底色
+    // 設計稿沒有 active-bg，調整成不判斷 active-bg
+    --bs-table-bg-state: var(--bs-table-bg-type, var(--bs-table-accent-bg));
+  }
+
+  // 沒有 hover-color，所以如果是 table-active，就套用 active-color
+  &.table-hover > tbody > tr:hover > * {
+    --bs-table-color-state: var(--bs-table-active-color);
+  }
+  // 不是 table-active，就套用 主要底色
+  &.table-hover > tbody > tr:hover:not(.table-active) > * {
+    --bs-table-color-state: var(--bs-table-color);
+  }
+}

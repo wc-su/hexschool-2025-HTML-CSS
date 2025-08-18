@@ -1,0 +1,75 @@
+@use "sass:map";
+
+.story-card {
+  max-width: 320px;
+  height: 100%;
+  border: 0;
+  box-shadow: $box-shadow-custom;
+  cursor: pointer;
+  &:hover .card-img-top img {
+    transform: scale(1.1);
+  }
+  @include media-breakpoint-up(md) {
+    max-width: 400px;
+  }
+  .card-img-top {
+    height: 400px;
+    overflow: hidden;
+    img {
+      transition: all 0.3s;
+    }
+    @include media-breakpoint-up(md) {
+      height: 500px;
+    }
+  }
+  .card-body {
+    padding-top: map.get($spacers, 4);
+    padding-right: map.get($spacers, 4);
+    padding-left: map.get($spacers, 4);
+    padding-bottom: map.get($spacers, 6);
+    display: flex;
+    flex-direction: column;
+  }
+  .card-title {
+    font-size: map.get($font-sizes, 5);
+    margin-bottom: map.get($spacers, 4);
+    letter-spacing: $body-letter-spacing;
+    @include media-breakpoint-up(md) {
+      font-size: map.get($font-sizes, 4);
+    }
+  }
+  .card-text {
+    color: $natural-50;
+    font-size: $font-size-sm;
+    letter-spacing: $body-letter-spacing;
+    margin-bottom: map.get($spacers, 4);
+  }
+  .card-text-job-position {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+    letter-spacing: $body-letter-spacing;
+    margin-top: auto;
+  }
+  .card-text-name-age {
+    padding-left: map.get($spacers, 2);
+    font-size: $font-size-sm;
+    font-weight: $font-weight-normal;
+    border-left: 1px solid $border-color;
+    margin-left: map.get($spacers, 2);
+  }
+  .card-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    color: $white;
+    background-color: $primary;
+    font-size: $font-size-sm;
+    letter-spacing: $body-letter-spacing;
+    font-weight: $font-weight-medium;
+    border-radius: $border-radius;
+    padding: map.get($spacers, 2) map.get($spacers, 4);
+    @include media-breakpoint-up(md) {
+      font-size: $font-size-base;
+    }
+  }
+}

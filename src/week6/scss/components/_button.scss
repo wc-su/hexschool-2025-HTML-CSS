@@ -1,0 +1,151 @@
+@use "sass:map";
+
+.custom-btn {
+  @include button-variant(
+    $background: $black,
+    $border: transparent,
+    $color: $light,
+    $hover-background: $secondary,
+    $hover-border: transparent,
+    $hover-color: $black,
+    $active-background: $secondary,
+    $active-border: transparent,
+    $active-color: $black,
+    $disabled-background: $black,
+    $disabled-border: transparent,
+    $disabled-color: $light
+  );
+  @include button-size(
+    $padding-y: map.get($spacers, 3),
+    $padding-x: map.get($spacers, 5),
+    $font-size: $font-size-base,
+    $border-radius: $border-radius-lg
+  );
+  & > .custom-btn-icon {
+    font-size: map.get($font-sizes, 5);
+  }
+}
+
+.custom-btn-outline {
+  @include button-variant(
+    $background: $light,
+    $border: $border-color,
+    $color: $black,
+    $hover-background: $natural-90,
+    $hover-border: transparent,
+    $hover-color: $black,
+    $active-background: $natural-90,
+    $active-border: transparent,
+    $active-color: $black,
+    $disabled-background: $light,
+    $disabled-border: $border-color,
+    $disabled-color: $black
+  );
+  @include button-size(
+    $padding-y: map.get($spacers, 3),
+    $padding-x: map.get($spacers, 5),
+    $font-size: $font-size-base,
+    $border-radius: $border-radius-lg
+  );
+  & > .custom-btn-icon {
+    font-size: map.get($font-sizes, 5);
+  }
+}
+
+.custom-btn-lg {
+  @include button-variant(
+    $background: $secondary,
+    $border: transparent,
+    $color: $black,
+    $hover-background: $primary,
+    $hover-border: transparent,
+    $hover-color: $white,
+    $active-background: $primary,
+    $active-border: transparent,
+    $active-color: $white,
+    $disabled-background: $secondary,
+    $disabled-border: transparent,
+    $disabled-color: $black
+  );
+  @include button-size(
+    $padding-y: map.get($spacers, 4),
+    $padding-x: map.get($spacers, 5),
+    $font-size: map.get($font-sizes, 4),
+    $border-radius: $border-radius-lg
+  );
+  font-weight: $font-weight-bold;
+  & > .custom-btn-icon {
+    font-size: map.get($font-sizes, 3);
+  }
+}
+
+.custom-btn-sm {
+  @include button-variant(
+    $background: $white,
+    $border: $border-color,
+    $color: $natural-50,
+    $hover-background: $natural-90,
+    $hover-border: $border-color,
+    $hover-color: $natural-50,
+    $active-background: $natural-90,
+    $active-border: $border-color,
+    $active-color: $natural-50,
+    $disabled-background: $white,
+    $disabled-border: $border-color,
+    $disabled-color: $natural-50
+  );
+  @include button-size(
+    $padding-y: map.get($spacers, 1),
+    $padding-x: map.get($spacers, 2),
+    $font-size: $font-size-sm,
+    $border-radius: $border-radius-lg
+  );
+  & > .custom-btn-icon {
+    font-size: map.get($font-sizes, 5);
+  }
+}
+
+.custom-btn-only-icon {
+  @include button-variant(
+    $background: transparent,
+    $border: transparent,
+    $color: $black,
+    $hover-background: $natural-90,
+    $hover-border: $natural-90,
+    $hover-color: $black,
+    $active-background: $natural-90,
+    $active-border: $natural-90,
+    $active-color: $black,
+    $disabled-background: transparent,
+    $disabled-border: transparent,
+    $disabled-color: $black
+  );
+  border: none; // 直接覆寫成無邊框
+  @include button-size(
+    $padding-y: $spacer * 0.625,
+    $padding-x: $spacer * 0.625,
+    $font-size: $font-size-base,
+    $border-radius: $border-radius-lg
+  );
+  & > .custom-btn-icon {
+    font-size: map.get($font-sizes, 4);
+    display: block; // 取消文字排版規則
+  }
+}
+
+// 有 icon，加上 flex 排版
+.custom-btn-icon-start {
+  display: flex;
+  align-items: center;
+  & > .custom-btn-icon {
+    margin-right: map.get($spacers, 1);
+  }
+}
+.custom-btn-icon-end {
+  display: flex;
+  align-items: center;
+  padding-right: map.get($spacers, 3);
+  & > .custom-btn-icon {
+    margin-left: map.get($spacers, 1);
+  }
+}

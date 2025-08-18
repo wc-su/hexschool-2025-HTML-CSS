@@ -1,0 +1,151 @@
+@use "sass:map";
+
+@mixin down-arrow-centered($arrow-size, $bg-color, $border-color) {
+  position: relative;
+  margin-bottom: $arrow-size;
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-style: solid;
+  }
+  // 箭頭 border 樣式
+  &::before {
+    bottom: calc(-1 * $arrow-size);
+    border-width: $arrow-size $arrow-size 0 $arrow-size;
+    border-color: $border-color transparent transparent transparent;
+  }
+  // 箭頭內部樣式
+  $border-width: calc($arrow-size - 2px);
+  &::after {
+    bottom: calc(-1 * ($border-width - 1px));
+    border-width: $border-width $border-width 0 $border-width;
+    border-color: $bg-color transparent transparent transparent;
+  }
+}
+
+.header-bg {
+  background: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/916c25d5a06bc1b73135d3acf0a22ad65c7af4c8/2025-week6/index/gradient-ball.png")
+    no-repeat $white top 40px center / 560px 560px;
+  @include media-breakpoint-up(md) {
+    background-size: 800px 800px;
+  }
+}
+.header-md-title {
+  @include media-breakpoint-up(md) {
+    font-size: map.get($display-font-sizes, 1);
+  }
+}
+
+.story-section {
+  background: linear-gradient(to bottom, $white 0 calc(100% - 200px), $natural-95 calc(100% - 200px) 100%);
+  .story-icon {
+    width: 48px;
+    height: 40px;
+    @include media-breakpoint-up(md) {
+      width: 96px;
+      height: 80px;
+    }
+  }
+}
+
+
+.choose-section-why {
+  display: inline-block;
+  color: $primary;
+  background-color: $white;
+  font-size: $font-size-lg;
+  line-height: $line-height-xs;
+  letter-spacing: $body-letter-spacing;
+  font-weight: $font-weight-bold;
+  border-radius: $border-radius;
+  border: 2px solid $primary;
+  position: relative;
+  padding-top: 11.8px;
+  padding-bottom: 12.2px;
+  padding-right: 20.12px;
+  padding-left: 21.88px;
+  @include media-breakpoint-up(lg) {
+    font-size: map.get($font-sizes, 5);
+    padding-top: 10.8px;
+    padding-bottom: 11.2px;
+    padding-right: 16.12px;
+    padding-left: 17.88px;
+  }
+  @include down-arrow-centered(13.8px, $white, $primary);
+}
+.choose-section-svg {
+  display: none;
+  width: 196px;
+  height: 196px;
+  position: absolute;
+  top: 0;
+  right: calc(var(--bs-gutter-x) * 0.5);
+  z-index: -1;
+  @include media-breakpoint-up(lg) {
+    display: block;
+  }
+}
+
+
+.qa-section {
+  background: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/916c25d5a06bc1b73135d3acf0a22ad65c7af4c8/2025-week6/index/bg-grid.png");
+  background-size: 50% auto;
+  &-why {
+    display: inline-block;
+    color: $primary;
+    background-color: $white;
+    font-size: $font-size-lg;
+    line-height: $line-height-xs;
+    letter-spacing: $body-letter-spacing;
+    font-weight: $font-weight-bold;
+    border-radius: $border-radius;
+    border: 2px solid $primary;
+    position: relative;
+    padding-top: 11.8px;
+    padding-bottom: 12.2px;
+    padding-right: 25.12px;
+    padding-left: 27.88px;
+    @include media-breakpoint-up(md) {
+      font-size: map.get($font-sizes, 5);
+      padding-top: 10.8px;
+      padding-bottom: 11.2px;
+      padding-right: 22.12px;
+      padding-left: 23.88px;
+    }
+    @include down-arrow-centered(13.8px, $white, $primary);
+  }
+  .accordion-button {
+    box-shadow: none;
+  }
+  .accordion-button::after {
+    content: "\e5cb";
+    background-image: none;
+    font-family: 'Material Symbols Outlined';
+    font-size: var(--bs-accordion-btn-icon-width);
+    color: $black;
+  }
+  .accordion-button::before {
+    content: "";
+    transition: opacity .3s ease-out;
+    width: calc(100% - var(--bs-accordion-btn-padding-x) * 2);
+    margin-left: var(--bs-accordion-btn-padding-x);
+    position: absolute;
+    bottom: -1px;
+    bottom: 8px;
+    left: 0;
+    border-bottom: 1px dashed $border-color;
+    opacity: 0;
+  }
+  .accordion-button:not(.collapsed)::before {
+    opacity: 1;
+  }
+  .accordion-button:not(.collapsed)::after {
+    color: $natural-50;
+    transform-origin: center;
+  }
+  .accordion-body {
+    padding-top: map.get($spacers, 2);
+  }
+}

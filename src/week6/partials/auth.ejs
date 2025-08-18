@@ -1,0 +1,108 @@
+<!-- login modal -->
+<div class="modal fade" id="login-modal" tabindex="-1" aria-hidden="true" aria-labelledby="login">
+  <div class="modal-dialog modal-fullscreen-md-down modal-xl modal-dialog-centered">
+    <div class="modal-content flex-row overflow-hidden align-items-stretch">
+      <div class="flex-grow-1 flex-shrink-1 auth-img">
+        <img class="w-100 h-100 object-fit-cover" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/916c25d5a06bc1b73135d3acf0a22ad65c7af4c8/2025-week6/about/login.png" alt="">
+      </div>
+      <div class="auth-width-500 flex-grow-1 flex-shrink-0 py-6 py-md-0">
+        <div class="modal-header justify-content-center position-relative border-bottom-0 p-0">
+          <h2 class="h3 fs-md-2 mt-6 mt-md-9" id="login">登入</h2>
+          <button type="button" class="btn custom-btn-only-icon position-absolute auth-btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <span class="material-symbols-outlined custom-btn-icon">close</span>
+          </button>
+        </div>
+        <div class="modal-body p-6 p-md-9">
+          <div class="border-bottom pb-6">
+            <button type="button" class="btn custom-btn-outline custom-btn-icon-start w-100 justify-content-center">
+              <img class="custom-btn-icon" src="<%= images.week6['google.svg'] %>" alt="google-icon">
+              <p>Google</p>
+            </button>
+            <button type="button" class="btn custom-btn-outline custom-btn-icon-start w-100 justify-content-center mt-4">
+              <img class="custom-btn-icon" src="<%= images.week6['discord.svg'] %>" alt="discord-icon">
+              <p>Discord</p>
+            </button>
+          </div>
+          <div class="form-floating custom-form-floating mt-6">
+            <input type="text" class="form-control rounded-1" id="account" name="account" placeholder="帳號">
+            <label for="account" class="form-label">帳號</label>
+          </div>
+          <div class="input-group mt-4">
+            <div class="form-floating custom-form-floating">
+              <input type="password" class="form-control rounded-1 rounded-end-0 border-end-0" id="login-password" name="login-password" placeholder="密碼">
+              <label for="login-password" class="form-label">密碼</label>
+            </div>
+            <span class="material-symbols-outlined input-group-text bg-white fs-5 py-0">visibility_off</span>
+          </div>
+          <a class="color-natural-50 d-block text-end mt-4" href="#">忘記密碼</a>
+          <button class="btn custom-btn custom-btn-icon-end justify-content-center w-100 mt-4" type="button">
+            <p>送出</p>
+            <span class="material-symbols-outlined">chevron_forward</span>
+          </button>
+          <p class="color-natural-50 text-center mt-6 mt-md-9">不是會員？<a class="text-decoration-underline" href="#register-modal" data-bs-toggle="modal">快速註冊</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- register modal -->
+<div class="modal fade" id="register-modal" tabindex="-1" aria-hidden="true" aria-labelledby="register">
+  <div class="modal-dialog modal-fullscreen-md-down modal-xl modal-dialog-centered">
+    <div class="modal-content flex-row-reverse overflow-hidden align-items-stretch">
+      <div class="flex-grow-1 flex-shrink-1 auth-img">
+        <img class="w-100 h-100 object-fit-cover" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/916c25d5a06bc1b73135d3acf0a22ad65c7af4c8/2025-week6/about/register.png" alt="">
+      </div>
+      <div class="auth-width-500 flex-grow-1 flex-shrink-0 py-6 py-md-0">
+        <div class="modal-header justify-content-center position-relative border-bottom-0 p-0">
+          <h2 class="h3 fs-md-2 mt-6 mt-md-9" id="register">註冊</h2>
+          <button type="button" class="btn custom-btn-only-icon position-absolute auth-btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <span class="material-symbols-outlined custom-btn-icon">close</span>
+          </button>
+        </div>
+        <div class="modal-body p-6 p-md-9">
+          <div class="border-bottom pb-6">
+            <button type="button" class="btn custom-btn-outline custom-btn-icon-start w-100 justify-content-center">
+              <img class="custom-btn-icon" src="<%= images.week6['google.svg'] %>" alt="google-icon">
+              <p>Google</p>
+            </button>
+            <button type="button" class="btn custom-btn-outline custom-btn-icon-start w-100 justify-content-center mt-4">
+              <img class="custom-btn-icon" src="<%= images.week6['discord.svg'] %>" alt="discord-icon">
+              <p>Discord</p>
+            </button>
+          </div>
+          <div class="form-floating custom-form-floating mt-6">
+            <input type="text" class="form-control rounded-1" id="name" name="name" placeholder="姓名">
+            <label for="name" class="form-label">姓名</label>
+          </div>
+          <div class="form-floating custom-form-floating mt-4">
+            <input type="email" class="form-control rounded-1" id="email" name="email" placeholder="信箱">
+            <label for="email" class="form-label">信箱</label>
+          </div>
+          <div class="input-group mt-4">
+            <div class="form-floating custom-form-floating">
+              <input type="password" class="form-control rounded-1 rounded-end-0 border-end-0" id="register-password" name="register-password" placeholder="密碼">
+              <label for="register-password" class="form-label">密碼</label>
+            </div>
+            <span class="material-symbols-outlined input-group-text bg-white fs-5 py-0">visibility_off</span>
+          </div>
+          <div class="input-group mt-4">
+            <div class="form-floating custom-form-floating">
+              <input type="password" class="form-control rounded-1 rounded-end-0 border-end-0" id="register-password-check" name="register-password-check" placeholder="確認密碼">
+              <label for="register-password-check" class="form-label">確認密碼</label>
+            </div>
+            <span class="material-symbols-outlined input-group-text bg-white fs-5 py-0">visibility_off</span>
+          </div>
+          <div class="custom-form-check form-check form-check-inline mt-4">
+            <input class="form-check-input" type="checkbox" id="agree-terms-privacy" name="agree-terms-privacy" value="我同意服務條款和隱私政策">
+            <label class="form-check-label" for="agree-terms-privacy">我同意<a href="./terms-of-service.html" target="_blank">服務條款</a>和<a href="./privacy-policy.html" target="_blank">隱私政策</a></label>
+          </div>
+          <button class="btn custom-btn custom-btn-icon-end justify-content-center w-100 mt-4" type="button">
+            <p>送出</p>
+            <span class="material-symbols-outlined">chevron_forward</span>
+          </button>
+          <p class="color-natural-50 text-center mt-6">已經會員？<a class="text-decoration-underline" href="#login-modal" data-bs-toggle="modal">直接登入</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
