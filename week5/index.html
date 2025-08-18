@@ -6,7 +6,7 @@
   <title>職旅 Workway</title>
   <link rel="shortcut icon" href="/hexschool-2025-HTML-CSS/week5/images/favicon.png" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-  <script type="module" crossorigin src="/hexschool-2025-HTML-CSS/week5/js/index.js"></script>
+  <script type="module" crossorigin src="/hexschool-2025-HTML-CSS/chunks/bootstrap.esm.js"></script>
   <link rel="stylesheet" crossorigin href="/hexschool-2025-HTML-CSS/week5/css/index.css">
 </head>
 <body>
@@ -108,7 +108,7 @@
       </div>
       <!-- 變更姓名 -->
       <div class="form-floating custom-form-floating mt-6">
-        <input type="text" class="form-control rounded-1" id="person-name" placeholder="姓名" value="Mokumaru">
+        <input type="text" class="form-control rounded-1" id="person-name" name="person-name" placeholder="姓名" value="Mokumaru">
         <label for="person-name" class="form-label">姓名</label>
       </div>
       <!-- 選擇性別 -->
@@ -130,7 +130,7 @@
       </div>
       <!-- 變更生日 -->
       <div class="form-floating custom-form-floating mt-6">
-        <input type="date" class="form-control rounded-1" id="birth" placeholder="生日" value="2000-01-10">
+        <input type="date" class="form-control rounded-1" id="birth" name="birth" placeholder="生日" value="2000-01-10">
         <label for="birth" class="form-label">生日</label>
       </div>
       <!-- 變更密碼 -->
@@ -153,11 +153,11 @@
               </div>
               <div class="modal-body p-6">
                 <div class="form-floating custom-form-floating">
-                  <input type="password" class="form-control rounded-1" id="pwd" placeholder="新密碼">
+                  <input type="password" class="form-control rounded-1" id="pwd" name="pwd" placeholder="新密碼">
                   <label for="pwd" class="form-label">新密碼</label>
                 </div>
                 <div class="form-floating custom-form-floating mt-6">
-                  <input type="password" class="form-control rounded-1" id="pwd-again" placeholder="再次密碼">
+                  <input type="password" class="form-control rounded-1" id="pwd-again" name="pwd-again" placeholder="再次密碼">
                   <label for="pwd-again" class="form-label">再次密碼</label>
                 </div>
               </div>
@@ -173,18 +173,18 @@
       </div>
       <!-- 變更信箱 -->
       <div class="form-floating custom-form-floating mt-6">
-        <input type="mail" class="form-control rounded-1" id="mail" placeholder="信箱" value="mokumaru@mail.com">
+        <input type="mail" class="form-control rounded-1" id="mail" name="mail" placeholder="信箱" value="mokumaru@mail.com">
         <label for="mail" class="form-label">信箱</label>
         <p class="fs-sm ls-base color-natural-50 ps-2">盡量勿使用Yahoo或Hotmail郵件信箱，以免因擋信、漏信</p>
       </div>
       <!-- 變更聯絡電話 -->
       <div class="form-floating custom-form-floating mt-6">
-        <input type="tel" class="form-control rounded-1" id="phone" placeholder="聯絡電話" value="09-1234-5678">
+        <input type="tel" class="form-control rounded-1" id="phone" name="phone" placeholder="聯絡電話" value="09-1234-5678">
         <label for="phone" class="form-label">聯絡電話</label>
       </div>
       <!-- 變更通訊地址 -->
       <div class="form-floating custom-form-floating mt-6">
-        <input type="text" class="form-control rounded-1" id="address" placeholder="通訊地址" value="高雄市三民區九如一路 87 號">
+        <input type="text" class="form-control rounded-1" id="address" name="address" placeholder="通訊地址" value="高雄市三民區九如一路 87 號">
         <label for="address" class="form-label">通訊地址</label>
       </div>
     </div>
@@ -416,12 +416,12 @@
       </div>
       <!-- 職業摘要 -->
       <div class="form-floating custom-form-floating">
-        <textarea class="form-control textarea-resize-none rounded-1 form-contro-height-160" maxlength="300" placeholder="職業摘要（簡短描述您的專業背景和核心競爭力最多 300 字）" id="career-summary"></textarea>
+        <textarea class="form-control textarea-resize-none rounded-1 form-contro-height-160" maxlength="300" placeholder="職業摘要（簡短描述您的專業背景和核心競爭力最多 300 字）" id="career-summary" name="career-summary"></textarea>
         <label for="career-summary">職業摘要（簡短描述您的專業背景和核心競爭力最多 300 字）</label>
       </div>
       <!-- 作品案例展示 -->
       <div class="form-floating custom-form-floating mt-6">
-        <input type="email" class="form-control rounded-1" id="portfolio-showcase" placeholder="作品案例展示">
+        <input type="email" class="form-control rounded-1" id="portfolio-showcase" name="portfolio-showcase" placeholder="作品案例展示">
         <label for="portfolio-showcase" class="form-label">作品案例展示</label>
       </div>
       <!-- 附件檔案 -->
@@ -445,12 +445,12 @@
     <div class="col ms-md-6">
       <!-- 1 年短期職涯目標 -->
       <div class="form-floating custom-form-floating mb-3">
-        <textarea class="form-control textarea-resize-none rounded-1 form-contro-height-160" maxlength="300" placeholder="1 年短期職涯目標（最多 300 字）" id="short-term-career-goals"></textarea>
+        <textarea class="form-control textarea-resize-none rounded-1 form-contro-height-160" maxlength="300" placeholder="1 年短期職涯目標（最多 300 字）" id="short-term-career-goals" name="short-term-career-goals"></textarea>
         <label for="short-term-career-goals">1 年短期職涯目標（最多 300 字）</label>
       </div>
       <!-- 1-3 年中長期職涯願景 -->
       <div class="form-floating custom-form-floating mb-3 mt-6">
-        <textarea class="form-control textarea-resize-none rounded-1 form-contro-height-160" maxlength="300" placeholder="1-3 年中長期職涯願景（最多 300 字）" id="mid-long-term-career-vision"></textarea>
+        <textarea class="form-control textarea-resize-none rounded-1 form-contro-height-160" maxlength="300" placeholder="1-3 年中長期職涯願景（最多 300 字）" id="mid-long-term-career-vision" name="mid-long-term-career-vision"></textarea>
         <label for="mid-long-term-career-vision">1-3 年中長期職涯願景（最多 300 字）</label>
       </div>
       <!-- 理想工作模式 -->
@@ -482,87 +482,87 @@
       <!-- 目前面臨的職涯挑戰 -->
       <p class="mb-2 mt-6">目前面臨的職涯挑戰</p>
       <div class="custom-form-check form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="unclear-direction" value="方向不明確">
+        <input class="form-check-input" type="checkbox" id="unclear-direction" name="unclear-direction" value="方向不明確">
         <label class="form-check-label" for="unclear-direction">方向不明確</label>
       </div>
       <div class="custom-form-check form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="skill-improvement" value="技能需要提升">
+        <input class="form-check-input" type="checkbox" id="skill-improvement" name="skill-improvement" value="技能需要提升">
         <label class="form-check-label" for="skill-improvement">技能需要提升</label>
       </div>
       <div class="custom-form-check form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="unstable-income" value="收入不穩定">
+        <input class="form-check-input" type="checkbox" id="unstable-income" name="unstable-income" value="收入不穩定">
         <label class="form-check-label" for="unstable-income">收入不穩定</label>
       </div>
       <div class="custom-form-check form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="client-acquisition" value="客戶開發困難">
+        <input class="form-check-input" type="checkbox" id="client-acquisition" name="client-acquisition" value="客戶開發困難">
         <label class="form-check-label" for="client-acquisition">客戶開發困難</label>
       </div>
       <div class="custom-form-check form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="time-management" value="時間管理問題">
+        <input class="form-check-input" type="checkbox" id="time-management" name="time-management" value="時間管理問題">
         <label class="form-check-label" for="time-management">時間管理問題</label>
       </div>
       <div class="custom-form-check form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="work-life-imbalance" value="工作生活失衡">
+        <input class="form-check-input" type="checkbox" id="work-life-imbalance" name="work-life-imbalance" value="工作生活失衡">
         <label class="form-check-label" for="work-life-imbalance">工作生活失衡</label>
       </div>
       <div class="custom-form-check form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="lack-of-network" value="缺乏人脈資源">
+        <input class="form-check-input" type="checkbox" id="lack-of-network" name="lack-of-network" value="缺乏人脈資源">
         <label class="form-check-label" for="lack-of-network">缺乏人脈資源</label>
       </div>
       <div class="custom-form-check form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="career-challenges-other" value="其他(請說明)">
+        <input class="form-check-input" type="checkbox" id="career-challenges-other" name="career-challenges-other" value="其他(請說明)">
         <label class="form-check-label" for="career-challenges-other">其他(請說明)</label>
       </div>
       <!-- 期望獲得的協助與資源 -->
       <p class="mb-2 mt-6">期望獲得的協助與資源</p>
       <div class="custom-form-check form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="career-direction-guidance" value="職涯方向指導">
+        <input class="form-check-input" type="checkbox" id="career-direction-guidance" name="career-direction-guidance" value="職涯方向指導">
         <label class="form-check-label" for="career-direction-guidance">職涯方向指導</label>
       </div>
       <div class="custom-form-check form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="skill-improvement-suggestions" value="專業技能提升建議">
+        <input class="form-check-input" type="checkbox" id="skill-improvement-suggestions" name="skill-improvement-suggestions" value="專業技能提升建議">
         <label class="form-check-label" for="skill-improvement-suggestions">專業技能提升建議</label>
       </div>
       <div class="custom-form-check form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="personal-branding" value="個人品牌建立">
+        <input class="form-check-input" type="checkbox" id="personal-branding" name="personal-branding" value="個人品牌建立">
         <label class="form-check-label" for="personal-branding">個人品牌建立</label>
       </div>
       <div class="custom-form-check form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="freelance-strategy-pricing" value="接案策略與定價">
+        <input class="form-check-input" type="checkbox" id="freelance-strategy-pricing" name="freelance-strategy-pricing" value="接案策略與定價">
         <label class="form-check-label" for="freelance-strategy-pricing">接案策略與定價</label>
       </div>
       <div class="custom-form-check form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="client-acquisition-methods" value="客戶開發方法">
+        <input class="form-check-input" type="checkbox" id="client-acquisition-methods" name="client-acquisition-methods" value="客戶開發方法">
         <label class="form-check-label" for="client-acquisition-methods">客戶開發方法</label>
       </div>
       <div class="custom-form-check form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="financial-planning" value="財務規劃">
+        <input class="form-check-input" type="checkbox" id="financial-planning" name="financial-planning" value="財務規劃">
         <label class="form-check-label" for="financial-planning">財務規劃</label>
       </div>
       <div class="custom-form-check form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="time-management-system" value="時間管理系統">
+        <input class="form-check-input" type="checkbox" id="time-management-system" name="time-management-system" value="時間管理系統">
         <label class="form-check-label" for="time-management-system">時間管理系統</label>
       </div>
       <div class="custom-form-check form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="work-life-balance" value="工作生活平衡">
+        <input class="form-check-input" type="checkbox" id="work-life-balance" name="work-life-balance" value="工作生活平衡">
         <label class="form-check-label" for="work-life-balance">工作生活平衡</label>
       </div>
       <div class="custom-form-check form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="desired-support-other" value="其他(請說明)">
+        <input class="form-check-input" type="checkbox" id="desired-support-other" name="desired-support-other" value="其他(請說明)">
         <label class="form-check-label" for="desired-support-other">其他(請說明)</label>
       </div>
       <!-- 感興趣的服務方案 -->
       <p class="mb-2 mt-6">感興趣的服務方案</p>
       <div class="custom-form-check form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="exploration-focus" value="探索定位">
+        <input class="form-check-input" type="checkbox" id="exploration-focus" name="exploration-focus" value="探索定位">
         <label class="form-check-label" for="exploration-focus">探索定位</label>
       </div>
       <div class="custom-form-check form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="customized-plan" value="客製化方案">
+        <input class="form-check-input" type="checkbox" id="customized-plan" name="customized-plan" value="客製化方案">
         <label class="form-check-label" for="customized-plan">客製化方案</label>
       </div>
       <div class="custom-form-check form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="practical-coaching" value="實戰指導">
+        <input class="form-check-input" type="checkbox" id="practical-coaching" name="practical-coaching" value="實戰指導">
         <label class="form-check-label" for="practical-coaching">實戰指導</label>
       </div>
     </div>
@@ -577,63 +577,63 @@
       <!-- 核心專業領域 -->
       <p class="mb-2">核心專業領域</p>
       <div class="custom-form-check form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="design-creativity" value="設計/創意">
+        <input class="form-check-input" type="checkbox" id="design-creativity" name="design-creativity" value="設計/創意">
         <label class="form-check-label" for="design-creativity">設計/創意</label>
       </div>
       <div class="custom-form-check form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="tech-development" value="科技/程式開發">
+        <input class="form-check-input" type="checkbox" id="tech-development" name="tech-development" value="科技/程式開發">
         <label class="form-check-label" for="tech-development">科技/程式開發</label>
       </div>
       <div class="custom-form-check form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="marketing-pr" value="行銷/公關">
+        <input class="form-check-input" type="checkbox" id="marketing-pr" name="marketing-pr" value="行銷/公關">
         <label class="form-check-label" for="marketing-pr">行銷/公關</label>
       </div>
       <div class="custom-form-check form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="content-writing" value="內容創作/寫作">
+        <input class="form-check-input" type="checkbox" id="content-writing" name="content-writing" value="內容創作/寫作">
         <label class="form-check-label" for="content-writing">內容創作/寫作</label>
       </div>
       <div class="custom-form-check form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="consulting" value="顧問/諮詢">
+        <input class="form-check-input" type="checkbox" id="consulting" name="consulting" value="顧問/諮詢">
         <label class="form-check-label" for="consulting">顧問/諮詢</label>
       </div>
       <div class="custom-form-check form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="business-management" value="商業/管理">
+        <input class="form-check-input" type="checkbox" id="business-management" name="business-management" value="商業/管理">
         <label class="form-check-label" for="business-management">商業/管理</label>
       </div>
       <div class="custom-form-check form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="finance-accounting" value="財務/會計">
+        <input class="form-check-input" type="checkbox" id="finance-accounting" name="finance-accounting" value="財務/會計">
         <label class="form-check-label" for="finance-accounting">財務/會計</label>
       </div>
       <div class="custom-form-check form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="education-training" value="教育/培訓">
+        <input class="form-check-input" type="checkbox" id="education-training" name="education-training" value="教育/培訓">
         <label class="form-check-label" for="education-training">教育/培訓</label>
       </div>
       <div class="custom-form-check form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="legal-compliance" value="法律/合規">
+        <input class="form-check-input" type="checkbox" id="legal-compliance" name="legal-compliance" value="法律/合規">
         <label class="form-check-label" for="legal-compliance">法律/合規</label>
       </div>
       <div class="custom-form-check form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="healthcare-medical" value="健康/醫療">
+        <input class="form-check-input" type="checkbox" id="healthcare-medical" name="healthcare-medical" value="健康/醫療">
         <label class="form-check-label" for="healthcare-medical">健康/醫療</label>
       </div>
       <!-- 專業背景和核心競爭力 -->
       <div class="form-floating custom-form-floating mb-3 mt-6">
-        <textarea class="form-control textarea-resize-none rounded-1 form-contro-height-160" maxlength="300" placeholder="專業背景和核心競爭力（最多300字）" id="professional-background-core-competencies"></textarea>
+        <textarea class="form-control textarea-resize-none rounded-1 form-contro-height-160" maxlength="300" placeholder="專業背景和核心競爭力（最多300字）" id="professional-background-core-competencies" name="professional-background-core-competencies"></textarea>
         <label for="professional-background-core-competencies">專業背景和核心競爭力（最多300字）</label>
       </div>
       <!-- 專業技能 -->
       <div class="form-floating custom-form-floating mb-3 mt-6">
-        <textarea class="form-control textarea-resize-none rounded-1 form-contro-height-160" maxlength="300" placeholder="專業技能（最多300字）" id="professional-skills"></textarea>
+        <textarea class="form-control textarea-resize-none rounded-1 form-contro-height-160" maxlength="300" placeholder="專業技能（最多300字）" id="professional-skills" name="professional-skills"></textarea>
         <label for="professional-skills">專業技能（最多300字）</label>
       </div>
       <!-- 語文能力 -->
       <div class="form-floating custom-form-floating mb-3 mt-6">
-        <textarea class="form-control textarea-resize-none rounded-1 form-contro-height-160" maxlength="300" placeholder="語文能力（最多 300 字）" id="language-proficiency"></textarea>
+        <textarea class="form-control textarea-resize-none rounded-1 form-contro-height-160" maxlength="300" placeholder="語文能力（最多 300 字）" id="language-proficiency" name="language-proficiency"></textarea>
         <label for="language-proficiency">語文能力（最多 300 字）</label>
       </div>
       <!-- 資格證照 -->
       <div class="form-floating custom-form-floating mb-3 mt-6">
-        <textarea class="form-control textarea-resize-none rounded-1 form-contro-height-160" maxlength="300" placeholder="資格證照（最多 300 字）" id="certifications"></textarea>
+        <textarea class="form-control textarea-resize-none rounded-1 form-contro-height-160" maxlength="300" placeholder="資格證照（最多 300 字）" id="certifications" name="certifications"></textarea>
         <label for="certifications">資格證照（最多 300 字）</label>
       </div>
     </div>
@@ -647,12 +647,12 @@
     <div class="col ms-md-6">
       <!-- 學歷背景 -->
       <div class="form-floating custom-form-floating mb-6">
-        <textarea class="form-control textarea-resize-none rounded-1 form-contro-height-160" maxlength="500" placeholder="學歷背景（最多500字）" id="education-background"></textarea>
+        <textarea class="form-control textarea-resize-none rounded-1 form-contro-height-160" maxlength="500" placeholder="學歷背景（最多500字）" id="education-background" name="education-background"></textarea>
         <label for="education-background">學歷背景（最多500字）</label>
       </div>
       <!-- 專業培訓與工作坊 -->
       <div class="form-floating custom-form-floating">
-        <textarea class="form-control textarea-resize-none rounded-1 form-contro-height-160" maxlength="500" placeholder="專業培訓與工作坊（最多500字）" id="professional-training-workshops"></textarea>
+        <textarea class="form-control textarea-resize-none rounded-1 form-contro-height-160" maxlength="500" placeholder="專業培訓與工作坊（最多500字）" id="professional-training-workshops" name="professional-training-workshops"></textarea>
         <label for="professional-training-workshops">專業培訓與工作坊（最多500字）</label>
       </div>
     </div>

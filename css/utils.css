@@ -1,0 +1,47 @@
+.spinner-screen {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  opacity: 1;
+  transition: opacity 0.6s ease, visibility 0.6s ease, background-color 0.6s ease-in;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 6px solid #ddd;
+  border-top-color: #4a69e8;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.spinner-screen.transition {
+  opacity: 0;
+  visibility: hidden;
+  background-color: transparent;
+}
+
+.spinner-screen.stop {
+  display: none;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+body.loading {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+body.loading .spinner-screen {
+  visibility: visible;
+  opacity: 1;
+}
