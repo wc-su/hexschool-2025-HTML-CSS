@@ -12,14 +12,14 @@
 <body class="loading">
   <%- include('./week6/partials/loader.ejs') %>
   <%- include('./week6/partials/header.ejs') %>
-  <main>
+  <main class="overflow-x-hidden">
     <section class="header-bg py-9 py-md-12" aria-labelledby="title">
       <div class="container text-center">
         <div class="d-inline-block">
-          <h2 class="h2 header-md-title text-center lh-xs ls-base" id="title">一起陪伴、探索<br>還有你那些未完成的夢</h2>
+          <h2 class="h2 header-md-title text-center lh-xs ls-base animate__animated animate__fadeInRight animate__slow" id="title">一起陪伴、探索<br>還有你那些未完成的夢</h2>
           <div class="d-flex flex-column justify-content-center align-items-center flex-md-row justify-content-md-between mt-6">
-            <p class="text-center color-natural-50 text-md-start">自由工作很美，也很難。<br>我們用 1 對 1 陪伴，陪你從第一步開始，直到夢想變成日常</p>
-            <button type="button" class="btn custom-btn-lg custom-btn-icon-end fs-5 p-3 pe-2 py-md-4 ps-md-5 pe-md-3 mt-4 mt-md-0">
+            <p class="text-center color-natural-50 text-md-start animate__animated animate__fadeInLeft animate__delay-1s">自由工作很美，也很難。<br>我們用 1 對 1 陪伴，陪你從第一步開始，直到夢想變成日常</p>
+            <button type="button" class="btn custom-btn-lg custom-btn-icon-end fs-5 p-3 pe-2 py-md-4 ps-md-5 pe-md-3 mt-4 mt-md-0 custom-btn-hover">
               <p>開始你的職旅</p>
               <span class="material-symbols-outlined custom-btn-icon">chevron_forward</span>
             </button>
@@ -51,7 +51,7 @@
           </div>
           <div class="col-md-8 mt-6 mt-md-0">
             <div class="p-3">
-              <ul class="list-unstyled row gx-4 gx-md-6 flex-nowrap overflow-x-auto pb-4 mb-0" id="story-md-list">
+              <ul class="list-unstyled row gx-4 gx-md-6 flex-nowrap overflow-x-auto pb-4 mb-0" id="story-md-list" data-aos="fade-left" data-aos-duration="1000">
                 <li class="col-auto">
                   <div class="card story-card">
                     <div class="card-img-top">
@@ -138,7 +138,7 @@
     </section>
     <section class="choose-section py-9 py-lg-12">
       <div class="container text-center position-relative">
-        <p class="choose-section-why">為什麼？</p>
+        <p class="choose-section-why" data-aos="zoom-in">為什麼？</p>
         <h3 class="fs-lg-1 mt-1">選擇職旅 WorkWay</h3>
         <div class="row mt-6 mt-lg-9">
           <div class="col-lg-4">
@@ -192,7 +192,7 @@
             <span class="d-block w-100 border-bottom"></span>
           </div>
         </div>
-        <img class="choose-section-svg" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/916c25d5a06bc1b73135d3acf0a22ad65c7af4c8/2025-week6/index/adv-vectors.svg" alt="">
+        <img data-aos="fade-up" data-aos-delay="300" class="choose-section-svg" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/916c25d5a06bc1b73135d3acf0a22ad65c7af4c8/2025-week6/index/adv-vectors.svg" alt="">
       </div>
     </section>
     <section class="bg-white py-9 py-md-12">
@@ -207,7 +207,7 @@
             <p class="h5 fs-md-4 text-primary text-center d-md-inline-block bg-natural-95 p-2 mt-4 mt-md-6">“ 他們都曾面對你正在經歷的挑戰 ”</p>
             <p class="fs-md-lg color-natural-50 mt-4 mt-md-6">職旅 WorkWay 匯集了來自不同領域、擁有豐富實戰經驗的自由工作者與數位遊牧專家。我們的顧問不只教授理論，更分享親身經歷的挑戰與解決之道。</p>
             <p class="fs-md-lg color-natural-50 mt-4 mt-md-6">我們相信，最好的指導來自於那些已經走過你想走的路，並願意伸出手拉你一把的人。</p>
-            <button type="button" class="btn custom-btn custom-btn-icon-end mx-auto mx-md-0 mt-4 mt-md-6">
+            <button type="button" class="btn custom-btn custom-btn-icon-end mx-auto mx-md-0 mt-4 mt-md-6 custom-btn-hover">
               <p>了解更多職旅夥伴</p>
               <span class="material-symbols-outlined custom-btn-icon">chevron_forward</span>
             </button>
@@ -221,7 +221,7 @@
         <p class="fs-md-lg ls-base mt-4 mt-md-6">簡單四步，踏上你的職旅</p>
         <div class="row flex-nowrap flex-md-wrap mt-6 mt-md-9 overflow-x-auto" id="serve-list">
           <div class="col-auto col-md-3">
-            <div class="card serve-card">
+            <div class="card serve-card" data-aos="fade-up" data-aos-delay="100">
               <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/916c25d5a06bc1b73135d3acf0a22ad65c7af4c8/2025-week6/index/serve-1.svg" class="card-img-top" alt="">
               <div class="card-body">
                 <h4 class="card-title">免費註冊會員</h4>
@@ -231,7 +231,7 @@
             </div>
           </div>
           <div class="col-auto col-md-3">
-            <div class="card serve-card">
+            <div class="card serve-card" data-aos="fade-up" data-aos-delay="200">
               <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/916c25d5a06bc1b73135d3acf0a22ad65c7af4c8/2025-week6/index/serve-2.svg" class="card-img-top" alt="">
               <div class="card-body">
                 <h4 class="card-title">填寫職旅計劃</h4>
@@ -241,7 +241,7 @@
             </div>
           </div>
           <div class="col-auto col-md-3">
-            <div class="card serve-card">
+            <div class="card serve-card" data-aos="fade-up" data-aos-delay="400">
               <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/916c25d5a06bc1b73135d3acf0a22ad65c7af4c8/2025-week6/index/serve-3.svg" class="card-img-top" alt="">
               <div class="card-body">
                 <h4 class="card-title">初次諮詢</h4>
@@ -251,7 +251,7 @@
             </div>
           </div>
           <div class="col-auto col-md-3">
-            <div class="card serve-card">
+            <div class="card serve-card" data-aos="fade-up" data-aos-delay="500">
               <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/916c25d5a06bc1b73135d3acf0a22ad65c7af4c8/2025-week6/index/serve-4.svg" class="card-img-top" alt="">
               <div class="card-body">
                 <h4 class="card-title">實戰指導</h4>
@@ -265,8 +265,8 @@
     </section>
     <section class="qa-section py-9 py-md-12">
       <div class="container text-center">
-        <p class="qa-section-why">\ Q&A /</p>
-        <h3 class="mt-1">你可能有些困惑...</h3>
+        <p class="qa-section-why" data-aos="zoom-in">\ Q&A /</p>
+        <h3 class="fs-md-1 ls-base mt-1">你可能有些困惑...</h3>
         <div class="row mt-6 mt-md-9">
           <div class="col-md-5 d-none d-md-flex align-items-end">
             <img class="img-fluid" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/916c25d5a06bc1b73135d3acf0a22ad65c7af4c8/2025-week6/index/qa.svg" alt="">  
@@ -291,7 +291,7 @@
                   </div>
                 </div>
               </div>
-              <div class="accordion-item rounded shadow-custom overflow-hidden">
+              <div class="accordion-item rounded shadow-custom overflow-hidden" data-aos="fade-left">
                 <h4 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#freelance-career" aria-expanded="false" aria-controls="freelance-career">
                     <div class="d-flex me-2">
@@ -309,7 +309,7 @@
                   </div>
                 </div>
               </div>
-              <div class="accordion-item rounded shadow-custom overflow-hidden">
+              <div class="accordion-item rounded shadow-custom overflow-hidden" data-aos="fade-left">
                 <h4 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pricing-method" aria-expanded="false" aria-controls="pricing-method">
                     <div class="d-flex me-2">
@@ -327,7 +327,7 @@
                   </div>
                 </div>
               </div>
-              <div class="accordion-item rounded shadow-custom overflow-hidden">
+              <div class="accordion-item rounded shadow-custom overflow-hidden" data-aos="fade-left">
                 <h4 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#refund-guarantee" aria-expanded="false" aria-controls="refund-guarantee">
                     <div class="d-flex me-2">
@@ -345,7 +345,7 @@
                   </div>
                 </div>
               </div>
-              <div class="accordion-item rounded shadow-custom overflow-hidden">
+              <div class="accordion-item rounded shadow-custom overflow-hidden" data-aos="fade-left">
                 <h4 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#book-consultation" aria-expanded="false" aria-controls="book-consultation">
                     <div class="d-flex me-2">
