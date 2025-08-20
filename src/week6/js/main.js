@@ -1,8 +1,27 @@
 // Import custom CSS
 import "../scss/style.scss";
 
+import 'animate.css';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 // Import utils
 import * as utils from './utils'
+
+AOS.init();
+
+
+const btnsHoverEffects = document.querySelectorAll(".custom-btn-hover");
+btnsHoverEffects.forEach((el) => {
+  el.addEventListener("mouseenter", () => {
+    el.classList.add("animate__animated", "animate__pulse", "animate__infinite");
+  });
+
+  el.addEventListener("mouseleave", () => {
+    el.classList.remove("animate__animated", "animate__pulse", "animate__infinite");
+  });
+})
 
 
 // 取得 Bootstrap 的 md 斷點寬度（來自 CSS 變數）
