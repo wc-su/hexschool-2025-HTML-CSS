@@ -5046,3 +5046,6 @@ class Toast extends BaseComponent {
 }
 enableDismissTrigger(Toast);
 defineJQueryPlugin(Toast);
+export {
+  Carousel as C
+};
