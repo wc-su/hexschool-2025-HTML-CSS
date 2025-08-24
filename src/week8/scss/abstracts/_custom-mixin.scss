@@ -1,0 +1,19 @@
+@use 'sass:map';
+@use './variables' as var;
+
+@mixin font-size($size, $line-height: null, $font-weight: null) {
+  font-size: $size;
+
+  @if $line-height != null {
+    line-height: $line-height;
+  }
+
+  @if $font-weight != null {
+    font-weight: $font-weight;
+  }
+
+  // 只有當 size 不是 $font-size-base 才加 letter-spacing
+  @if $size != var.$font-size-base {
+    letter-spacing: var.$body-letter-spacing;
+  }
+}

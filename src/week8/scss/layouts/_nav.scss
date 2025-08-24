@@ -1,0 +1,73 @@
+@use "../abstracts/variables" as var;
+
+:root {
+  --nav-height: 64px; // 宣告 nav 高度
+  @include media-breakpoint-up(md) {
+    --nav-height: 88px;
+  }
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $white;
+  z-index: 2;
+  .nav-logo {
+    width: 180px;
+    height: 30px;
+  }
+  @include media-breakpoint-up(md) {
+    animation: nav-background-change forwards;
+    // animation-timeline: scroll(root);
+    animation-timeline: scroll();
+    animation-range: 0px 80px; /* 動畫由頂部 0px 往下滾動 80px 後完成 */
+  }
+}
+
+@keyframes nav-background-change {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: rgba(255, 255, 255, 0.72);
+    border-bottom: 0.5px solid var(--neutral-50, $neutral-40);
+    backdrop-filter: blur(4px);
+  }
+}
+
+.nav-search {
+  --bs-border-radius: 8px;
+  max-width: 400px;
+  & > .input-group-text {
+    padding: 10px 0 10px 12px;
+  }
+  & > input.form-control::placeholder {
+    color: var.$neutral-60;
+  }
+}
+
+
+.guest-offcanvas-width {
+  --bs-offcanvas-width: 327px;
+}
+.guest-offcanvas-icon {
+  mask: url("../../images/profile.svg")
+    no-repeat center / contain;
+  background-color: var.$primary-10;
+  width: 24px;
+  height: 24px;
+}
+
+.nav-offcanvas-search {
+  &.offcanvas {
+    bottom: auto;
+  }
+  &.offcanvas-top {
+    height: auto;
+  }
+  .nav-search {
+    max-width: none;
+  }
+}

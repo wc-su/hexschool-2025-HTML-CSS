@@ -1,0 +1,143 @@
+@use "../abstracts/variables" as var;
+
+.hero-section {
+  margin-top: var(--nav-height);
+  @include media-breakpoint-up(md) {
+    padding-top: 168px !important;
+    margin-top: 0;
+  }
+  .hero-carousel {
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .carousel-item {
+      max-width: 100%;
+      max-height: 240px;
+      @include media-breakpoint-up(md) {
+        display: block;
+        float: none;
+        max-height: 100%;
+      }
+    }
+    .carousel-indicators {
+      right: auto;
+      bottom: 12px;
+      left: 12px;
+      margin: 0;
+      & > button {
+        border: 0;
+        border-radius: 100px;
+        background-color: var.$white;
+      }
+      & > button.active {
+        width: 24px;
+        background-color: rgba(var.$primary, 0.2);
+        position: relative;
+      }
+      & > button.active::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 5;
+        border-radius: 100px;
+        background-color: var.$primary;
+        animation: carousel-indicator-animation 3s linear;
+      }
+    }
+    .hero-carousel-btn {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+    }
+  }
+}
+
+@keyframes carousel-indicator-animation {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 24px;
+  }
+}
+
+.col-md-6-custom {
+  @include media-breakpoint-up(md) {
+    width: 55.5556%;
+  }
+}
+
+.categories-section .card {
+  .card-img-top {
+    width: 64px;
+    transition: transform 0.3s;
+    @include media-breakpoint-up(md) {
+      width: 150px;
+    }
+  }
+  &:hover {
+    box-shadow: $box-shadow;
+  }
+}
+
+.top-section .attraction-card,
+.recommend-section .attraction-card {
+  max-width: 306px;
+  @include media-breakpoint-up(md) {
+    max-width: 100%;
+  }
+}
+
+.recommend-nav {
+  .nav-link {
+    position: relative;
+  }
+  .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 4px;
+    border-radius: 10px;
+    background-color: transparent;
+    transition: width 0.3s, background-color 0.3s;
+  }
+  .nav-link.active::before {
+    width: 50%;
+    background-color: var.$primary;
+  }
+}
+
+
+.guide-section {
+  .card .card-img {
+    @include media-breakpoint-up(lg) {
+      width: auto;
+    }
+  }
+  .card .card-img-top {
+    max-height: 232px;
+    @include media-breakpoint-up(lg) {
+      max-width: 480px;
+      max-height: none;
+      height: 100%;
+    }
+  }
+  .card .card-title,
+  .card .card-text {
+    transition: color 0.5s;
+  }
+  .card:hover {
+    .card-title {
+      color: var.$primary !important;
+    }
+    .card-text {
+      color: var.$primary-60;
+    }
+  }
+}
