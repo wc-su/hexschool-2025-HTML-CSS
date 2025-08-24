@@ -1,0 +1,206 @@
+// *******************************
+// * Bootstrap References
+// *******************************
+
+// line-height
+$line-height-base:            1.5 !default;
+
+// font-size
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+
+// color
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-600: #6c757d !default;
+$black:    #000 !default;
+$yellow:  #ffc107 !default;
+
+$secondary:     $gray-600 !default;
+$warning:       $yellow !default;
+$light:         $gray-100 !default;
+
+// font-weight
+$font-weight-bold:            700 !default;
+
+// spacer
+$spacer: 1rem !default;
+
+// *******************************
+// * Custom Variables
+// *******************************
+
+// line-height
+$line-height-xs:              1.2 !default;
+
+// font-size
+$font-size-xs:                $font-size-base * .75 !default;
+
+// letter-spacing
+$body-letter-spacing: 0.02em;
+
+// color
+$primary-120: #2b211b !default;
+$primary-100: #4a3830 !default;
+$primary-80:  #886658 !default;
+$primary-60:  #a37f71 !default;
+$primary-40:  #cbb6af !default;
+$primary-10:  #f3eeec !default;
+$primarys: (
+  "120": $primary-120,
+  "100": $primary-100,
+  "80":  $primary-80,
+  "60":  $primary-60,
+  "40":  $primary-40,
+  "10":  $primary-10
+) !default;
+
+$success-120: #48970f !default;
+$success-100: #7cd31f !default;
+$success-20:  #ddfaa5 !default;
+$success-10:  #f0fcd1 !default;
+$successes: (
+  "120": $success-120,
+  "100": $success-100,
+  "20":  $success-20,
+  "10":  $success-10
+) !default;
+
+$info-120: #1566b5 !default;
+$info-100: #2aaffc !default;
+$info-20:  #a9effe !default;
+$info-10:  #d4f9fe !default;
+$infos: (
+  "120": $info-120,
+  "100": $info-100,
+  "20":  $info-20,
+  "10":  $info-10
+) !default;
+
+$danger-120: #b71d4f !default;
+$danger-100: #ff3a55 !default;
+$danger-20:  #ffbbb0 !default;
+$danger-10:  #ffe0d7 !default;
+$dangers: (
+  "120": $danger-120,
+  "100": $danger-100,
+  "20":  $danger-20,
+  "10":  $danger-10
+) !default;
+
+$neutral-80:  #4b4b4b !default;
+$neutral-60:  #909090 !default;
+$neutral-40:  #ececec !default;
+$neutral-15:  #f4f4f4 !default;
+$neutral-10:  #f9f9f9 !default;
+$neutrals: (
+  "80":  $neutral-80,
+  "60":  $neutral-60,
+  "40":  $neutral-40,
+  "15":  $neutral-15,
+  "10":  $neutral-10
+) !default;
+
+$tint:          $primary-10 !default;
+
+// *******************************
+// * Bootstrap Overrides
+// *******************************
+
+// font-size
+$h1-font-size:                $font-size-base * 3 !default;
+$h2-font-size:                $font-size-base * 2.5 !default;
+$h3-font-size:                $font-size-base * 2 !default;
+$h4-font-size:                $font-size-base * 1.75 !default;
+$h5-font-size:                $font-size-base * 1.5 !default;
+$h6-font-size:                $font-size-base * 1.25 !default;
+
+// color
+$primary:       $primary-100 !default;
+$success:       $success-100 !default;
+$info:          $info-100 !default;
+$danger:        $danger-100 !default;
+$dark:          $primary-120 !default;
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark,
+  "tint":       $tint,
+  "black":      $black,
+  "white":      $white
+) !default;
+
+$body-color:                $primary !default;
+
+$border-color:              $neutral-40 !default;
+
+// spacer
+$spacers: (
+  0: 0,
+  1:  $spacer * .25,
+  2:  $spacer * .5,
+  3:  $spacer * .75,
+  4:  $spacer,
+  5:  $spacer * 1.25,
+  6:  $spacer * 1.5,
+  7:  $spacer * 1.75,
+  8:  $spacer * 2,
+  9:  $spacer * 2.5,
+  10: $spacer * 3,
+  11: $spacer * 5,
+  12: $spacer * 7.5
+) !default;
+
+// border-radius
+$border-radius-md:            .75rem !default;
+$border-radius-xxl:           1.5rem !default;
+
+// paragraph
+$paragraph-margin-bottom:   0 !default;
+
+// headings
+$headings-margin-bottom:      0 !default;
+$headings-font-weight:        $font-weight-bold !default;
+
+// display
+$display-font-sizes: (
+  1: 6.25rem,  // custom
+  2: 4.5rem,
+  3: 4rem,
+  4: 3.5rem,
+  5: 3rem,
+  6: 2.5rem
+) !default;
+$display-font-weight: $font-weight-bold !default;
+// check !!!
+// $display-line-height: $headings-line-height !default;
+
+// rfs
+$enable-rfs:                  false !default;
+
+// link
+$link-decoration:                         none !default;
+
+// font-family
+$font-family-custom: "Noto Sans TC", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif: $font-family-custom !default;
+
+// carousel
+$carousel-indicator-width:           8px !default;
+$carousel-indicator-height:          8px !default;
+$carousel-indicator-spacer:          4px !default;
+$carousel-indicator-opacity:         1 !default;
+$carousel-indicator-transition:      background-color 0.6s ease, width 0.6s ease !default;
+
+// nav-link
+$nav-link-padding-y:                1rem !default;
+$nav-link-padding-x:                0 !default;
+$nav-link-disabled-color:           $neutral-40 !default;
+
+// box-shadow
+$box-shadow:                  0 .25rem 2.5rem rgba($black, .15) !default;

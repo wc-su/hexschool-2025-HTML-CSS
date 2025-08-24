@@ -1,0 +1,203 @@
+$utilities: map-merge(
+  $utilities,
+  (
+    //===============================
+    // 調整 bootstrap 原有設定
+    //===============================
+    "font-size": map-merge(
+      map-get($utilities, "font-size"),
+      (
+        responsive: true,
+        values: map-merge(
+          map-get(map-get($utilities, "font-size"), "values"),
+          (
+            xs: $font-size-xs,
+            sm: $font-size-sm,
+            md: $font-size-base,
+            // lg: $font-size-lg
+          )
+        ),
+      ),
+    ),
+    // "shadow": map-merge(
+    //   map-get($utilities, "shadow"),
+    //   (
+    //     values: map-merge(
+    //       map-get(map-get($utilities, "shadow"), "values"),
+    //       (custom: $box-shadow-custom)
+    //     ),
+    //   ),
+    // ),
+    "line-height": map-merge(
+      map-get($utilities, "line-height"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "line-height"), "values"),
+          (
+            0: 0,
+            xs: $line-height-xs
+          )
+        ),
+      ),
+    ),
+    "background-color": map-merge(
+      map-get($utilities, "background-color"),
+      (
+        responsive: true,
+      ),
+    ),
+    "rounded": map-merge(
+      map-get($utilities, "rounded"),
+      (
+        responsive: true,
+        values: map-merge(
+          map-get(map-get($utilities, "rounded"), "values"),
+          (2: $border-radius-md)
+        ),
+      ),
+    ),
+    "rounded-top": map-merge(
+      map-get($utilities, "rounded-top"),
+      (
+        responsive: true,
+        values: map-merge(
+          map-get(map-get($utilities, "rounded-top"), "values"),
+          (2: $border-radius-md)
+        ),
+      ),
+    ),
+    "rounded-end": map-merge(
+      map-get($utilities, "rounded-end"),
+      (
+        responsive: true,
+        values: map-merge(
+          map-get(map-get($utilities, "rounded-end"), "values"),
+          (2: $border-radius-md)
+        ),
+      ),
+    ),
+    "rounded-bottom": map-merge(
+      map-get($utilities, "rounded-bottom"),
+      (
+        responsive: true,
+        values: map-merge(
+          map-get(map-get($utilities, "rounded-bottom"), "values"),
+          (2: $border-radius-md)
+        ),
+      ),
+    ),
+    "rounded-start": map-merge(
+      map-get($utilities, "rounded-start"),
+      (
+        responsive: true,
+        values: map-merge(
+          map-get(map-get($utilities, "rounded-start"), "values"),
+          (2: $border-radius-md)
+        ),
+      ),
+    ),
+    "width": map-merge(
+      map-get($utilities, "width"),
+      (
+        responsive: true,
+      ),
+    ),
+    //===============================
+    // 覆蓋 bootstrap 原有設定
+    //===============================
+    // "rounded": (
+    //   property: border-radius,
+    //   class: rounded,
+    //   values: (
+    //     null: var(--#{$prefix}border-radius),
+    //     0: 0,
+    //     1: var(--#{$prefix}border-radius-sm),
+    //     2: var(--#{$prefix}border-radius),
+    //     3: var(--#{$prefix}border-radius-lg),
+    //     4: var(--#{$prefix}border-radius-xl),
+    //     5: var(--#{$prefix}border-radius-xxl),
+    //     circle: 50%,
+    //     pill: var(--#{$prefix}border-radius-pill)
+    //   )
+    // ),
+    // "rounded-top": (
+    //   property: border-top-left-radius border-top-right-radius,
+    //   class: rounded-top,
+    //   values: (
+    //     null: var(--#{$prefix}border-radius),
+    //     0: 0,
+    //     1: var(--#{$prefix}border-radius-sm),
+    //     2: var(--#{$prefix}border-radius),
+    //     3: var(--#{$prefix}border-radius-lg),
+    //     4: var(--#{$prefix}border-radius-xl),
+    //     5: var(--#{$prefix}border-radius-xxl),
+    //     circle: 50%,
+    //     pill: var(--#{$prefix}border-radius-pill)
+    //   )
+    // ),
+    // "rounded-end": (
+    //   property: border-top-right-radius border-bottom-right-radius,
+    //   class: rounded-end,
+    //   values: (
+    //     null: var(--#{$prefix}border-radius),
+    //     0: 0,
+    //     1: var(--#{$prefix}border-radius-sm),
+    //     2: var(--#{$prefix}border-radius),
+    //     3: var(--#{$prefix}border-radius-lg),
+    //     4: var(--#{$prefix}border-radius-xl),
+    //     5: var(--#{$prefix}border-radius-xxl),
+    //     circle: 50%,
+    //     pill: var(--#{$prefix}border-radius-pill)
+    //   )
+    // ),
+    // "rounded-bottom": (
+    //   property: border-bottom-right-radius border-bottom-left-radius,
+    //   class: rounded-bottom,
+    //   values: (
+    //     null: var(--#{$prefix}border-radius),
+    //     0: 0,
+    //     1: var(--#{$prefix}border-radius-sm),
+    //     2: var(--#{$prefix}border-radius),
+    //     3: var(--#{$prefix}border-radius-lg),
+    //     4: var(--#{$prefix}border-radius-xl),
+    //     5: var(--#{$prefix}border-radius-xxl),
+    //     circle: 50%,
+    //     pill: var(--#{$prefix}border-radius-pill)
+    //   )
+    // ),
+    // "rounded-start": (
+    //   property: border-bottom-left-radius border-top-left-radius,
+    //   class: rounded-start,
+    //   values: (
+    //     null: var(--#{$prefix}border-radius),
+    //     0: 0,
+    //     1: var(--#{$prefix}border-radius-sm),
+    //     2: var(--#{$prefix}border-radius),
+    //     3: var(--#{$prefix}border-radius-lg),
+    //     4: var(--#{$prefix}border-radius-xl),
+    //     5: var(--#{$prefix}border-radius-xxl),
+    //     circle: 50%,
+    //     pill: var(--#{$prefix}border-radius-pill)
+    //   )
+    // ),
+    //===============================
+    // 新增 utilities 設定
+    //===============================
+    // "textarea-resize": (
+    //   property: resize,
+    //   class: textarea-resize,
+    //   values: (
+    //     none: none
+    //   )
+    // ),
+    "letter-spacing": (
+      property: letter-spacing,
+      responsive: true,
+      class: ls,
+      values: (
+        0: 0,
+        base: $body-letter-spacing
+      )
+    ),
+  )
+)

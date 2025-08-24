@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>地點搜尋頁</title>
+  <link rel="shortcut icon" href="./favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script type="module" src="./js/location.js"></script>
+</head>
+<body>
+  <%- include('./week8/partials/nav.ejs') %>
+  <main>
+    <div class="container">
+      <section class="hero-section py-9 py-md-11">
+        <nav class="d-none d-md-block" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">首頁</a></li>
+            <li class="breadcrumb-item"><a href="#">日本</a></li>
+            <li class="breadcrumb-item"><a href="#">關西</a></li>
+            <li class="breadcrumb-item active" aria-current="page">大阪</li>
+          </ol>
+        </nav>
+        <h1 class="h3 fs-md-1 text-black mt-md-9">大阪</h1>
+        <p class="mt-2">大阪，一座融合傳統與現代的城市，擁有豐富的歷史文化、熱鬧的購物街區與世界知名的美食天堂。從氣派的大阪城到霓虹閃爍的道頓堀，每一處都充滿驚喜。無論是第一次造訪，還是再次回味，大阪總能用它的熱情與魅力，讓你留下難忘回憶。</p>
+        <div class="carousel slide hero-carousel mt-6" id="hero-carousel">
+          <div class="carousel-inner rounded-md-4">
+            <div class="carousel-indicators d-md-none">
+              <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="row-md g-md-2">
+              <div class="col-md-6-custom">
+                <div class="carousel-item active rounded-4 rounded-md-0 overflow-hidden h-100">
+                  <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week8/location/osaka-1.png" alt="">
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="row-md g-md-2">
+                  <div class="col-md-6">
+                    <div class="carousel-item rounded-4 rounded-md-0 overflow-hidden">
+                      <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week8/location/osaka-2.png" alt="">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="carousel-item rounded-4 rounded-md-0 overflow-hidden">
+                      <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week8/location/osaka-3.png" alt="">
+                    </div>
+                  </div>
+                  <div class="col-md-6 d-none d-md-block">
+                    <div class="rounded-4 rounded-md-0 overflow-hidden">
+                      <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week8/location/osaka-4.png" alt="">
+                    </div>
+                  </div>
+                  <div class="col-md-6 d-none d-md-block">
+                    <div class="rounded-4 rounded-md-0 overflow-hidden">
+                      <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week8/location/osaka-5.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="hero-carousel-btn btn btn-white fw-semibold poppins rounded-2 border border-black py-4 px-8">查看更多</button>
+        </div>
+      </section>
+      <section class="categories-section py-9 py-md-11">
+        <h2 class="h3 ls-base fs-md-1">想怎麼玩大阪？<span class="d-block d-md-none"></span>熱門分類快速選！</h2>
+        <ul class="list-unstyled row mt-5 mt-md-9">
+          <li class="col-6 col-md-3">
+            <div class="card rounded-4 overflow-hidden">
+              <div class="card-img bg-tint d-flex justify-content-center rounded-0 py-5">
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week8/location/category-1.svg"
+                class="card-img-top" alt="">
+              </div>
+              <div class="card-body">
+                <p class="card-title text-black fw-bold fs-md-6 ls-md-base">交通優惠</p>
+                <p class="card-text fs-sm ls-base text-neutral-80 fs-md-md">20+ 種選擇</p>
+              </div>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </li>
+          <li class="col-6 col-md-3">
+            <div class="card rounded-4 overflow-hidden">
+              <div class="card-img bg-tint d-flex justify-content-center rounded-0 py-5">
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week8/location/category-2.svg"
+                class="card-img-top" alt="">
+              </div>
+              <div class="card-body">
+                <p class="card-title text-black fw-bold fs-md-6 ls-md-base">一日遊</p>
+                <p class="card-text fs-sm ls-base text-neutral-80 fs-md-md">50+ 種選擇</p>
+              </div>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </li>
+          <li class="col-6 col-md-3 mt-4 mt-md-0">
+            <div class="card rounded-4 overflow-hidden">
+              <div class="card-img bg-tint d-flex justify-content-center rounded-0 py-5">
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week8/location/category-3.svg"
+                class="card-img-top" alt="">
+              </div>
+              <div class="card-body">
+                <p class="card-title text-black fw-bold fs-md-6 ls-md-base">景點門票</p>
+                <p class="card-text fs-sm ls-base text-neutral-80 fs-md-md">70+ 種選擇</p>
+              </div>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </li>
+          <li class="col-6 col-md-3 mt-4 mt-md-0">
+            <div class="card rounded-4 overflow-hidden">
+              <div class="card-img bg-tint d-flex justify-content-center rounded-0 py-5">
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week8/location/category-4.svg"
+                class="card-img-top" alt="">
+              </div>
+              <div class="card-body">
+                <p class="card-title text-black fw-bold fs-md-6 ls-md-base">美食餐廳</p>
+                <p class="card-text fs-sm ls-base text-neutral-80 fs-md-md">80+ 種選擇</p>
+              </div>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="top-section py-9 py-md-11">
+        <h2 class="h3 ls-base fs-md-1">大阪 TOP 10!</h2>
+        <ul class="list-unstyled mt-5 mt-md-9 row flex-nowrap flex-md-wrap overflow-x-auto" id="top-list">
+          <li class="col-auto col-md-6 col-lg-3">
+            <div class="attraction-card card h-100">
+              <div class="card-img">
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week8/location/top-1.png"
+                  class="card-img-top" alt="">
+              </div>
+              <span class="material-symbols-outlined card-fav-icon icon-bg-dark">favorite</span>
+              <div class="card-body">
+                <h5 class="card-title">環球影城超值一日遊｜哈利波特園區＋快速通關體驗</h5>
+                <div class="card-badges">
+                  <div class="card-badges__item">即買即用</div>
+                  <div class="card-badges__item">5 天前可免費取消</div>
+                </div>
+                <div class="card-rating">
+                  <img src="./images/star.svg" alt="">
+                  <span class="card-rating-score">4.8</span>
+                  <span class="card-rating-count">(1029)</span>
+                  <span class="card-order-count">1,000+ 個已訂購</span>
+                </div>
+                <p class="price-discounted">NT$ 5,480</p>
+                <p class="price-original">NT$ 6,200</p>
+              </div>
+            </div>
+          </li>
+          <li class="col-auto col-md-6 col-lg-3">
+            <div class="attraction-card card h-100">
+              <div class="card-img">
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week8/location/top-2.png"
+                class="card-img-top" alt="">
+              </div>
+              <span class="material-symbols-outlined card-fav-icon icon-bg-dark">favorite</span>
+              <div class="card-body">
+                <h5 class="card-title">奈良梅花鹿餵食體驗＋和服散策｜日式風情輕旅行</h5>
+                <div class="card-badges">
+                  <div class="card-badges__item">中文導覽</div>
+                  <div class="card-badges__item">5 天前可免費取消</div>
+                </div>
+                <div class="card-rating">
+                  <img src="./images/star.svg" alt="">
+                  <span class="card-rating-score">4.7</span>
+                  <span class="card-rating-count">(880)</span>
+                  <span class="card-order-count">900+ 個已訂購</span>
+                </div>
+                <p class="price-discounted">NT$ 2,250</p>
+                <p class="price-original">NT$ 2,800</p>
+              </div>
+            </div>
+          </li>
+          <li class="col-auto col-md-6 mt-md-6 col-lg-3 mt-lg-0">
+            <div class="attraction-card card h-100">
+              <div class="card-img">
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week8/location/top-3.png"
+                class="card-img-top" alt="">
+              </div>
+              <span class="material-symbols-outlined card-fav-icon icon-bg-dark">favorite</span>
+              <div class="card-body">
+                <h5 class="card-title">黑門市場美食巡禮｜在地職人帶路吃遍大阪經典小吃</h5>
+                <div class="card-badges">
+                  <div class="card-badges__item">專業導覽</div>
+                  <div class="card-badges__item">5 天前可免費取消</div>
+                </div>
+                <div class="card-rating">
+                  <img src="./images/star.svg" alt="">
+                  <span class="card-rating-score">4.6</span>
+                  <span class="card-rating-count">(540)</span>
+                  <span class="card-order-count">700+ 個已訂購</span>
+                </div>
+                <p class="price-discounted">NT$ 1,580</p>
+                <p class="price-original">NT$ 2,500</p>
+              </div>
+            </div>
+          </li>
+          <li class="col-auto col-md-6 mt-md-6 col-lg-3 mt-lg-0">
+            <div class="attraction-card card h-100">
+              <div class="card-img">
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week8/location/top-4.png"
+                class="card-img-top" alt="">
+              </div>
+              <span class="material-symbols-outlined card-fav-icon icon-bg-dark">favorite</span>
+              <div class="card-body">
+                <h5 class="card-title">大阪夜景直升機體驗｜空中俯瞰梅田摩天輪＋海遊館</h5>
+                <div class="card-badges">
+                  <div class="card-badges__item">即買即用</div>
+                  <div class="card-badges__item">7 天前可免費取消</div>
+                </div>
+                <div class="card-rating">
+                  <img src="./images/star.svg" alt="">
+                  <span class="card-rating-score">4.7</span>
+                  <span class="card-rating-count">(319)</span>
+                  <span class="card-order-count">600+ 個已訂購</span>
+                </div>
+                <p class="price-discounted">NT$ 6,890</p>
+                <p class="price-original">NT$ 8,890</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="recommend-section py-9 py-md-11">
+        <h2 class="h3 ls-base fs-md-1">來自 ZOBAA 的<span class="d-block d-md-none"></span>大阪推薦</h2>
+        <ul class="nav recommend-nav flex-nowrap overflow-x-auto position-relative ps-2 gap-8 mt-5 mt-md-9">
+          <li class="nav-item flex-shrink-0" role="presentation">
+            <button class="nav-link active py-4 px-0" type="button" role="tab" id="tours-tab"
+              data-bs-toggle="tab" data-bs-target="#tours-tab-pane" aria-controls="tours-tab-pane" aria-selected="true">
+              觀光行程
+            </button>
+          </li>
+          <li class="nav-item flex-shrink-0" role="presentation">
+            <button class="nav-link py-4 px-0" type="button" role="tab" id="tickets-tab"
+              data-bs-toggle="tab" data-bs-target="#tickets-tab-pane" aria-controls="tickets-tab-pane" aria-selected="false">
+              景點門票
+            </button>
+          </li>
+          <li class="nav-item flex-shrink-0" role="presentation">
+            <button class="nav-link py-4 px-0" type="button" role="tab" id="transport-tab" disabled
+              data-bs-toggle="tab" data-bs-target="#transport-tab-pane" aria-controls="transport-tab-pane" aria-selected="false">
+              交通優惠
+            </button>
+          </li>
+          <li class="nav-item flex-shrink-0" role="presentation">
+            <button class="nav-link py-4 px-0" type="button" role="tab" id="dining-tab" disabled
+              data-bs-toggle="tab" data-bs-target="#dining-tab-pane" aria-controls="dining-tab-pane" aria-selected="false">
+              美食餐廳
+            </button>
+          </li>
+          <li class="nav-item flex-shrink-0" role="presentation">
+            <button class="nav-link py-4 px-0" type="button" role="tab" id="deals-tab" disabled
+              data-bs-toggle="tab" data-bs-target="#deals-tab-pane" aria-controls="deals-tab-pane" aria-selected="false">
+              本月優惠
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content mt-5 mt-md-9" id="recommend-tabContent">
+          <div class="tab-pane fade show active" id="tours-tab-pane" role="tabpanel" aria-labelledby="tours-tab" tabindex="0">
+            <ul class="list-unstyled row flex-nowrap flex-md-wrap overflow-x-auto" id="recommend-list">
+              <li class="col-auto col-md-6 col-lg-3">
+                <div class="attraction-card card h-100">
+                  <div class="card-img">
+                    <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week8/location/top-1.png"
+                      class="card-img-top" alt="">
+                  </div>
+                  <span class="material-symbols-outlined card-fav-icon icon-bg-dark">favorite</span>
+                  <div class="card-body">
+                    <h5 class="card-title">環球影城超值一日遊｜哈利波特園區＋快速通關體驗</h5>
+                    <div class="card-badges">
+                      <div class="card-badges__item">即買即用</div>
+                      <div class="card-badges__item">5 天前可免費取消</div>
+                    </div>
+                    <div class="card-rating">
+                      <img src="./images/star.svg" alt="">
+                      <span class="card-rating-score">4.8</span>
+                      <span class="card-rating-count">(1029)</span>
+                      <span class="card-order-count">1,000+ 個已訂購</span>
+                    </div>
+                    <p class="price-discounted">NT$ 5,480</p>
+                    <p class="price-original">NT$ 6,200</p>
+                  </div>
+                </div>
+              </li>
+              <li class="col-auto col-md-6 col-lg-3">
+                <div class="attraction-card card h-100">
+                  <div class="card-img">
+                    <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week8/location/top-2.png"
+                    class="card-img-top" alt="">
+                  </div>
+                  <span class="material-symbols-outlined card-fav-icon icon-bg-dark">favorite</span>
+                  <div class="card-body">
+                    <h5 class="card-title">奈良梅花鹿餵食體驗＋和服散策｜日式風情輕旅行</h5>
+                    <div class="card-badges">
+                      <div class="card-badges__item">中文導覽</div>
+                      <div class="card-badges__item">5 天前可免費取消</div>
+                    </div>
+                    <div class="card-rating">
+                      <img src="./images/star.svg" alt="">
+                      <span class="card-rating-score">4.7</span>
+                      <span class="card-rating-count">(880)</span>
+                      <span class="card-order-count">900+ 個已訂購</span>
+                    </div>
+                    <p class="price-discounted">NT$ 2,250</p>
+                    <p class="price-original">NT$ 2,800</p>
+                  </div>
+                </div>
+              </li>
+              <li class="col-auto col-md-6 mt-md-6 col-lg-3 mt-lg-0">
+                <div class="attraction-card card h-100">
+                  <div class="card-img">
+                    <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week8/location/top-3.png"
+                    class="card-img-top" alt="">
+                  </div>
+                  <span class="material-symbols-outlined card-fav-icon icon-bg-dark">favorite</span>
+                  <div class="card-body">
+                    <h5 class="card-title">黑門市場美食巡禮｜在地職人帶路吃遍大阪經典小吃</h5>
+                    <div class="card-badges">
+                      <div class="card-badges__item">專業導覽</div>
+                      <div class="card-badges__item">5 天前可免費取消</div>
+                    </div>
+                    <div class="card-rating">
+                      <img src="./images/star.svg" alt="">
+                      <span class="card-rating-score">4.6</span>
+                      <span class="card-rating-count">(540)</span>
+                      <span class="card-order-count">700+ 個已訂購</span>
+                    </div>
+                    <p class="price-discounted">NT$ 1,580</p>
+                    <p class="price-original">NT$ 2,500</p>
+                  </div>
+                </div>
+              </li>
+              <li class="col-auto col-md-6 mt-md-6 col-lg-3 mt-lg-0">
+                <div class="attraction-card card h-100">
+                  <div class="card-img">
+                    <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week8/location/top-4.png"
+                    class="card-img-top" alt="">
+                  </div>
+                  <span class="material-symbols-outlined card-fav-icon icon-bg-dark">favorite</span>
+                  <div class="card-body">
+                    <h5 class="card-title">大阪夜景直升機體驗｜空中俯瞰梅田摩天輪＋海遊館</h5>
+                    <div class="card-badges">
+                      <div class="card-badges__item">即買即用</div>
+                      <div class="card-badges__item">7 天前可免費取消</div>
+                    </div>
+                    <div class="card-rating">
+                      <img src="./images/star.svg" alt="">
+                      <span class="card-rating-score">4.7</span>
+                      <span class="card-rating-count">(319)</span>
+                      <span class="card-order-count">600+ 個已訂購</span>
+                    </div>
+                    <p class="price-discounted">NT$ 6,890</p>
+                    <p class="price-original">NT$ 8,890</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-pane fade" id="tickets-tab-pane" role="tabpanel" aria-labelledby="tickets-tab" tabindex="0">
+            <div class="card border-0" style="max-width: 240px;">
+            <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week8/empty.svg"
+              class="card-img-top" alt="">
+            <div class="card-body">
+              <h5 class="card-title text-center">準備中...</h5>
+            </div>
+          </div>
+          </div>
+          <div class="tab-pane fade" id="transport-tab-pane" role="tabpanel" aria-labelledby="transport-tab" tabindex="0"></div>
+          <div class="tab-pane fade" id="dining-tab-pane" role="tabpanel" aria-labelledby="dining-tab" tabindex="0"></div>
+          <div class="tab-pane fade" id="deals-tab-pane" role="tabpanel" aria-labelledby="deals-tab" tabindex="0"></div>
+        </div>
+      </section>
+    </div>
+    <section class="guide-section bg-tint py-9 py-lg-12">
+      <div class="container">
+        <div class="d-lg-flex align-items-lg-center">
+          <h2 class="h3 ls-base fs-lg-1">旅人攻略<span class="d-block pt-2"></span>看看大家怎麼玩！</h2>
+          <div class="ms-lg-auto">
+            <p class="fw-bold mt-2 mt-lg-0">這裡不只是遊記，更是來自旅人親身經歷的風格指南與靈感筆記。</p>
+            <p class="fw-bold mt-2">跟著他們的腳步走，找到屬於你的旅行意義。</p>
+          </div>
+        </div>
+        <ul class="list-unstyled d-flex flex-column gap-6 mt-5 mt-lg-11">
+          <li>
+            <div class="card flex-lg-row gap-lg-8 rounded-5 border-0 p-4 p-lg-8">
+              <div class="card-img overflow-hidden flex-lg-shrink-0">
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week8/location/guide-1.png"
+                class="card-img-top object-fit-cover rounded-4" alt="">
+              </div>
+              <div class="d-flex flex-column mt-4 mt-lg-0">
+                <div class="d-flex gap-2">
+                  <div class="fs-sm ls-base fw-bold bg-tint rounded-3 py-2 px-4">#大阪</div>
+                  <div class="fs-sm ls-base fw-bold bg-tint rounded-3 py-2 px-4">#老街巡禮</div>
+                </div>
+                <div class="card-body d-lg-flex flex-lg-column p-0 mt-6">
+                  <h5 class="card-title h4 ls-base fs-lg-2 text-black">空堀商店街的散步節奏</h5>
+                  <p class="card-text fs-sm ls-base fs-lg-md text-neutral-80">離開熱鬧難波，走進空堀這座時間凍結的老街，每家店都像一段回憶：木造喫茶、手工小物、安靜的巷弄轉角。這裡沒有觀光氣氛，只有城市最真實的日常樣貌...</p>
+                  <a href="#" class="btn d-inline-flex align-self-lg-end p-0 mt-9">
+                    <p class="fw-bold me-2">查看文章</p>
+                    <span class="material-symbols-outlined fs-5">arrow_forward</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="card flex-lg-row gap-lg-8 rounded-5 border-0 p-4 p-lg-8">
+              <div class="card-img overflow-hidden flex-lg-shrink-0">
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week8/location/guide-1.png"
+                class="card-img-top object-fit-cover rounded-4" alt="">
+              </div>
+              <div class="d-flex flex-column mt-4 mt-lg-0">
+                <div class="d-flex gap-2">
+                  <div class="fs-sm ls-base fw-bold bg-tint rounded-3 py-2 px-4">#大阪</div>
+                  <div class="fs-sm ls-base fw-bold bg-tint rounded-3 py-2 px-4">#庶民美食</div>
+                </div>
+                <div class="card-body d-lg-flex flex-lg-column p-0 mt-6">
+                  <h5 class="card-title h4 ls-base fs-lg-2 text-black">深夜的章魚燒與便利商店啤酒</h5>
+                  <p class="card-text fs-sm ls-base fs-lg-md text-neutral-80">難波站邊的小巷，有開到凌晨的章魚燒老店。坐在路邊配一罐便利商店啤酒，看路人談天、喝醉、笑鬧，這種庶民感才是我最懷念的大阪味道。</p>
+                  <a href="#" class="btn d-inline-flex align-self-lg-end p-0 mt-9">
+                    <p class="fw-bold me-2">查看文章</p>
+                    <span class="material-symbols-outlined fs-5">arrow_forward</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="card flex-lg-row gap-lg-8 rounded-5 border-0 p-4 p-lg-8">
+              <div class="card-img overflow-hidden flex-lg-shrink-0">
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week8/location/guide-1.png"
+                class="card-img-top object-fit-cover rounded-4" alt="">
+              </div>
+              <div class="d-flex flex-column mt-4 mt-lg-0">
+                <div class="d-flex gap-2">
+                  <div class="fs-sm ls-base fw-bold bg-tint rounded-3 py-2 px-4">#大阪</div>
+                  <div class="fs-sm ls-base fw-bold bg-tint rounded-3 py-2 px-4">#靜態旅行</div>
+                </div>
+                <div class="card-body d-lg-flex flex-lg-column p-0 mt-6">
+                  <h5 class="card-title h4 ls-base fs-lg-2 text-black">一個人在中之島圖書館待一整天</h5>
+                  <p class="card-text fs-sm ls-base fs-lg-md text-neutral-80">陰天的中之島很安靜，我選擇在百年圖書館裡消磨一整天。閱讀、打盹、寫明信片，從高聳書架與拱形窗邊找到片刻的呼吸空間。不趕行程的日子，才最像我想要的旅途。</p>
+                  <a href="#" class="btn d-inline-flex align-self-lg-end p-0 mt-9">
+                    <p class="fw-bold me-2">查看文章</p>
+                    <span class="material-symbols-outlined fs-5">arrow_forward</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="card flex-lg-row gap-lg-8 rounded-5 border-0 p-4 p-lg-8">
+              <div class="card-img overflow-hidden flex-lg-shrink-0">
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week8/location/guide-1.png"
+                class="card-img-top object-fit-cover rounded-4" alt="">
+              </div>
+              <div class="d-flex flex-column mt-4 mt-lg-0">
+                <div class="d-flex gap-2">
+                  <div class="fs-sm ls-base fw-bold bg-tint rounded-3 py-2 px-4">#大阪</div>
+                  <div class="fs-sm ls-base fw-bold bg-tint rounded-3 py-2 px-4">#在地文化</div>
+                </div>
+                <div class="card-body d-lg-flex flex-lg-column p-0 mt-6">
+                  <h5 class="card-title h4 ls-base fs-lg-2 text-black">跟著在地人玩「新世界」</h5>
+                  <p class="card-text fs-sm ls-base fs-lg-md text-neutral-80">走進「新世界」，才發現大阪有多狂、有多生活。串炸店裡全是吆喝聲、立吞店排滿上班族，還有拍不完的霓虹與搞笑招牌。這一區又亂又熱鬧，但真實又迷人。</p>
+                  <a href="#" class="btn d-inline-flex align-self-lg-end p-0 mt-9">
+                    <p class="fw-bold me-2">查看文章</p>
+                    <span class="material-symbols-outlined fs-5">arrow_forward</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <%- include('./week8/partials/footer.ejs') %>
+</body>
+</html>

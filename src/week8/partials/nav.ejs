@@ -1,0 +1,64 @@
+<nav class="nav">
+  <div class="container">
+    <div class="d-flex align-items-center py-3 py-md-4">
+      <h1 class="nav-logo logo logo-primary me-auto me-md-0">
+        <span class="visually-hidden"># ZOBAA !</span>
+        <a href="./" class="stretched-link"></a>
+      </h1>
+      <div class="d-none d-md-flex nav-search input-group ms-6 me-md-auto">
+        <label class="input-group-text bg-white border-end-0 ps-2 pe-1 py-3" for="nav-search-text">
+          <span class="material-symbols-outlined">search</span>
+        </label>
+        <input type="text" class="form-control border-start-0 px-1 py-3" placeholder="搜尋景點、地點或城市"
+          aria-label="搜尋景點、地點或城市" id="nav-search-text" name="nav-search-text">
+      </div>
+      <button type="button" class="btn p-2 d-md-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+        <span class="material-symbols-outlined d-block">search</span>
+      </button>
+      <button type="button" class="btn py-2">
+        <span class="material-symbols-outlined d-block">shopping_cart</span>
+      </button>
+      <button type="button" class="d-md-none btn p-2" data-bs-toggle="offcanvas" data-bs-target="#guest-offcanvas" aria-controls="guest-offcanvas">
+        <span class="material-symbols-outlined d-block">menu</span>
+      </button>
+      <button class="d-none d-md-inline-block btn btn-primary text-white fw-semibold text-nowrap rounded-2 px-4 py-3" type="button" id="nav-search-btn">
+        登入 / 註冊
+      </button>
+    </div>
+  </div>
+</nav>
+<div class="offcanvas offcanvas-end guest-offcanvas-width" tabindex="-1" id="guest-offcanvas" aria-labelledby="guest-offcanvas-label">
+  <div class="offcanvas-header p-6 pb-4">
+    <button type="button" class="btn border-0 p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+      <span class="material-symbols-outlined d-block">close</span>
+    </button>
+  </div>
+  <div class="offcanvas-body d-flex flex-column p-6 pt-0">
+    <div class="d-flex align-items-center border-bottom pb-4">
+      <div class="bg-primary-40 rounded-circle p-1">
+        <div class="guest-offcanvas-icon"></div>
+      </div>
+      <div class="d-flex flex-column ms-2">
+        <span class="fw-bold">訪客</span>
+        <span class="text-neutral-80">未登入</span>
+      </div>
+    </div>
+    <p class="h6 mt-6">歡迎來到 ZOBAA</p>
+    <p class="text-neutral-80 mt-1">加入會員即可立即訂購、收藏行程，並享相關優惠好禮。</p>
+    <button type="button" class="btn bg-primary text-white poppins fw-semibold rounded-2 py-4 mt-auto">登入 / 註冊 </button>
+  </div>
+</div>
+<div class="offcanvas offcanvas-top nav-offcanvas-search" tabindex="-1" id="offcanvasTop" aria-labelledby="nav-offcanvas-search-text">
+  <div class="offcanvas-body d-flex align-items-center p-3">
+    <div class="d-flex nav-search input-group flex-grow-1">
+      <label class="input-group-text bg-white border-end-0 ps-3 py-2" for="nav-offcanvas-search-text">
+        <span class="material-symbols-outlined">search</span>
+      </label>
+      <input type="text" class="form-control fs-6 border-start-0 px-1 py-2" placeholder="搜尋景點、地點或城市"
+        aria-label="搜尋景點、地點或城市" id="nav-offcanvas-search-text" name="nav-offcanvas-search-text">
+    </div>
+    <button type="button" class="btn p-2 ms-1">
+      <span class="material-symbols-outlined d-block" data-bs-dismiss="offcanvas" aria-label="Close">close</span>
+    </button>
+  </div>
+</div>

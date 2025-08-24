@@ -1,0 +1,110 @@
+@use "sass:map";
+@use "../abstracts/variables" as var;
+@use "../abstracts/custom-mixin" as mixin;
+
+.attraction-card {
+  &.card {
+    border: 0;
+    cursor: pointer;
+  }
+  .card-fav-icon.material-symbols-outlined {
+    --icon-bg-color: transparent;
+    color: $white;
+    background-color: var(--icon-bg-color);
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transition: color 0.3s, background-color 0.3s;
+    padding: map.get($spacers, 4);
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    &.icon-bg-dark {
+      --icon-bg-color: #{rgba(var.$black, 0.4)};
+      backdrop-filter: blur(12px);
+    }
+    &:hover {
+      color: var.$danger;
+      font-variation-settings: 'FILL' 1;
+    }
+    &:not(.icon-bg-dark):hover {
+      --icon-bg-color: #{rgba(var.$white, 0.2)};
+    }
+  }
+  .card-img {
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  .card-img-top {
+    transition: transform 0.3s;
+  }
+  &:hover .card-img-top {
+    transform: scale(1.1);
+  }
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+  .card-title {
+    @include mixin.font-size($font-size-sm, $font-weight: var.$font-weight-bold);
+    color: var.$black;
+  }
+  .card-badges {
+    display: flex;
+    &__item {
+      display: inline-block;
+      @include mixin.font-size($font-size-sm);
+      background-color: var.$tint;
+      border-radius: $border-radius-lg;
+      padding-top: map.get($spacers, 1);
+      padding-bottom: map.get($spacers, 1);
+      padding-left: map.get($spacers, 2);
+      padding-right: map.get($spacers, 2);
+      &:not(:first-child) {
+        margin-left: map.get($spacers, 2);
+      }
+    }
+  }
+  .card-rating {
+    padding-bottom: map.get($spacers, 4);
+    border-bottom: 1px solid var.$border-color;
+    margin-top: map.get($spacers, 2);
+    .card-rating-score {
+      @include mixin.font-size($font-size-sm);
+      color: var.$primary-80;
+      margin-left: map.get($spacers, 1);
+    }
+    .card-rating-count {
+      @include mixin.font-size($font-size-sm);
+      color: var.$neutral-60;
+      margin-left: map.get($spacers, 1);
+      padding-right: map.get($spacers, 3);
+      border-right: 1px solid var.$border-color;
+    }
+    .card-order-count {
+      @include mixin.font-size($font-size-sm);
+      color: var.$primary-80;
+      margin-left: map.get($spacers, 3);
+    }
+  }
+  .price-discounted {
+    @include mixin.font-size(var.$h6-font-size, var.$line-height-xs, var.$font-weight-bold);
+    margin-top: map.get($spacers, 2);
+  }
+  .price-original {
+    @include mixin.font-size($font-size-sm);
+    color: #808080;
+    text-decoration: line-through;
+  }
+  &.card:hover {
+    .card-img-top {
+      transform: scale(1.1);
+    }
+    .card-title {
+      color: var.$primary;
+    }
+  }
+}
