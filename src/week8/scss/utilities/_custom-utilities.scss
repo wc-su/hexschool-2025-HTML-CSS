@@ -1,0 +1,44 @@
+@use "sass:map";
+@use "../abstracts/variables" as var;
+@use "../abstracts/custom-mixin" as mixin;
+
+.text-primary-80 {
+  color: var.$primary-80;
+}
+.text-primary-60 {
+  color: var.$primary-60;
+}
+.text-neutral-80 {
+  color: var.$neutral-80;
+}
+.text-neutral-60 {
+  color: var.$neutral-60;
+}
+
+.bg-primary-40 {
+  background-color: var.$primary-40;
+}
+
+.display-md-2 {
+  @include media-breakpoint-up(md) {
+    @include mixin.font-size(map.get($display-font-sizes, 2), var.$line-height-xs, var.$font-weight-bold);
+  }
+}
+.display-lg-2 {
+  @include media-breakpoint-up(lg) {
+    @include mixin.font-size(map.get($display-font-sizes, 2), var.$line-height-xs, var.$font-weight-bold);
+  }
+}
+
+.top-auto {
+  top: auto;
+}
+
+
+.poppins {
+  font-family: "Poppins", "Noto Sans TC", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.object-position-top-center {
+  object-position: top center;
+}
